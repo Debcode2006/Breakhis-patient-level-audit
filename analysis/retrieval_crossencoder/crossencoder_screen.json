@@ -1,0 +1,1081 @@
+{
+  "created": "2026-08-05T00:52:49",
+  "preregistration": {
+    "hypothesis": "Error-decorrelation from the parametric head (awrong) is a property of encoder identity, not of key definition; a bank encoded by a pathology foundation model with a measurably different error profile should produce awrong above the exp1 cross-encoder band (0.127-0.136).",
+    "primary_endpoints": [
+      "auc_where_param_wrong",
+      "gate weight on p_img",
+      "subtype_lift",
+      "neighbour_overlap_vs_same_encoder"
+    ],
+    "secondary_endpoint": "image AUC/accuracy of p_final_loso",
+    "success_criterion": "p_final must beat BOTH p_param AND the two-probe ensemble (half and LOSO-fitted) on the same surface.",
+    "test_set": "NOT touched by this script.",
+    "held_fixed": "route/k/cap/two-level ranking (D3-D7); gate protocol (pooled OOF, 5->16->3, same seed/epochs/lr); T=0.07 primary with a reported sweep.",
+    "selection_bias": "p_final is fitted and scored on the same pooled-OOF rows; p_final_loso is the honest ordering. Neither replaces a held-out confirmation."
+  },
+  "base_experiment": "exp3n",
+  "base_encoder": "exp3n",
+  "foreign_encoder": "ctranspath",
+  "foreign_cache": "analysis/foundation/ctranspath/features.npz",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "alignment": {
+    "0": {
+      "bank": {
+        "rows": 4541,
+        "patients": 52,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      },
+      "val": {
+        "rows": 1715,
+        "patients": 14,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      }
+    },
+    "1": {
+      "bank": {
+        "rows": 5133,
+        "patients": 53,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      },
+      "val": {
+        "rows": 1123,
+        "patients": 13,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      }
+    },
+    "2": {
+      "bank": {
+        "rows": 5137,
+        "patients": 53,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      },
+      "val": {
+        "rows": 1119,
+        "patients": 13,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      }
+    },
+    "3": {
+      "bank": {
+        "rows": 5027,
+        "patients": 53,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      },
+      "val": {
+        "rows": 1229,
+        "patients": 13,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      }
+    },
+    "4": {
+      "bank": {
+        "rows": 5186,
+        "patients": 53,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      },
+      "val": {
+        "rows": 1070,
+        "patients": 13,
+        "columns_verified": [
+          "patient_id",
+          "label",
+          "mag_index"
+        ],
+        "joined_on": "image_path"
+      }
+    }
+  },
+  "results": [
+    {
+      "name": "exp3n features (same-encoder D1)",
+      "key": "features",
+      "key_transform": "none",
+      "key_encoder": "exp3n",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 1024.0,
+        "effective_rank": 1.1856,
+        "dominant_axis_share": 0.9193,
+        "mean_unit_key_norm": 0.8358,
+        "random_pair_cos": 0.7004
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.4112,
+        "subtype_match_rate": 0.3566,
+        "subtype_base_rate": 0.2233,
+        "subtype_lift": 0.1332,
+        "mean_top1_sim": 0.9986,
+        "std_top1_sim": 0.0021,
+        "mean_distinct_patients": 7.558
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.8496,
+        "image_auc": 0.8678,
+        "image_sens": 0.9091,
+        "image_spec": 0.725,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9293
+      },
+      "p_slide": {
+        "image_acc": 0.8611,
+        "image_auc": 0.8493,
+        "image_sens": 0.9121,
+        "image_spec": 0.7542,
+        "patient_acc": 0.8939,
+        "patient_auc": 0.9424
+      },
+      "p_final": {
+        "image_acc": 0.8645,
+        "image_auc": 0.8862,
+        "image_sens": 0.9103,
+        "image_spec": 0.7685,
+        "patient_acc": 0.8788,
+        "patient_auc": 0.9522
+      },
+      "p_final_loso": {
+        "image_acc": 0.8627,
+        "image_auc": 0.8833,
+        "image_sens": 0.9107,
+        "image_spec": 0.7621,
+        "patient_acc": 0.8788,
+        "patient_auc": 0.9533
+      },
+      "gate_mean_weights": [
+        0.8226,
+        0.1468,
+        0.0306
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.8384,
+        "mean_w_param_where_head_wrong": 0.7206,
+        "gap": -0.1178,
+        "mean_w_img_where_head_wrong": 0.2153,
+        "mean_w_slide_where_head_wrong": 0.0641,
+        "frac_w_param_above_0.95": 0.7231,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.9479,
+        "auc_where_param_wrong": 0.0559,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.89,
+        "best_blend_auc": 0.8864,
+        "blend_gain_auc": 0.0009
+      },
+      "flips_vs_param": {
+        "n_changed": 63,
+        "changed_to_correct": 23,
+        "changed_to_wrong": 40,
+        "net": -17,
+        "frac_changed": 0.01007
+      },
+      "delta_auc_final_vs_param": 0.0007,
+      "delta_acc_final_vs_param": -0.0009,
+      "delta_patacc_final_vs_param": 0.0152,
+      "delta_auc_final_loso_vs_param": -0.0022,
+      "delta_acc_final_loso_vs_param": -0.0027,
+      "delta_patacc_final_loso_vs_param": 0.0152
+    },
+    {
+      "name": "exp1 features (cross-encoder control)",
+      "key": "features",
+      "key_transform": "none",
+      "key_encoder": "exp1",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 1024.0,
+        "effective_rank": 1.2744,
+        "dominant_axis_share": 0.8835,
+        "mean_unit_key_norm": 0.7869,
+        "random_pair_cos": 0.6399
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.3814,
+        "subtype_match_rate": 0.3412,
+        "subtype_base_rate": 0.2233,
+        "subtype_lift": 0.1178,
+        "mean_top1_sim": 0.9987,
+        "std_top1_sim": 0.0026,
+        "mean_distinct_patients": 8.02
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.855,
+        "image_auc": 0.8718,
+        "image_sens": 0.9128,
+        "image_spec": 0.7339,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9391
+      },
+      "p_slide": {
+        "image_acc": 0.8605,
+        "image_auc": 0.857,
+        "image_sens": 0.9091,
+        "image_spec": 0.7587,
+        "patient_acc": 0.9242,
+        "patient_auc": 0.9511
+      },
+      "p_final": {
+        "image_acc": 0.8704,
+        "image_auc": 0.89,
+        "image_sens": 0.9204,
+        "image_spec": 0.7656,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.9554
+      },
+      "p_final_loso": {
+        "image_acc": 0.8659,
+        "image_auc": 0.8872,
+        "image_sens": 0.9188,
+        "image_spec": 0.7552,
+        "patient_acc": 0.9242,
+        "patient_auc": 0.9522
+      },
+      "gate_mean_weights": [
+        0.836,
+        0.1323,
+        0.0318
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.8574,
+        "mean_w_param_where_head_wrong": 0.6981,
+        "gap": -0.1593,
+        "mean_w_img_where_head_wrong": 0.2166,
+        "mean_w_slide_where_head_wrong": 0.0853,
+        "frac_w_param_above_0.95": 0.6811,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.9076,
+        "auc_where_param_wrong": 0.1333,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.71,
+        "best_blend_auc": 0.8898,
+        "blend_gain_auc": 0.0043
+      },
+      "flips_vs_param": {
+        "n_changed": 155,
+        "changed_to_correct": 79,
+        "changed_to_wrong": 76,
+        "net": 3,
+        "frac_changed": 0.02478
+      },
+      "delta_auc_final_vs_param": 0.0045,
+      "delta_acc_final_vs_param": 0.005,
+      "delta_patacc_final_vs_param": 0.0758,
+      "delta_auc_final_loso_vs_param": 0.0017,
+      "delta_acc_final_loso_vs_param": 0.0005,
+      "delta_patacc_final_loso_vs_param": 0.0606
+    },
+    {
+      "name": "exp1 fpn.std (cross-encoder control)",
+      "key": "fpn.std",
+      "key_transform": "none",
+      "key_encoder": "exp1",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 1024.0,
+        "effective_rank": 2.8934,
+        "dominant_axis_share": 0.5496,
+        "mean_unit_key_norm": 0.9713,
+        "random_pair_cos": 0.9437
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.3385,
+        "subtype_match_rate": 0.3442,
+        "subtype_base_rate": 0.2233,
+        "subtype_lift": 0.1208,
+        "mean_top1_sim": 0.9981,
+        "std_top1_sim": 0.0019,
+        "mean_distinct_patients": 8.483
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.8577,
+        "image_auc": 0.8723,
+        "image_sens": 0.915,
+        "image_spec": 0.7379,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.9402
+      },
+      "p_slide": {
+        "image_acc": 0.8443,
+        "image_auc": 0.8602,
+        "image_sens": 0.9159,
+        "image_spec": 0.6944,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9413
+      },
+      "p_final": {
+        "image_acc": 0.8672,
+        "image_auc": 0.891,
+        "image_sens": 0.9235,
+        "image_spec": 0.7493,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9565
+      },
+      "p_final_loso": {
+        "image_acc": 0.8652,
+        "image_auc": 0.8883,
+        "image_sens": 0.9195,
+        "image_spec": 0.7517,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9489
+      },
+      "gate_mean_weights": [
+        0.8082,
+        0.1501,
+        0.0417
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.8316,
+        "mean_w_param_where_head_wrong": 0.6574,
+        "gap": -0.1742,
+        "mean_w_img_where_head_wrong": 0.2336,
+        "mean_w_slide_where_head_wrong": 0.109,
+        "frac_w_param_above_0.95": 0.5679,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.9058,
+        "auc_where_param_wrong": 0.1281,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.72,
+        "best_blend_auc": 0.8902,
+        "blend_gain_auc": 0.0047
+      },
+      "flips_vs_param": {
+        "n_changed": 191,
+        "changed_to_correct": 95,
+        "changed_to_wrong": 96,
+        "net": -1,
+        "frac_changed": 0.03053
+      },
+      "delta_auc_final_vs_param": 0.0055,
+      "delta_acc_final_vs_param": 0.0018,
+      "delta_patacc_final_vs_param": 0.0455,
+      "delta_auc_final_loso_vs_param": 0.0028,
+      "delta_acc_final_loso_vs_param": -0.0002,
+      "delta_patacc_final_loso_vs_param": 0.0455
+    },
+    {
+      "name": "CTP features",
+      "key": "features",
+      "key_transform": "none",
+      "key_encoder": "ctranspath",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 768.0,
+        "effective_rank": 22.6102,
+        "dominant_axis_share": 0.144,
+        "mean_unit_key_norm": 0.6962,
+        "random_pair_cos": 0.4846
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.7395,
+        "subtype_match_rate": 0.3974,
+        "subtype_base_rate": 0.2276,
+        "subtype_lift": 0.1698,
+        "mean_top1_sim": 0.8165,
+        "std_top1_sim": 0.0492,
+        "mean_distinct_patients": 7.771
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.8625,
+        "image_auc": 0.9149,
+        "image_sens": 0.9188,
+        "image_spec": 0.7448,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9609
+      },
+      "p_slide": {
+        "image_acc": 0.8449,
+        "image_auc": 0.8836,
+        "image_sens": 0.9136,
+        "image_spec": 0.7013,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9337
+      },
+      "p_final": {
+        "image_acc": 0.8863,
+        "image_auc": 0.9431,
+        "image_sens": 0.9412,
+        "image_spec": 0.7715,
+        "patient_acc": 0.9091,
+        "patient_auc": 0.9783
+      },
+      "p_final_loso": {
+        "image_acc": 0.8684,
+        "image_auc": 0.9199,
+        "image_sens": 0.9242,
+        "image_spec": 0.7517,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.962
+      },
+      "gate_mean_weights": [
+        0.448,
+        0.4044,
+        0.1477
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.4563,
+        "mean_w_param_where_head_wrong": 0.3943,
+        "gap": -0.062,
+        "mean_w_img_where_head_wrong": 0.458,
+        "mean_w_slide_where_head_wrong": 0.1477,
+        "frac_w_param_above_0.95": 0.0,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.7276,
+        "auc_where_param_wrong": 0.5676,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.4,
+        "best_blend_auc": 0.9383,
+        "blend_gain_auc": 0.0528
+      },
+      "flips_vs_param": {
+        "n_changed": 371,
+        "changed_to_correct": 195,
+        "changed_to_wrong": 176,
+        "net": 19,
+        "frac_changed": 0.0593
+      },
+      "neighbour_overlap_vs_same_encoder": {
+        "topk_overlap_frac": 0.075,
+        "topk_jaccard": 0.0412,
+        "topk_patient_overlap_frac": 0.338,
+        "top1_identical_rate": 0.0237,
+        "n_queries": 600.0
+      },
+      "delta_auc_final_vs_param": 0.0576,
+      "delta_acc_final_vs_param": 0.0209,
+      "delta_patacc_final_vs_param": 0.0455,
+      "delta_auc_final_loso_vs_param": 0.0344,
+      "delta_acc_final_loso_vs_param": 0.003,
+      "delta_patacc_final_loso_vs_param": 0.0
+    },
+    {
+      "name": "CTP features whiten:128",
+      "key": "features",
+      "key_transform": "whiten:128",
+      "key_encoder": "ctranspath",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 128.0,
+        "effective_rank": 126.4768,
+        "dominant_axis_share": 0.0105,
+        "mean_unit_key_norm": 0.0105,
+        "random_pair_cos": -0.0001
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.6683,
+        "subtype_match_rate": 0.3629,
+        "subtype_base_rate": 0.2276,
+        "subtype_lift": 0.1354,
+        "mean_top1_sim": 0.4461,
+        "std_top1_sim": 0.0766,
+        "mean_distinct_patients": 8.841
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.868,
+        "image_auc": 0.9337,
+        "image_sens": 0.9265,
+        "image_spec": 0.7453,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.9935
+      },
+      "p_slide": {
+        "image_acc": 0.8736,
+        "image_auc": 0.9293,
+        "image_sens": 0.9457,
+        "image_spec": 0.7226,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.988
+      },
+      "p_final": {
+        "image_acc": 0.9041,
+        "image_auc": 0.9595,
+        "image_sens": 0.9445,
+        "image_spec": 0.8195,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.9902
+      },
+      "p_final_loso": {
+        "image_acc": 0.8836,
+        "image_auc": 0.9412,
+        "image_sens": 0.9313,
+        "image_spec": 0.7839,
+        "patient_acc": 0.8939,
+        "patient_auc": 0.9804
+      },
+      "gate_mean_weights": [
+        0.3363,
+        0.4498,
+        0.2139
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.3397,
+        "mean_w_param_where_head_wrong": 0.3147,
+        "gap": -0.025,
+        "mean_w_img_where_head_wrong": 0.4486,
+        "mean_w_slide_where_head_wrong": 0.2367,
+        "frac_w_param_above_0.95": 0.0,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.6811,
+        "auc_where_param_wrong": 0.7272,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.34,
+        "best_blend_auc": 0.9535,
+        "blend_gain_auc": 0.068
+      },
+      "flips_vs_param": {
+        "n_changed": 424,
+        "changed_to_correct": 269,
+        "changed_to_wrong": 155,
+        "net": 114,
+        "frac_changed": 0.06777
+      },
+      "neighbour_overlap_vs_same_encoder": {
+        "topk_overlap_frac": 0.0555,
+        "topk_jaccard": 0.03,
+        "topk_patient_overlap_frac": 0.2942,
+        "top1_identical_rate": 0.017,
+        "n_queries": 600.0
+      },
+      "delta_auc_final_vs_param": 0.074,
+      "delta_acc_final_vs_param": 0.0387,
+      "delta_patacc_final_vs_param": 0.0758,
+      "delta_auc_final_loso_vs_param": 0.0557,
+      "delta_acc_final_loso_vs_param": 0.0182,
+      "delta_patacc_final_loso_vs_param": 0.0303
+    },
+    {
+      "name": "CTP features pca_drop:10",
+      "key": "features",
+      "key_transform": "pca_drop:10",
+      "key_encoder": "ctranspath",
+      "p_param_encoder": "exp3n",
+      "temperature": 0.07,
+      "n_rows": 6256,
+      "n_patients": 66,
+      "geometry": {
+        "dim": 768.0,
+        "effective_rank": 71.8734,
+        "dominant_axis_share": 0.0391,
+        "mean_unit_key_norm": 0.0094,
+        "random_pair_cos": -0.0001
+      },
+      "neighbourhood": {
+        "same_mag_rate_route_all": 0.6046,
+        "subtype_match_rate": 0.3422,
+        "subtype_base_rate": 0.2276,
+        "subtype_lift": 0.1146,
+        "mean_top1_sim": 0.4708,
+        "std_top1_sim": 0.0796,
+        "mean_distinct_patients": 8.639
+      },
+      "p_param": {
+        "image_acc": 0.8654,
+        "image_auc": 0.8855,
+        "image_sens": 0.9086,
+        "image_spec": 0.775,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9598
+      },
+      "p_img": {
+        "image_acc": 0.8499,
+        "image_auc": 0.9169,
+        "image_sens": 0.9162,
+        "image_spec": 0.7112,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.9891
+      },
+      "p_slide": {
+        "image_acc": 0.7778,
+        "image_auc": 0.801,
+        "image_sens": 0.8788,
+        "image_spec": 0.5663,
+        "patient_acc": 0.8636,
+        "patient_auc": 0.9293
+      },
+      "p_final": {
+        "image_acc": 0.8956,
+        "image_auc": 0.9538,
+        "image_sens": 0.935,
+        "image_spec": 0.8131,
+        "patient_acc": 0.9545,
+        "patient_auc": 0.988
+      },
+      "p_final_loso": {
+        "image_acc": 0.8795,
+        "image_auc": 0.9319,
+        "image_sens": 0.9277,
+        "image_spec": 0.7784,
+        "patient_acc": 0.9394,
+        "patient_auc": 0.975
+      },
+      "gate_mean_weights": [
+        0.4278,
+        0.5167,
+        0.0555
+      ],
+      "gate_behaviour": {
+        "mean_w_param_where_head_correct": 0.4261,
+        "mean_w_param_where_head_wrong": 0.4389,
+        "gap": 0.0128,
+        "mean_w_img_where_head_wrong": 0.4914,
+        "mean_w_slide_where_head_wrong": 0.0698,
+        "frac_w_param_above_0.95": 0.0003,
+        "n_head_wrong": 842
+      },
+      "complementarity": {
+        "corr_param_img": 0.6339,
+        "auc_where_param_wrong": 0.7393,
+        "n_param_wrong": 842,
+        "best_fixed_alpha": 0.38,
+        "best_blend_auc": 0.9501,
+        "blend_gain_auc": 0.0646
+      },
+      "flips_vs_param": {
+        "n_changed": 366,
+        "changed_to_correct": 227,
+        "changed_to_wrong": 139,
+        "net": 88,
+        "frac_changed": 0.0585
+      },
+      "neighbour_overlap_vs_same_encoder": {
+        "topk_overlap_frac": 0.0495,
+        "topk_jaccard": 0.0266,
+        "topk_patient_overlap_frac": 0.2746,
+        "top1_identical_rate": 0.0116,
+        "n_queries": 600.0
+      },
+      "delta_auc_final_vs_param": 0.0683,
+      "delta_acc_final_vs_param": 0.0302,
+      "delta_patacc_final_vs_param": 0.0909,
+      "delta_auc_final_loso_vs_param": 0.0464,
+      "delta_acc_final_loso_vs_param": 0.0141,
+      "delta_patacc_final_loso_vs_param": 0.0758
+    }
+  ],
+  "ensemble_control": {
+    "p_probe_ctranspath": {
+      "image_acc": 0.8764,
+      "image_auc": 0.9415,
+      "image_sens": 0.8812,
+      "image_spec": 0.8665,
+      "patient_acc": 0.8788,
+      "patient_auc": 0.9717
+    },
+    "p_ens_half": {
+      "image_acc": 0.8832,
+      "image_auc": 0.9482,
+      "image_sens": 0.9136,
+      "image_spec": 0.8195,
+      "patient_acc": 0.8939,
+      "patient_auc": 0.9761
+    },
+    "p_ens_fitted_loso": {
+      "image_acc": 0.8841,
+      "image_auc": 0.9472,
+      "image_sens": 0.9003,
+      "image_spec": 0.8501,
+      "patient_acc": 0.9091,
+      "patient_auc": 0.9739
+    },
+    "awrong_of_probe": 0.6148,
+    "corr_param_probe": 0.7331,
+    "final_beats_param": true,
+    "final_beats_ens_half": false,
+    "final_beats_ens_fitted": false
+  },
+  "bootstrap": {
+    "final_vs_param": {
+      "point_delta_auc": 0.03438,
+      "point_delta_acc": 0.00304,
+      "auc": {
+        "delta": 0.033,
+        "ci95": [
+          -0.01302,
+          0.08942
+        ],
+        "p_two_sided": 0.22
+      },
+      "accuracy": {
+        "delta": 0.0034,
+        "ci95": [
+          -0.02157,
+          0.02516
+        ],
+        "p_two_sided": 0.754
+      },
+      "n_resamples": 2000
+    },
+    "final_vs_ens_half": {
+      "point_delta_auc": -0.02839,
+      "point_delta_acc": -0.01471,
+      "auc": {
+        "delta": -0.02779,
+        "ci95": [
+          -0.05235,
+          -0.00648
+        ],
+        "p_two_sided": 0.004
+      },
+      "accuracy": {
+        "delta": -0.01437,
+        "ci95": [
+          -0.03749,
+          0.00526
+        ],
+        "p_two_sided": 0.173
+      },
+      "n_resamples": 2000
+    },
+    "final_vs_ens_fitted": {
+      "point_delta_auc": -0.02733,
+      "point_delta_acc": -0.01566,
+      "auc": {
+        "delta": -0.02664,
+        "ci95": [
+          -0.05528,
+          -0.00354
+        ],
+        "p_two_sided": 0.022
+      },
+      "accuracy": {
+        "delta": -0.01496,
+        "ci95": [
+          -0.05615,
+          0.02049
+        ],
+        "p_two_sided": 0.459
+      },
+      "n_resamples": 2000
+    },
+    "ens_half_vs_param": {
+      "point_delta_auc": 0.06276,
+      "point_delta_acc": 0.01774,
+      "auc": {
+        "delta": 0.06079,
+        "ci95": [
+          0.01517,
+          0.12009
+        ],
+        "p_two_sided": 0.001
+      },
+      "accuracy": {
+        "delta": 0.01776,
+        "ci95": [
+          -0.00096,
+          0.03739
+        ],
+        "p_two_sided": 0.07
+      },
+      "n_resamples": 2000
+    },
+    "img_vs_param": {
+      "point_delta_auc": 0.02944,
+      "point_delta_acc": -0.00288,
+      "auc": {
+        "delta": 0.02763,
+        "ci95": [
+          -0.04325,
+          0.10681
+        ],
+        "p_two_sided": 0.497
+      },
+      "accuracy": {
+        "delta": -0.00263,
+        "ci95": [
+          -0.05098,
+          0.04329
+        ],
+        "p_two_sided": 0.906
+      },
+      "n_resamples": 2000
+    }
+  },
+  "threshold_freedom": {
+    "p_param": {
+      "acc_at_0.5": 0.8654,
+      "oof_optimal_threshold": 0.54,
+      "acc_at_optimal_IN_SAMPLE": 0.8657
+    },
+    "p_final_loso": {
+      "acc_at_0.5": 0.8684,
+      "oof_optimal_threshold": 0.335,
+      "acc_at_optimal_IN_SAMPLE": 0.8726
+    },
+    "p_ens_half": {
+      "acc_at_0.5": 0.8832,
+      "oof_optimal_threshold": 0.51,
+      "acc_at_optimal_IN_SAMPLE": 0.8875
+    },
+    "p_img": {
+      "acc_at_0.5": 0.8625,
+      "oof_optimal_threshold": 0.465,
+      "acc_at_optimal_IN_SAMPLE": 0.8651
+    }
+  },
+  "temperature_sweep": [
+    {
+      "temperature": 0.01,
+      "p_img_auc": 0.9055,
+      "awrong": 0.6086,
+      "corr_param_img": 0.6594,
+      "gate_w_img": 0.3225,
+      "delta_auc_loso": 0.0459,
+      "delta_acc_loso": 0.0027,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 0.02,
+      "p_img_auc": 0.9115,
+      "awrong": 0.6009,
+      "corr_param_img": 0.6954,
+      "gate_w_img": 0.4134,
+      "delta_auc_loso": 0.0426,
+      "delta_acc_loso": 0.0043,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 0.035,
+      "p_img_auc": 0.9151,
+      "awrong": 0.5872,
+      "corr_param_img": 0.7179,
+      "gate_w_img": 0.4388,
+      "delta_auc_loso": 0.038,
+      "delta_acc_loso": 0.0042,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 0.07,
+      "p_img_auc": 0.9149,
+      "awrong": 0.5676,
+      "corr_param_img": 0.7276,
+      "gate_w_img": 0.4044,
+      "delta_auc_loso": 0.0344,
+      "delta_acc_loso": 0.003,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 0.15,
+      "p_img_auc": 0.9125,
+      "awrong": 0.5528,
+      "corr_param_img": 0.7263,
+      "gate_w_img": 0.3964,
+      "delta_auc_loso": 0.033,
+      "delta_acc_loso": 0.0011,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 0.3,
+      "p_img_auc": 0.9112,
+      "awrong": 0.5479,
+      "corr_param_img": 0.724,
+      "gate_w_img": 0.3885,
+      "delta_auc_loso": 0.0324,
+      "delta_acc_loso": 0.001,
+      "mean_top1_sim": 0.8165
+    },
+    {
+      "temperature": 1.0,
+      "p_img_auc": 0.911,
+      "awrong": 0.5475,
+      "corr_param_img": 0.722,
+      "gate_w_img": 0.3776,
+      "delta_auc_loso": 0.0318,
+      "delta_acc_loso": 0.0008,
+      "mean_top1_sim": 0.8165
+    }
+  ],
+  "artefact_checks": [
+    {
+      "check": "route=all",
+      "p_img_auc": 0.921,
+      "awrong": 0.5871,
+      "p_final_loso_auc": 0.9199,
+      "delta_auc_vs_param": 0.0344,
+      "delta_auc_vs_ens_half": -0.02833,
+      "ci95_vs_ens_half": [
+        -0.05179,
+        -0.00722
+      ],
+      "beats_ens_half": false
+    },
+    {
+      "check": "route=cross_mag",
+      "p_img_auc": 0.9112,
+      "awrong": 0.5557,
+      "p_final_loso_auc": 0.9209,
+      "delta_auc_vs_param": 0.0354,
+      "delta_auc_vs_ens_half": -0.02732,
+      "ci95_vs_ens_half": [
+        -0.05179,
+        -0.00635
+      ],
+      "beats_ens_half": false
+    },
+    {
+      "check": "cap=1",
+      "p_img_auc": 0.915,
+      "awrong": 0.5147,
+      "p_final_loso_auc": 0.9164,
+      "delta_auc_vs_param": 0.0309,
+      "delta_auc_vs_ens_half": -0.03186,
+      "ci95_vs_ens_half": [
+        -0.06009,
+        -0.0072
+      ],
+      "beats_ens_half": false
+    },
+    {
+      "check": "cap=15 (no cap)",
+      "p_img_auc": 0.912,
+      "awrong": 0.6054,
+      "p_final_loso_auc": 0.9259,
+      "delta_auc_vs_param": 0.0404,
+      "delta_auc_vs_ens_half": -0.02232,
+      "ci95_vs_ens_half": [
+        -0.04541,
+        -0.00282
+      ],
+      "beats_ens_half": false
+    },
+    {
+      "check": "k=5",
+      "p_img_auc": 0.8975,
+      "awrong": 0.6053,
+      "p_final_loso_auc": 0.9291,
+      "delta_auc_vs_param": 0.0436,
+      "delta_auc_vs_ens_half": -0.0191,
+      "ci95_vs_ens_half": [
+        -0.03847,
+        -0.00243
+      ],
+      "beats_ens_half": false
+    },
+    {
+      "check": "k=30",
+      "p_img_auc": 0.9173,
+      "awrong": 0.5387,
+      "p_final_loso_auc": 0.9138,
+      "delta_auc_vs_param": 0.0283,
+      "delta_auc_vs_ens_half": -0.03441,
+      "ci95_vs_ens_half": [
+        -0.062,
+        -0.00974
+      ],
+      "beats_ens_half": false
+    }
+  ]
+}
