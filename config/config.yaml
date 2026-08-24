@@ -1,0 +1,247 @@
+# =============================================================================
+# RAP-MST -- Single source of truth for every experiment.
+#
+# Nothing important is hardcoded in the Python. To change an experiment you edit
+# this file (or pass `--experiment {exp1,exp2,exp3}` / dotted overrides on the
+# CLI, which patch these same values). Defaults are tuned for a 4 GB RTX 3050:
+# Swin-Tiny @ 224px, small batch + gradient accumulation, mixed precision.
+# =============================================================================
+
+# -----------------------------------------------------------------------------
+# Reproducibility
+# -----------------------------------------------------------------------------
+seed: 42
+deterministic: true          # deterministic cuDNN (slower); false -> cudnn.benchmark
+
+# -----------------------------------------------------------------------------
+# Experiment identity (set by presets in rap_mst/experiments.py)
+# -----------------------------------------------------------------------------
+experiment:
+  name: exp1_swin_cls        # overwritten when --experiment is passed
+
+# -----------------------------------------------------------------------------
+# Data
+# -----------------------------------------------------------------------------
+data:
+  dataset_root: "D:/Downloads/BreaKHis_v1"
+  splits_path: "splits/breakhis_splits.json"
+  magnifications: null       # null = use all four (40/100/200/400) -> unified model
+  image_size: 224
+  batch_size: 16             # 4 GB VRAM friendly with AMP; lower to 8 if OOM
+  num_workers: 2
+  pin_memory: true
+  balanced_sampler: false    # oversample benign to counter 24:58 patient imbalance
+  two_view: false            # exp3/SupCon: emit a 2nd augmented crop -> [B,2,D]
+                             # contrastive pairs. Doubles the forward batch, so on
+                             # 4 GB pair with a smaller batch_size (e.g. 8).
+
+# -----------------------------------------------------------------------------
+# Augmentation (train-time only)
+# -----------------------------------------------------------------------------
+augmentation:
+  random_horizontal_flip: 0.5
+  random_vertical_flip: 0.5
+  random_rotation: 15
+  color_jitter:
+    brightness: 0.1
+    contrast: 0.1
+    saturation: 0.1
+    hue: 0.02
+  random_erasing: 0.0
+
+# -----------------------------------------------------------------------------
+# Model -- modular; components toggle on/off per experiment
+# -----------------------------------------------------------------------------
+model:
+  backbone:
+    variant: "swin_tiny_patch4_window7_224"   # timm Swin model name
+    pretrained: true
+    drop_rate: 0.0
+    drop_path_rate: 0.1
+    out_indices: [0, 1, 2, 3]  # hierarchical stages fed to the FPN (fine->coarse)
+  fpn:
+    enabled: true            # default backbone is Swin + FPN; false = deepest-stage only
+    out_channels: 256        # unified pyramid channels; lower to 128 if 4 GB OOM
+    norm: true               # GroupNorm in FPN convs (batch-size independent)
+  fusion:
+    mode: "concat"           # pyramid -> vector: "concat" | "mean" | "sum"
+  magnification:
+    enabled: false           # exp2/exp3 -> true
+    embed_dim: 64
+    fusion: "concat"         # "concat" | "add"
+  projection:
+    enabled: false           # exp3 -> true (needed for SupCon)
+    hidden_dim: 512
+    out_dim: 128
+    normalize: true
+  classifier:
+    num_classes: 2
+    hidden_dim: null         # null = linear head; int = one hidden layer
+    dropout: 0.1
+
+# -----------------------------------------------------------------------------
+# Loss -- modular weighted sum; add future terms here
+# -----------------------------------------------------------------------------
+loss:
+  ce_weight: 1.0
+  supcon_weight: 0.0         # exp3 preset sets this to 0.4
+  supcon_temperature: 0.07
+  use_class_weights: true    # inverse-frequency weighting on CrossEntropy
+
+# -----------------------------------------------------------------------------
+# Optimizer
+# -----------------------------------------------------------------------------
+optimizer:
+  name: adamw                # adamw | adam | sgd
+  lr: 0.0003
+  weight_decay: 0.05
+  betas: [0.9, 0.999]
+
+# -----------------------------------------------------------------------------
+# LR scheduler
+# -----------------------------------------------------------------------------
+scheduler:
+  name: cosine               # cosine | step | none
+  min_lr: 0.000001
+  step_size: 15              # used only by step
+  gamma: 0.1
+
+# -----------------------------------------------------------------------------
+# Training
+# -----------------------------------------------------------------------------
+train:
+  fold: 0                    # which CV fold (0-4); override with --fold
+  epochs: 10
+  mixed_precision: true      # AMP -- essential on 4 GB
+  grad_accum_steps: 2        # effective batch = batch_size * grad_accum_steps
+  grad_clip_norm: 1.0        # 0 disables
+  monitor: accuracy  # checkpoint / early-stop metric (val_metrics keys are unprefixed; higher is better). Patient-level per the protocol: image-level `accuracy` is image-count-weighted and majority-biased on the small, ~70%-malignant val folds, so it selects checkpoints poorly (it stays pinned near the class prior while the model is still improving). image-level accuracy/auc and patient_auc are still computed & logged.
+  early_stopping_patience: 10  # 0 disables
+
+# -----------------------------------------------------------------------------
+# Retrieval Memory module (post-fusion, non-parametric; see docs/retrieval.md)
+#
+# Two-stage and NOT end-to-end: the encoder is frozen before the bank is built, so
+# the whole module adds ~100 trainable parameters (the fusion gate).
+#   Stage B1  scripts/build_memory_bank.py   frozen encoder -> ONE .npz per fold
+#   Stage B2  scripts/train_gate.py          fit the gate on POOLED out-of-fold val
+#   Stage C   scripts/test.py --retrieval    p_param + p_img + p_slide -> p_final
+#
+# Every value below is a measured decision (D-numbers refer to docs/retrieval.md §9),
+# not a hyper-parameter to tune. The ablation ladder is a one-line change here.
+# -----------------------------------------------------------------------------
+retrieval:
+  enabled: true               # exp1-exp3n behave identically when false
+  base_experiment: exp3n       # D9 -- the frozen encoder the module is built on
+  key: features                # D1 -- what the memory indexes and queries on.
+                               #  Spec language: rap_mst/retrieval/keys.py.
+                               #    forward dict : features | embeddings | projections
+                               #    FPN poolings : fpn.gap | fpn.max | fpn.std | fpn.gem
+                               #                   (+ '@<level>' for one level,
+                               #                    '.ln' for per-level L2 norm)
+                               #    composition  : 'features+fpn.std' (parts L2-normed)
+                               #  NEVER 'embeddings' on a magnification-enabled encoder
+                               #  outside the ablation: 99.6-100% of neighbours then
+                               #  share the query's zoom. Measured comparison of every
+                               #  option: docs/results/retrieval_key_ablation.md.
+  key_transform: none          # D10 -- fitted key-space reshaping (rap_mst/retrieval/
+                               #  transform.py), fitted on the bank's TRAIN rows only
+                               #  and stored inside the bank .npz:
+                               #    none | center | pca_drop:<n> | whiten:<n> | drop_dirs
+                               #  'none' reproduces the original D1 behaviour exactly.
+  bank_path: "analysis/retrieval/{experiment}/bank_fold{fold}.npz"  # ONE file, all levels (D5)
+  gate_path: "analysis/retrieval/{experiment}/gate.pt"              # one gate, shared by folds
+  merge_levels: false          # D5 -- MUST stay false; true = one top-k over the
+                               #  union, which degenerates to image-only retrieval
+                               #  (centroid share ~1.2%) and loses the PC/TA rescues
+  block_query_patients: true   # defence in depth: a query never retrieves its own
+                               #  patient, even if the bank were built wrong
+  levels:
+    image:
+      enabled: true
+      route: same_mag          # D3 -- 'same_mag' | 'all' | 'cross_mag'
+      k: 15                    # D6 -- flat over 5..30
+      per_patient_cap: 3       # D4 -- at most 3 neighbours from one bank patient
+      temperature: 0.07        # D4 -- do not tune
+      candidate_pool_multiplier: 8   # cap search pool = k * this
+    slide:
+      enabled: true            # D5 -- fixes the cases image-kNN breaks
+      route: all               # slide centroids are per patient, not per mag
+      k: 5                     # specificity-optimal; larger k trades it away
+      per_patient_cap: 1       # one centroid per patient by construction
+      temperature: 0.07
+      candidate_pool_multiplier: 8
+  gate:
+    enabled: true              # D6 -- false = fixed blend at `fixed_weights`
+    hidden: 16
+    init_weights: [0.5, 0.5, 0.0]   # softmax output at init (param, img, slide)
+    init_weight_floor: 0.01    # log(0) is an unrecoverable dead unit; floor it
+    fixed_weights: [0.5, 0.5, 0.0]  # used only when gate.enabled=false
+    fit_on: pooled_oof         # never per-fold (docs/results/threshold_calibration.md §4)
+    epochs: 400                # full-batch Adam on ~8k rows x 5 features
+    lr: 0.01
+    weight_decay: 0.0
+  diagnostics:
+    log_retrieved_subtypes: true    # D8 -- interpretability, not a vote weight
+    dump_exemplars: true            # the paper's interpretability deliverable
+    exemplars_top_k: 5              # top-5 retrieved per exemplar query image
+    exemplars_per_patient: 5        # how many query images per hard patient
+    dump_exemplars_for:
+      - SOB_M_DC-14-12312           # low-grade ductal   -- image-kNN rescues it
+      - SOB_M_PC-14-9146            # papillary, rare    -- slide level rescues it
+      - SOB_B_TA-14-16184           # tubular adenoma    -- slide level rescues it
+      - SOB_M_MC-14-16456
+      - SOB_M_DC-14-20636
+
+# -----------------------------------------------------------------------------
+# Pathology foundation-model baseline (the paper)
+#
+# A *frozen* pathology foundation model + a linear head, on the SAME splits, the
+# SAME eval transform and the SAME metrics as exp1-exp3n, so it is one more row in
+# the main table rather than a separate study. Three stages, mirroring the
+# retrieval module's two-stage discipline (frozen encoder -> cache -> tiny head):
+#   Stage F1  scripts/extract_foundation_features.py   encode all ~7.9k images ONCE
+#   Stage F2  scripts/train_linear_probe.py            per-fold head on cached rows
+#   Stage F3  scripts/test_linear_probe.py             the 16-patient held-out set
+#
+# Why CTransPath and not UNI: UNI is HuggingFace-gated, CTransPath is not -- and at
+# ~27.5 M parameters it is param-matched to RAP-MST's ~30.8 M, so the comparison
+# isolates *pathology pretraining* from *model scale* (the paper). No
+# BreaKHis label is ever seen by the encoder, so caching all 82 patients' features
+# in one file is leakage-free; everything fitted from labels (the standardiser and
+# the head) is fitted on a fold's TRAIN rows only, and that is asserted.
+# -----------------------------------------------------------------------------
+foundation:
+  encoder: ctranspath        # key into `encoders:` below; also names the cache dir
+  encoders:
+    ctranspath:
+      hub_id: "hf-hub:1aurent/swin_tiny_patch4_window7_224.CTransPath"
+      embed_layer: convstem  # CTransPath replaces Swin's patch-embed with a CNN stem
+      feature_dim: 768       # asserted against the encoder's real output dim
+      pool: avg              # timm global_pool; num_classes=0 -> pooled vector out
+  cache_path: "analysis/foundation/{encoder}/features.npz"
+  batch_size: 32             # encode-only, no gradients -- fits 4 GB comfortably
+  amp: true
+
+  # The probe. Deliberately small: the point of the baseline is "frozen encoder +
+  # linear head", not a second modelling effort.
+  probe:
+    head: linear             # linear | mlp  (mlp = one hidden layer, see below)
+    hidden_dim: 512          # used only by head: mlp
+    dropout: 0.1             # matches model.classifier.dropout
+    standardize: true        # per-dimension z-score, fitted on TRAIN rows ONLY
+    use_class_weights: true  # same inverse-frequency CE weighting as exp1-exp3n
+    epochs: 100              # seconds on cached features; the head is tiny
+    batch_size: 256
+    lr: 0.001
+    weight_decay: 0.0001
+    scheduler: cosine        # cosine | none
+    min_lr: 0.000001
+    monitor: accuracy        # SAME selection rule exp1-exp3n used (image-level val)
+    early_stopping_patience: 20
+
+# -----------------------------------------------------------------------------
+# Logging / checkpoints
+# -----------------------------------------------------------------------------
+logging:
+  log_root: "runs"           # runs/<experiment>/<timestamp>_fold<k>/
