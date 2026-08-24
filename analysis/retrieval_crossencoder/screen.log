@@ -1,0 +1,188 @@
+2026-08-05 00:27:14 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CROSS-ENCODER RETRIEVAL SCREEN (pooled OOF)
+══════════════════════════════════════════════════════════════════════════
+  base encoder (p_param)    : exp3n -> exp3n
+  foreign encoder (bank+query keys): ctranspath
+  foreign feature cache     : analysis/foundation/ctranspath/features.npz
+  folds                     : [0, 1, 2, 3, 4]
+  held fixed                : route/k/cap/two-level ranking (D3-D7) + Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the TEST SET IS NOT TOUCHED
+  primary endpoints         : awrong, gate weight on memory, subtype lift, neighbour overlap
+  secondary endpoint        : accuracy vs p_param AND vs the two-probe ensemble
+  output dir                : analysis\retrieval_crossencoder
+  device                    : cuda
+──────────────────────────────────────────────────────────────────────────
+2026-08-05 00:27:19 | INFO    | loaded 5 base fold caches from analysis\retrieval_keys\exp3n
+2026-08-05 00:27:20 | INFO    | ROW ALIGNMENT VERIFIED (image_path join; patient_id/label/mag_index checked element-wise on 31280 rows)
+2026-08-05 00:27:24 | INFO    |   probe val predictions fold 0: 1715 rows <- 20260728_201818_train_fold0
+2026-08-05 00:27:24 | INFO    |   probe val predictions fold 1: 1123 rows <- 20260728_201831_train_fold1
+2026-08-05 00:27:24 | INFO    |   probe val predictions fold 2: 1119 rows <- 20260728_201839_train_fold2
+2026-08-05 00:27:24 | INFO    |   probe val predictions fold 3: 1229 rows <- 20260728_201849_train_fold3
+2026-08-05 00:27:24 | INFO    |   probe val predictions fold 4: 1070 rows <- 20260728_201852_train_fold4
+2026-08-05 00:27:25 | INFO    | 
+2026-08-05 00:27:25 | INFO    | [1/6] exp3n features (same-encoder D1)  key='features' transform='none' key_encoder=exp3n
+2026-08-05 00:27:50 | INFO    |     dim=1024 eff_rank=1.19 | awrong=0.0559 corr=0.948 | p_img auc=0.8678 | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=+0.0152
+2026-08-05 00:27:50 | INFO    |     w=[0.8226, 0.1468, 0.0306] (w_param wrong 0.721 vs correct 0.838) | mag_lock=0.411 subtype_lift=+0.133 | top1_sim=0.9986 | best-alpha 0.89 -> +0.0009
+2026-08-05 00:27:50 | INFO    | 
+2026-08-05 00:27:50 | INFO    | [2/6] exp1 features (cross-encoder control)  key='features' transform='none' key_encoder=exp1
+2026-08-05 00:28:15 | INFO    |     dim=1024 eff_rank=1.27 | awrong=0.1333 corr=0.908 | p_img auc=0.8718 | LOSO auc=0.8872 (+0.0017) acc=0.8659 (+0.0005) pat=+0.0606
+2026-08-05 00:28:15 | INFO    |     w=[0.836, 0.1323, 0.0318] (w_param wrong 0.698 vs correct 0.857) | mag_lock=0.381 subtype_lift=+0.118 | top1_sim=0.9987 | best-alpha 0.71 -> +0.0043
+2026-08-05 00:28:15 | INFO    | 
+2026-08-05 00:28:15 | INFO    | [3/6] exp1 fpn.std (cross-encoder control)  key='fpn.std' transform='none' key_encoder=exp1
+2026-08-05 00:28:44 | INFO    |     dim=1024 eff_rank=2.89 | awrong=0.1281 corr=0.906 | p_img auc=0.8723 | LOSO auc=0.8883 (+0.0028) acc=0.8652 (-0.0002) pat=+0.0455
+2026-08-05 00:28:44 | INFO    |     w=[0.8082, 0.1501, 0.0417] (w_param wrong 0.657 vs correct 0.832) | mag_lock=0.339 subtype_lift=+0.121 | top1_sim=0.9981 | best-alpha 0.72 -> +0.0047
+2026-08-05 00:28:44 | INFO    | 
+2026-08-05 00:28:44 | INFO    | [4/6] CTP features  key='features' transform='none' key_encoder=ctranspath
+2026-08-05 00:29:13 | INFO    |     dim=768 eff_rank=22.61 | awrong=0.5676 corr=0.728 | p_img auc=0.9149 | LOSO auc=0.9199 (+0.0344) acc=0.8684 (+0.0030) pat=+0.0000
+2026-08-05 00:29:13 | INFO    |     w=[0.448, 0.4044, 0.1477] (w_param wrong 0.394 vs correct 0.456) | mag_lock=0.740 subtype_lift=+0.170 | top1_sim=0.8165 | best-alpha 0.40 -> +0.0528
+2026-08-05 00:29:13 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.075 (jaccard 0.041), patients 0.338, top-1 identical 0.024
+2026-08-05 00:29:13 | INFO    | 
+2026-08-05 00:29:13 | INFO    | [5/6] CTP features whiten:128  key='features' transform='whiten:128' key_encoder=ctranspath
+2026-08-05 00:29:58 | INFO    |     dim=128 eff_rank=126.48 | awrong=0.7272 corr=0.681 | p_img auc=0.9337 | LOSO auc=0.9412 (+0.0557) acc=0.8836 (+0.0182) pat=+0.0303
+2026-08-05 00:29:58 | INFO    |     w=[0.3363, 0.4498, 0.2139] (w_param wrong 0.315 vs correct 0.340) | mag_lock=0.668 subtype_lift=+0.135 | top1_sim=0.4461 | best-alpha 0.34 -> +0.0680
+2026-08-05 00:29:58 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.056 (jaccard 0.030), patients 0.294, top-1 identical 0.017
+2026-08-05 00:29:58 | INFO    | 
+2026-08-05 00:29:58 | INFO    | [6/6] CTP features pca_drop:10  key='features' transform='pca_drop:10' key_encoder=ctranspath
+2026-08-05 00:30:36 | INFO    |     dim=768 eff_rank=71.87 | awrong=0.7393 corr=0.634 | p_img auc=0.9169 | LOSO auc=0.9319 (+0.0464) acc=0.8795 (+0.0141) pat=+0.0758
+2026-08-05 00:30:36 | INFO    |     w=[0.4278, 0.5167, 0.0555] (w_param wrong 0.439 vs correct 0.426) | mag_lock=0.605 subtype_lift=+0.115 | top1_sim=0.4708 | best-alpha 0.38 -> +0.0646
+2026-08-05 00:30:36 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.050 (jaccard 0.027), patients 0.275, top-1 identical 0.012
+2026-08-05 00:30:38 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ ENSEMBLE CONTROL (the bar p_final must clear)
+══════════════════════════════════════════════════════════════════════════
+  p_param (exp3n head)      : auc 0.8855 acc 0.8654
+  p_probe (CTransPath linear head): auc 0.9415 acc 0.8764
+  p_ens = 1/2(param+probe)  : auc 0.9482 acc 0.8832
+  p_ens fitted (LOSO alpha) : auc 0.9472 acc 0.8841
+  p_final (CTP memory, LOSO): auc 0.9199 acc 0.8684
+──────────────────────────────────────────────────────────────────────────
+  awrong of p_probe (head's errors): 0.6148
+  awrong of p_img (CTP memory): 0.5676
+  corr(p_param, p_probe)    : 0.7331
+  corr(p_param, p_img)      : 0.7276
+──────────────────────────────────────────────────────────────────────────
+2026-08-05 00:32:33 | INFO    | 
+2026-08-05 00:32:33 | INFO    | Patient-clustered bootstrap (2000 resamples over 66 CV patients, paired)
+2026-08-05 00:32:33 | INFO    | comparison                    dAUC                 95% CI      dAcc                 95% CI
+2026-08-05 00:32:33 | INFO    | final_vs_param            +0.03300 [-0.01302,+0.08942]  +0.00340 [-0.02157,+0.02516]
+2026-08-05 00:32:33 | INFO    | final_vs_ens_half         -0.02779 [-0.05235,-0.00648]  -0.01437 [-0.03749,+0.00526]
+2026-08-05 00:32:33 | INFO    | final_vs_ens_fitted       -0.02664 [-0.05528,-0.00354]  -0.01496 [-0.05615,+0.02049]
+2026-08-05 00:32:33 | INFO    | ens_half_vs_param         +0.06079 [+0.01517,+0.12009]  +0.01776 [-0.00096,+0.03739]
+2026-08-05 00:32:33 | INFO    | img_vs_param              +0.02763 [-0.04325,+0.10681]  -0.00263 [-0.05098,+0.04329]
+2026-08-05 00:32:33 | INFO    | 
+2026-08-05 00:32:33 | INFO    | Temperature sensitivity of the foreign vote (primary config only). T=0.07 was fixed on exp3n's key space, whose top1-top15 similarity spread is ~0.001; CTransPath's is ~0.07, so the SAME T is a sharper rule.
+2026-08-05 00:32:58 | INFO    |   T=0.01  p_img auc=0.9055 awrong=0.6086 w_img=0.3225 dAUC=+0.0459 dAcc=+0.0027
+2026-08-05 00:33:23 | INFO    |   T=0.02  p_img auc=0.9115 awrong=0.6009 w_img=0.4134 dAUC=+0.0426 dAcc=+0.0043
+2026-08-05 00:33:48 | INFO    |   T=0.035 p_img auc=0.9151 awrong=0.5872 w_img=0.4388 dAUC=+0.0380 dAcc=+0.0042
+2026-08-05 00:34:16 | INFO    |   T=0.07  p_img auc=0.9149 awrong=0.5676 w_img=0.4044 dAUC=+0.0344 dAcc=+0.0030
+2026-08-05 00:34:40 | INFO    |   T=0.15  p_img auc=0.9125 awrong=0.5528 w_img=0.3964 dAUC=+0.0330 dAcc=+0.0011
+2026-08-05 00:35:04 | INFO    |   T=0.3   p_img auc=0.9112 awrong=0.5479 w_img=0.3885 dAUC=+0.0324 dAcc=+0.0010
+2026-08-05 00:35:29 | INFO    |   T=1.0   p_img auc=0.9110 awrong=0.5475 w_img=0.3776 dAUC=+0.0318 dAcc=+0.0008
+2026-08-05 00:35:29 | INFO    | 
+Saved -> analysis\retrieval_crossencoder\crossencoder_screen.json
+2026-08-05 00:35:29 | INFO    | 
+configuration                                 enc  awrong   corr  pImgAUC  w_img     dAUC     dAcc     dPat   slift
+2026-08-05 00:35:29 | INFO    | -------------------------------------------------------------------------------------------------------------------
+2026-08-05 00:35:29 | INFO    | exp3n features (same-encoder D1)            exp3n  0.0559  0.948   0.8678  0.147  -0.0022  -0.0027  +0.0152  +0.133
+2026-08-05 00:35:29 | INFO    | exp1 features (cross-encoder control)        exp1  0.1333  0.908   0.8718  0.132  +0.0017  +0.0005  +0.0606  +0.118
+2026-08-05 00:35:29 | INFO    | exp1 fpn.std (cross-encoder control)         exp1  0.1281  0.906   0.8723  0.150  +0.0028  -0.0002  +0.0455  +0.121
+2026-08-05 00:35:29 | INFO    | CTP features                           ctranspath  0.5676  0.728   0.9149  0.404  +0.0344  +0.0030  +0.0000  +0.170
+2026-08-05 00:35:29 | INFO    | CTP features whiten:128                ctranspath  0.7272  0.681   0.9337  0.450  +0.0557  +0.0182  +0.0303  +0.135
+2026-08-05 00:35:29 | INFO    | CTP features pca_drop:10               ctranspath  0.7393  0.634   0.9169  0.517  +0.0464  +0.0141  +0.0758  +0.115
+2026-08-05 00:39:24 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CROSS-ENCODER RETRIEVAL SCREEN (pooled OOF)
+══════════════════════════════════════════════════════════════════════════
+  base encoder (p_param)    : exp3n -> exp3n
+  foreign encoder (bank+query keys): ctranspath
+  foreign feature cache     : analysis/foundation/ctranspath/features.npz
+  folds                     : [0, 1, 2, 3, 4]
+  held fixed                : route/k/cap/two-level ranking (D3-D7) + Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the TEST SET IS NOT TOUCHED
+  primary endpoints         : awrong, gate weight on memory, subtype lift, neighbour overlap
+  secondary endpoint        : accuracy vs p_param AND vs the two-probe ensemble
+  output dir                : analysis\retrieval_crossencoder
+  device                    : cuda
+──────────────────────────────────────────────────────────────────────────
+2026-08-05 00:39:29 | INFO    | loaded 5 base fold caches from analysis\retrieval_keys\exp3n
+2026-08-05 00:39:30 | INFO    | ROW ALIGNMENT VERIFIED (image_path join; patient_id/label/mag_index checked element-wise on 31280 rows)
+2026-08-05 00:39:35 | INFO    |   probe val predictions fold 0: 1715 rows <- 20260728_201818_train_fold0
+2026-08-05 00:39:35 | INFO    |   probe val predictions fold 1: 1123 rows <- 20260728_201831_train_fold1
+2026-08-05 00:39:35 | INFO    |   probe val predictions fold 2: 1119 rows <- 20260728_201839_train_fold2
+2026-08-05 00:39:35 | INFO    |   probe val predictions fold 3: 1229 rows <- 20260728_201849_train_fold3
+2026-08-05 00:39:35 | INFO    |   probe val predictions fold 4: 1070 rows <- 20260728_201852_train_fold4
+2026-08-05 00:39:36 | INFO    | 
+2026-08-05 00:39:36 | INFO    | [1/6] exp3n features (same-encoder D1)  key='features' transform='none' key_encoder=exp3n
+2026-08-05 00:40:02 | INFO    |     dim=1024 eff_rank=1.19 | awrong=0.0559 corr=0.948 | p_img auc=0.8678 | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=+0.0152
+2026-08-05 00:40:02 | INFO    |     w=[0.8226, 0.1468, 0.0306] (w_param wrong 0.721 vs correct 0.838) | mag_lock=0.411 subtype_lift=+0.133 | top1_sim=0.9986 | best-alpha 0.89 -> +0.0009
+2026-08-05 00:40:02 | INFO    | 
+2026-08-05 00:40:02 | INFO    | [2/6] exp1 features (cross-encoder control)  key='features' transform='none' key_encoder=exp1
+2026-08-05 00:40:26 | INFO    |     dim=1024 eff_rank=1.27 | awrong=0.1333 corr=0.908 | p_img auc=0.8718 | LOSO auc=0.8872 (+0.0017) acc=0.8659 (+0.0005) pat=+0.0606
+2026-08-05 00:40:26 | INFO    |     w=[0.836, 0.1323, 0.0318] (w_param wrong 0.698 vs correct 0.857) | mag_lock=0.381 subtype_lift=+0.118 | top1_sim=0.9987 | best-alpha 0.71 -> +0.0043
+2026-08-05 00:40:26 | INFO    | 
+2026-08-05 00:40:26 | INFO    | [3/6] exp1 fpn.std (cross-encoder control)  key='fpn.std' transform='none' key_encoder=exp1
+2026-08-05 00:40:51 | INFO    |     dim=1024 eff_rank=2.89 | awrong=0.1281 corr=0.906 | p_img auc=0.8723 | LOSO auc=0.8883 (+0.0028) acc=0.8652 (-0.0002) pat=+0.0455
+2026-08-05 00:40:51 | INFO    |     w=[0.8082, 0.1501, 0.0417] (w_param wrong 0.657 vs correct 0.832) | mag_lock=0.339 subtype_lift=+0.121 | top1_sim=0.9981 | best-alpha 0.72 -> +0.0047
+2026-08-05 00:40:51 | INFO    | 
+2026-08-05 00:40:51 | INFO    | [4/6] CTP features  key='features' transform='none' key_encoder=ctranspath
+2026-08-05 00:41:17 | INFO    |     dim=768 eff_rank=22.61 | awrong=0.5676 corr=0.728 | p_img auc=0.9149 | LOSO auc=0.9199 (+0.0344) acc=0.8684 (+0.0030) pat=+0.0000
+2026-08-05 00:41:17 | INFO    |     w=[0.448, 0.4044, 0.1477] (w_param wrong 0.394 vs correct 0.456) | mag_lock=0.740 subtype_lift=+0.170 | top1_sim=0.8165 | best-alpha 0.40 -> +0.0528
+2026-08-05 00:41:17 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.075 (jaccard 0.041), patients 0.338, top-1 identical 0.024
+2026-08-05 00:41:17 | INFO    | 
+2026-08-05 00:41:17 | INFO    | [5/6] CTP features whiten:128  key='features' transform='whiten:128' key_encoder=ctranspath
+2026-08-05 00:41:57 | INFO    |     dim=128 eff_rank=126.48 | awrong=0.7272 corr=0.681 | p_img auc=0.9337 | LOSO auc=0.9412 (+0.0557) acc=0.8836 (+0.0182) pat=+0.0303
+2026-08-05 00:41:57 | INFO    |     w=[0.3363, 0.4498, 0.2139] (w_param wrong 0.315 vs correct 0.340) | mag_lock=0.668 subtype_lift=+0.135 | top1_sim=0.4461 | best-alpha 0.34 -> +0.0680
+2026-08-05 00:41:57 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.056 (jaccard 0.030), patients 0.294, top-1 identical 0.017
+2026-08-05 00:41:57 | INFO    | 
+2026-08-05 00:41:57 | INFO    | [6/6] CTP features pca_drop:10  key='features' transform='pca_drop:10' key_encoder=ctranspath
+2026-08-05 00:42:40 | INFO    |     dim=768 eff_rank=71.87 | awrong=0.7393 corr=0.634 | p_img auc=0.9169 | LOSO auc=0.9319 (+0.0464) acc=0.8795 (+0.0141) pat=+0.0758
+2026-08-05 00:42:40 | INFO    |     w=[0.4278, 0.5167, 0.0555] (w_param wrong 0.439 vs correct 0.426) | mag_lock=0.605 subtype_lift=+0.115 | top1_sim=0.4708 | best-alpha 0.38 -> +0.0646
+2026-08-05 00:42:40 | INFO    |     neighbour overlap vs exp3n memory: top-15 0.050 (jaccard 0.027), patients 0.275, top-1 identical 0.012
+2026-08-05 00:42:43 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ ENSEMBLE CONTROL (the bar p_final must clear)
+══════════════════════════════════════════════════════════════════════════
+  p_param (exp3n head)      : auc 0.8855 acc 0.8654
+  p_probe (CTransPath linear head): auc 0.9415 acc 0.8764
+  p_ens = 1/2(param+probe)  : auc 0.9482 acc 0.8832
+  p_ens fitted (LOSO alpha) : auc 0.9472 acc 0.8841
+  p_final (CTP memory, LOSO): auc 0.9199 acc 0.8684
+──────────────────────────────────────────────────────────────────────────
+  awrong of p_probe (head's errors): 0.6148
+  awrong of p_img (CTP memory): 0.5676
+  corr(p_param, p_probe)    : 0.7331
+  corr(p_param, p_img)      : 0.7276
+──────────────────────────────────────────────────────────────────────────
+2026-08-05 00:44:35 | INFO    | 
+2026-08-05 00:44:35 | INFO    | Patient-clustered bootstrap (2000 resamples over 66 CV patients, paired)
+2026-08-05 00:44:35 | INFO    | comparison                    dAUC                 95% CI      dAcc                 95% CI
+2026-08-05 00:44:35 | INFO    | final_vs_param            +0.03300 [-0.01302,+0.08942]  +0.00340 [-0.02157,+0.02516]
+2026-08-05 00:44:35 | INFO    | final_vs_ens_half         -0.02779 [-0.05235,-0.00648]  -0.01437 [-0.03749,+0.00526]
+2026-08-05 00:44:35 | INFO    | final_vs_ens_fitted       -0.02664 [-0.05528,-0.00354]  -0.01496 [-0.05615,+0.02049]
+2026-08-05 00:44:35 | INFO    | ens_half_vs_param         +0.06079 [+0.01517,+0.12009]  +0.01776 [-0.00096,+0.03739]
+2026-08-05 00:44:35 | INFO    | img_vs_param              +0.02763 [-0.04325,+0.10681]  -0.00263 [-0.05098,+0.04329]
+2026-08-05 00:44:35 | INFO    | 
+2026-08-05 00:44:35 | INFO    | Temperature sensitivity of the foreign vote (primary config only). T=0.07 was fixed on exp3n's key space, whose top1-top15 similarity spread is ~0.001; CTransPath's is ~0.07, so the SAME T is a sharper rule.
+2026-08-05 00:44:59 | INFO    |   T=0.01  p_img auc=0.9055 awrong=0.6086 w_img=0.3225 dAUC=+0.0459 dAcc=+0.0027
+2026-08-05 00:45:23 | INFO    |   T=0.02  p_img auc=0.9115 awrong=0.6009 w_img=0.4134 dAUC=+0.0426 dAcc=+0.0043
+2026-08-05 00:45:51 | INFO    |   T=0.035 p_img auc=0.9151 awrong=0.5872 w_img=0.4388 dAUC=+0.0380 dAcc=+0.0042
+2026-08-05 00:46:19 | INFO    |   T=0.07  p_img auc=0.9149 awrong=0.5676 w_img=0.4044 dAUC=+0.0344 dAcc=+0.0030
+2026-08-05 00:46:44 | INFO    |   T=0.15  p_img auc=0.9125 awrong=0.5528 w_img=0.3964 dAUC=+0.0330 dAcc=+0.0011
+2026-08-05 00:47:10 | INFO    |   T=0.3   p_img auc=0.9112 awrong=0.5479 w_img=0.3885 dAUC=+0.0324 dAcc=+0.0010
+2026-08-05 00:47:36 | INFO    |   T=1.0   p_img auc=0.9110 awrong=0.5475 w_img=0.3776 dAUC=+0.0318 dAcc=+0.0008
+2026-08-05 00:47:36 | INFO    | 
+2026-08-05 00:47:36 | INFO    | Artefact checks on the primary config (NOT candidate configurations -- reported whatever they say; D3-D7 remain at their measured values).
+2026-08-05 00:48:26 | INFO    |   route=all        p_img auc=0.9210 awrong=0.5871 p_final=0.9199 (vs param +0.0344, vs ensemble -0.0283 [-0.0518,-0.0072])
+2026-08-05 00:49:16 | INFO    |   route=cross_mag  p_img auc=0.9112 awrong=0.5557 p_final=0.9209 (vs param +0.0354, vs ensemble -0.0273 [-0.0518,-0.0063])
+2026-08-05 00:50:04 | INFO    |   cap=1            p_img auc=0.9150 awrong=0.5147 p_final=0.9164 (vs param +0.0309, vs ensemble -0.0319 [-0.0601,-0.0072])
+2026-08-05 00:50:59 | INFO    |   cap=15 (no cap)  p_img auc=0.9120 awrong=0.6054 p_final=0.9259 (vs param +0.0404, vs ensemble -0.0223 [-0.0454,-0.0028])
+2026-08-05 00:51:53 | INFO    |   k=5              p_img auc=0.8975 awrong=0.6053 p_final=0.9291 (vs param +0.0436, vs ensemble -0.0191 [-0.0385,-0.0024])
+2026-08-05 00:52:49 | INFO    |   k=30             p_img auc=0.9173 awrong=0.5387 p_final=0.9138 (vs param +0.0283, vs ensemble -0.0344 [-0.0620,-0.0097])
+2026-08-05 00:52:49 | INFO    | 
+Saved -> analysis\retrieval_crossencoder\crossencoder_screen.json
+2026-08-05 00:52:49 | INFO    | 
+configuration                                 enc  awrong   corr  pImgAUC  w_img     dAUC     dAcc     dPat   slift
+2026-08-05 00:52:49 | INFO    | -------------------------------------------------------------------------------------------------------------------
+2026-08-05 00:52:49 | INFO    | exp3n features (same-encoder D1)            exp3n  0.0559  0.948   0.8678  0.147  -0.0022  -0.0027  +0.0152  +0.133
+2026-08-05 00:52:49 | INFO    | exp1 features (cross-encoder control)        exp1  0.1333  0.908   0.8718  0.132  +0.0017  +0.0005  +0.0606  +0.118
+2026-08-05 00:52:49 | INFO    | exp1 fpn.std (cross-encoder control)         exp1  0.1281  0.906   0.8723  0.150  +0.0028  -0.0002  +0.0455  +0.121
+2026-08-05 00:52:49 | INFO    | CTP features                           ctranspath  0.5676  0.728   0.9149  0.404  +0.0344  +0.0030  +0.0000  +0.170
+2026-08-05 00:52:49 | INFO    | CTP features whiten:128                ctranspath  0.7272  0.681   0.9337  0.450  +0.0557  +0.0182  +0.0303  +0.135
+2026-08-05 00:52:49 | INFO    | CTP features pca_drop:10               ctranspath  0.7393  0.634   0.9169  0.517  +0.0464  +0.0141  +0.0758  +0.115
