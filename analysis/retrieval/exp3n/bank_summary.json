@@ -1,0 +1,22 @@
+[
+  {
+    "fold": 4,
+    "path": "analysis\\retrieval\\exp3n\\bank_fold4.npz",
+    "size_mb": 19.99,
+    "rows": 5239,
+    "image_rows": 5186,
+    "slide_rows": 53,
+    "patients": 53,
+    "dim": 1024,
+    "key": "features",
+    "mag_shard_sizes": {
+      "40": 1296,
+      "100": 1366,
+      "200": 1322,
+      "400": 1202
+    },
+    "key_norm_min": 0.9999998211860657,
+    "key_norm_max": 1.000000238418579,
+    "max_image_rows_per_patient": 235
+  }
+]
