@@ -1,0 +1,708 @@
+{
+  "exp1": {
+    "A3_mag_decodable": {
+      "knn_mag_recovery_acc": 0.35332,
+      "chance": 0.2607,
+      "same_mag_neighbour_rate": 0.31394
+    },
+    "A4_per_mag_head": {
+      "40x": {
+        "n": 425.0,
+        "acc": 0.9087,
+        "auc": 0.96866,
+        "sens": 0.92532,
+        "spec": 0.8688
+      },
+      "100x": {
+        "n": 431.0,
+        "acc": 0.92296,
+        "auc": 0.96994,
+        "sens": 0.94548,
+        "spec": 0.8589
+      },
+      "200x": {
+        "n": 418.0,
+        "acc": 0.88612,
+        "auc": 0.93322,
+        "sens": 0.91638,
+        "spec": 0.8101
+      },
+      "400x": {
+        "n": 379.0,
+        "acc": 0.9029,
+        "auc": 0.9566,
+        "sens": 0.90684,
+        "spec": 0.89218
+      }
+    },
+    "B_storage": {
+      "B1_split_image_view": {
+        "img_acc": 0.88856,
+        "auc": 0.91634,
+        "patient_acc": 0.95,
+        "sens": 0.92354,
+        "spec": 0.79738,
+        "hp::SOB_M_DC-14-12312": 0.67006,
+        "hp::SOB_M_PC-14-9146": 0.64202,
+        "hp::SOB_B_TA-14-16184": 0.5149,
+        "hp::SOB_M_MC-14-16456": 0.84406,
+        "hp::SOB_M_DC-14-20636": 0.98374
+      },
+      "B1_split_slide_view": {
+        "img_acc": 0.89932,
+        "auc": 0.91482,
+        "patient_acc": 0.975,
+        "sens": 0.91114,
+        "spec": 0.86858,
+        "hp::SOB_M_DC-14-12312": 0.61418,
+        "hp::SOB_M_PC-14-9146": 0.70386,
+        "hp::SOB_B_TA-14-16184": 0.38766,
+        "hp::SOB_M_MC-14-16456": 0.9148,
+        "hp::SOB_M_DC-14-20636": 1.0
+      },
+      "B1_split_blend_50_50": {
+        "img_acc": 0.89582,
+        "auc": 0.9188,
+        "patient_acc": 0.975,
+        "sens": 0.91566,
+        "spec": 0.84408,
+        "hp::SOB_M_DC-14-12312": 0.64214,
+        "hp::SOB_M_PC-14-9146": 0.67296,
+        "hp::SOB_B_TA-14-16184": 0.4513,
+        "hp::SOB_M_MC-14-16456": 0.87944,
+        "hp::SOB_M_DC-14-20636": 0.99186
+      },
+      "similarity_scale": {
+        "mean_sim_image_rows": 0.68846,
+        "mean_sim_centroid_rows": 0.71912,
+        "mean_top1_image": 0.9983,
+        "mean_top1_centroid": 0.9869,
+        "frac_queries_centroid_beats_best_image": 0.01064,
+        "std_sim_image_rows": 0.30378,
+        "std_sim_centroid_rows": 0.28082
+      },
+      "B2_merged_single_topk_k15": {
+        "img_acc": 0.88892,
+        "auc": 0.9164,
+        "patient_acc": 0.95,
+        "sens": 0.92352,
+        "spec": 0.79868,
+        "hp::SOB_M_DC-14-12312": 0.66966,
+        "hp::SOB_M_PC-14-9146": 0.64188,
+        "hp::SOB_B_TA-14-16184": 0.51348,
+        "hp::SOB_M_MC-14-16456": 0.84464,
+        "hp::SOB_M_DC-14-20636": 0.98386,
+        "mean_centroid_share_of_topk": 0.01094,
+        "frac_queries_zero_centroids": 0.84704
+      },
+      "B2_merged_single_topk_k20": {
+        "img_acc": 0.89026,
+        "auc": 0.91848,
+        "patient_acc": 0.95,
+        "sens": 0.92418,
+        "spec": 0.80174,
+        "hp::SOB_M_DC-14-12312": 0.66674,
+        "hp::SOB_M_PC-14-9146": 0.65324,
+        "hp::SOB_B_TA-14-16184": 0.5086,
+        "hp::SOB_M_MC-14-16456": 0.847,
+        "hp::SOB_M_DC-14-20636": 0.98254,
+        "mean_centroid_share_of_topk": 0.01094,
+        "frac_queries_zero_centroids": 0.8011
+      },
+      "B2b_merged_zscored_levels": {
+        "img_acc": 0.88882,
+        "auc": 0.9158,
+        "patient_acc": 0.95,
+        "sens": 0.92336,
+        "spec": 0.7987,
+        "hp::SOB_M_DC-14-12312": 0.66914,
+        "hp::SOB_M_PC-14-9146": 0.64232,
+        "hp::SOB_B_TA-14-16184": 0.51364,
+        "hp::SOB_M_MC-14-16456": 0.84474,
+        "hp::SOB_M_DC-14-20636": 0.9841,
+        "mean_centroid_share_of_topk": 0.01352
+      },
+      "B3_unified_two_views_image": {
+        "img_acc": 0.88856,
+        "auc": 0.91634,
+        "patient_acc": 0.95,
+        "sens": 0.92354,
+        "spec": 0.79738,
+        "hp::SOB_M_DC-14-12312": 0.67006,
+        "hp::SOB_M_PC-14-9146": 0.64202,
+        "hp::SOB_B_TA-14-16184": 0.5149,
+        "hp::SOB_M_MC-14-16456": 0.84406,
+        "hp::SOB_M_DC-14-20636": 0.98374
+      },
+      "B3_unified_two_views_slide": {
+        "img_acc": 0.89932,
+        "auc": 0.91482,
+        "patient_acc": 0.975,
+        "sens": 0.91114,
+        "spec": 0.86858,
+        "hp::SOB_M_DC-14-12312": 0.61418,
+        "hp::SOB_M_PC-14-9146": 0.70386,
+        "hp::SOB_B_TA-14-16184": 0.38766,
+        "hp::SOB_M_MC-14-16456": 0.9148,
+        "hp::SOB_M_DC-14-20636": 1.0
+      },
+      "B3_equals_B1": {
+        "max_abs_diff_p_img": 0.0,
+        "max_abs_diff_p_slide": 0.0
+      }
+    }
+  },
+  "exp2": {
+    "A1_geometry": {
+      "mean_feature_norm": 27.9276,
+      "mean_magblock_norm": 8.00748,
+      "magblock_norm_share": 0.08112,
+      "n_distinct_block_values": 4.0
+    },
+    "A2_counterfactual": {
+      "acc_true_mag": 0.89742,
+      "auc_true_mag": 0.95496,
+      "forced_magnification": {
+        "forced_40x": {
+          "acc": 0.89522,
+          "auc": 0.95464,
+          "mean_abs_prob_shift_vs_true": 0.00779
+        },
+        "forced_100x": {
+          "acc": 0.89512,
+          "auc": 0.95464,
+          "mean_abs_prob_shift_vs_true": 0.00764
+        },
+        "forced_200x": {
+          "acc": 0.8957,
+          "auc": 0.95464,
+          "mean_abs_prob_shift_vs_true": 0.00558
+        },
+        "forced_400x": {
+          "acc": 0.90258,
+          "auc": 0.95464,
+          "mean_abs_prob_shift_vs_true": 0.01122
+        }
+      },
+      "acc_block_zeroed": 0.89632,
+      "auc_block_zeroed": 0.95464,
+      "mean_abs_prob_shift_zeroed": 0.00657,
+      "acc_block_table_mean": 0.89704,
+      "auc_block_table_mean": 0.95464,
+      "mean_abs_prob_shift_table_mean": 0.00635,
+      "logit_offset_per_mag": {
+        "40x": -0.14078,
+        "100x": 0.0328,
+        "200x": 0.01228,
+        "400x": 0.29654
+      },
+      "logit_offset_spread": 0.5818,
+      "feature_logit_std": 4.59652,
+      "offset_spread_over_feature_std": 0.12274
+    },
+    "A3_mag_decodable": {
+      "knn_mag_recovery_acc": 0.37822,
+      "chance": 0.2607,
+      "same_mag_neighbour_rate": 0.33224
+    },
+    "A4_per_mag_head": {
+      "40x": {
+        "n": 425.0,
+        "acc": 0.89318,
+        "auc": 0.95932,
+        "sens": 0.91002,
+        "spec": 0.8528
+      },
+      "100x": {
+        "n": 431.0,
+        "acc": 0.90626,
+        "auc": 0.96108,
+        "sens": 0.9166,
+        "spec": 0.87678
+      },
+      "200x": {
+        "n": 418.0,
+        "acc": 0.89042,
+        "auc": 0.94122,
+        "sens": 0.90434,
+        "spec": 0.85546
+      },
+      "400x": {
+        "n": 379.0,
+        "acc": 0.89974,
+        "auc": 0.96562,
+        "sens": 0.88882,
+        "spec": 0.92944
+      }
+    },
+    "B_storage": {
+      "B1_split_image_view": {
+        "img_acc": 0.88566,
+        "auc": 0.91728,
+        "patient_acc": 0.975,
+        "sens": 0.92416,
+        "spec": 0.78514,
+        "hp::SOB_M_DC-14-12312": 0.64852,
+        "hp::SOB_M_PC-14-9146": 0.64204,
+        "hp::SOB_B_TA-14-16184": 0.45192,
+        "hp::SOB_M_MC-14-16456": 0.8706,
+        "hp::SOB_M_DC-14-20636": 0.96508
+      },
+      "B1_split_slide_view": {
+        "img_acc": 0.89874,
+        "auc": 0.89648,
+        "patient_acc": 0.9625,
+        "sens": 0.9215,
+        "spec": 0.8393,
+        "hp::SOB_M_DC-14-12312": 0.66498,
+        "hp::SOB_M_PC-14-9146": 0.69566,
+        "hp::SOB_B_TA-14-16184": 0.43022,
+        "hp::SOB_M_MC-14-16456": 0.9286,
+        "hp::SOB_M_DC-14-20636": 0.99186
+      },
+      "B1_split_blend_50_50": {
+        "img_acc": 0.89282,
+        "auc": 0.91404,
+        "patient_acc": 0.9625,
+        "sens": 0.92418,
+        "spec": 0.8109,
+        "hp::SOB_M_DC-14-12312": 0.65674,
+        "hp::SOB_M_PC-14-9146": 0.66886,
+        "hp::SOB_B_TA-14-16184": 0.44108,
+        "hp::SOB_M_MC-14-16456": 0.8996,
+        "hp::SOB_M_DC-14-20636": 0.97848
+      },
+      "similarity_scale": {
+        "mean_sim_image_rows": 0.6599,
+        "mean_sim_centroid_rows": 0.69296,
+        "mean_top1_image": 0.99866,
+        "mean_top1_centroid": 0.97958,
+        "frac_queries_centroid_beats_best_image": 0.00956,
+        "std_sim_image_rows": 0.3541,
+        "std_sim_centroid_rows": 0.32588
+      },
+      "B2_merged_single_topk_k15": {
+        "img_acc": 0.88638,
+        "auc": 0.91748,
+        "patient_acc": 0.975,
+        "sens": 0.92466,
+        "spec": 0.78644,
+        "hp::SOB_M_DC-14-12312": 0.64906,
+        "hp::SOB_M_PC-14-9146": 0.64292,
+        "hp::SOB_B_TA-14-16184": 0.45142,
+        "hp::SOB_M_MC-14-16456": 0.87206,
+        "hp::SOB_M_DC-14-20636": 0.9658,
+        "mean_centroid_share_of_topk": 0.01094,
+        "frac_queries_zero_centroids": 0.84876
+      },
+      "B2_merged_single_topk_k20": {
+        "img_acc": 0.88844,
+        "auc": 0.91846,
+        "patient_acc": 0.975,
+        "sens": 0.92736,
+        "spec": 0.7869,
+        "hp::SOB_M_DC-14-12312": 0.64632,
+        "hp::SOB_M_PC-14-9146": 0.65116,
+        "hp::SOB_B_TA-14-16184": 0.44798,
+        "hp::SOB_M_MC-14-16456": 0.87454,
+        "hp::SOB_M_DC-14-20636": 0.96536,
+        "mean_centroid_share_of_topk": 0.01088,
+        "frac_queries_zero_centroids": 0.80386
+      },
+      "B2b_merged_zscored_levels": {
+        "img_acc": 0.88614,
+        "auc": 0.9181,
+        "patient_acc": 0.975,
+        "sens": 0.924,
+        "spec": 0.78732,
+        "hp::SOB_M_DC-14-12312": 0.64614,
+        "hp::SOB_M_PC-14-9146": 0.64128,
+        "hp::SOB_B_TA-14-16184": 0.44874,
+        "hp::SOB_M_MC-14-16456": 0.87128,
+        "hp::SOB_M_DC-14-20636": 0.96532,
+        "mean_centroid_share_of_topk": 0.0085
+      },
+      "B3_unified_two_views_image": {
+        "img_acc": 0.88566,
+        "auc": 0.91728,
+        "patient_acc": 0.975,
+        "sens": 0.92416,
+        "spec": 0.78514,
+        "hp::SOB_M_DC-14-12312": 0.64852,
+        "hp::SOB_M_PC-14-9146": 0.64204,
+        "hp::SOB_B_TA-14-16184": 0.45192,
+        "hp::SOB_M_MC-14-16456": 0.8706,
+        "hp::SOB_M_DC-14-20636": 0.96508
+      },
+      "B3_unified_two_views_slide": {
+        "img_acc": 0.89874,
+        "auc": 0.89648,
+        "patient_acc": 0.9625,
+        "sens": 0.9215,
+        "spec": 0.8393,
+        "hp::SOB_M_DC-14-12312": 0.66498,
+        "hp::SOB_M_PC-14-9146": 0.69566,
+        "hp::SOB_B_TA-14-16184": 0.43022,
+        "hp::SOB_M_MC-14-16456": 0.9286,
+        "hp::SOB_M_DC-14-20636": 0.99186
+      },
+      "B3_equals_B1": {
+        "max_abs_diff_p_img": 0.0,
+        "max_abs_diff_p_slide": 0.0
+      }
+    }
+  },
+  "exp3": {
+    "A1_geometry": {
+      "mean_feature_norm": 28.19178,
+      "mean_magblock_norm": 7.99904,
+      "magblock_norm_share": 0.0767,
+      "n_distinct_block_values": 4.0
+    },
+    "A2_counterfactual": {
+      "acc_true_mag": 0.8858,
+      "auc_true_mag": 0.96068,
+      "forced_magnification": {
+        "forced_40x": {
+          "acc": 0.88116,
+          "auc": 0.9605,
+          "mean_abs_prob_shift_vs_true": 0.01188
+        },
+        "forced_100x": {
+          "acc": 0.88384,
+          "auc": 0.9605,
+          "mean_abs_prob_shift_vs_true": 0.00871
+        },
+        "forced_200x": {
+          "acc": 0.88626,
+          "auc": 0.9605,
+          "mean_abs_prob_shift_vs_true": 0.00822
+        },
+        "forced_400x": {
+          "acc": 0.89038,
+          "auc": 0.9605,
+          "mean_abs_prob_shift_vs_true": 0.01206
+        }
+      },
+      "acc_block_zeroed": 0.88674,
+      "auc_block_zeroed": 0.9605,
+      "mean_abs_prob_shift_zeroed": 0.00828,
+      "acc_block_table_mean": 0.88542,
+      "auc_block_table_mean": 0.9605,
+      "mean_abs_prob_shift_table_mean": 0.0084,
+      "logit_offset_per_mag": {
+        "40x": -0.32154,
+        "100x": -0.11706,
+        "200x": -0.0442,
+        "400x": 0.28912
+      },
+      "logit_offset_spread": 0.67362,
+      "feature_logit_std": 4.22404,
+      "offset_spread_over_feature_std": 0.15148
+    },
+    "A3_mag_decodable": {
+      "knn_mag_recovery_acc": 0.39298,
+      "chance": 0.2607,
+      "same_mag_neighbour_rate": 0.3369
+    },
+    "A4_per_mag_head": {
+      "40x": {
+        "n": 425.0,
+        "acc": 0.90258,
+        "auc": 0.97402,
+        "sens": 0.91532,
+        "spec": 0.872
+      },
+      "100x": {
+        "n": 431.0,
+        "acc": 0.8956,
+        "auc": 0.96156,
+        "sens": 0.9066,
+        "spec": 0.86426
+      },
+      "200x": {
+        "n": 418.0,
+        "acc": 0.86652,
+        "auc": 0.94714,
+        "sens": 0.87224,
+        "spec": 0.8521
+      },
+      "400x": {
+        "n": 379.0,
+        "acc": 0.87704,
+        "auc": 0.96342,
+        "sens": 0.85992,
+        "spec": 0.92352
+      }
+    },
+    "B_storage": {
+      "B1_split_image_view": {
+        "img_acc": 0.88626,
+        "auc": 0.92416,
+        "patient_acc": 0.9625,
+        "sens": 0.91732,
+        "spec": 0.80522,
+        "hp::SOB_M_DC-14-12312": 0.72722,
+        "hp::SOB_M_PC-14-9146": 0.5895,
+        "hp::SOB_B_TA-14-16184": 0.48864,
+        "hp::SOB_M_MC-14-16456": 0.8143,
+        "hp::SOB_M_DC-14-20636": 0.98108
+      },
+      "B1_split_slide_view": {
+        "img_acc": 0.89012,
+        "auc": 0.92664,
+        "patient_acc": 0.9625,
+        "sens": 0.90528,
+        "spec": 0.85066,
+        "hp::SOB_M_DC-14-12312": 0.6331,
+        "hp::SOB_M_PC-14-9146": 0.68128,
+        "hp::SOB_B_TA-14-16184": 0.42544,
+        "hp::SOB_M_MC-14-16456": 0.90572,
+        "hp::SOB_M_DC-14-20636": 0.94724
+      },
+      "B1_split_blend_50_50": {
+        "img_acc": 0.89608,
+        "auc": 0.93036,
+        "patient_acc": 0.9625,
+        "sens": 0.9205,
+        "spec": 0.83232,
+        "hp::SOB_M_DC-14-12312": 0.68016,
+        "hp::SOB_M_PC-14-9146": 0.6354,
+        "hp::SOB_B_TA-14-16184": 0.45702,
+        "hp::SOB_M_MC-14-16456": 0.86002,
+        "hp::SOB_M_DC-14-20636": 0.96414
+      },
+      "similarity_scale": {
+        "mean_sim_image_rows": 0.76406,
+        "mean_sim_centroid_rows": 0.78694,
+        "mean_top1_image": 0.99838,
+        "mean_top1_centroid": 0.9916,
+        "frac_queries_centroid_beats_best_image": 0.00848,
+        "std_sim_image_rows": 0.2404,
+        "std_sim_centroid_rows": 0.22364
+      },
+      "B2_merged_single_topk_k15": {
+        "img_acc": 0.88638,
+        "auc": 0.92386,
+        "patient_acc": 0.9625,
+        "sens": 0.91748,
+        "spec": 0.80522,
+        "hp::SOB_M_DC-14-12312": 0.72698,
+        "hp::SOB_M_PC-14-9146": 0.59024,
+        "hp::SOB_B_TA-14-16184": 0.48762,
+        "hp::SOB_M_MC-14-16456": 0.8154,
+        "hp::SOB_M_DC-14-20636": 0.98118,
+        "mean_centroid_share_of_topk": 0.01208,
+        "frac_queries_zero_centroids": 0.82966
+      },
+      "B2_merged_single_topk_k20": {
+        "img_acc": 0.88664,
+        "auc": 0.9266,
+        "patient_acc": 0.9625,
+        "sens": 0.91698,
+        "spec": 0.80742,
+        "hp::SOB_M_DC-14-12312": 0.71792,
+        "hp::SOB_M_PC-14-9146": 0.59818,
+        "hp::SOB_B_TA-14-16184": 0.48272,
+        "hp::SOB_M_MC-14-16456": 0.815,
+        "hp::SOB_M_DC-14-20636": 0.98062,
+        "mean_centroid_share_of_topk": 0.01196,
+        "frac_queries_zero_centroids": 0.78042
+      },
+      "B2b_merged_zscored_levels": {
+        "img_acc": 0.88626,
+        "auc": 0.92416,
+        "patient_acc": 0.9625,
+        "sens": 0.91732,
+        "spec": 0.80522,
+        "hp::SOB_M_DC-14-12312": 0.72722,
+        "hp::SOB_M_PC-14-9146": 0.5895,
+        "hp::SOB_B_TA-14-16184": 0.48864,
+        "hp::SOB_M_MC-14-16456": 0.8143,
+        "hp::SOB_M_DC-14-20636": 0.98108,
+        "mean_centroid_share_of_topk": 0.0
+      },
+      "B3_unified_two_views_image": {
+        "img_acc": 0.88626,
+        "auc": 0.92416,
+        "patient_acc": 0.9625,
+        "sens": 0.91732,
+        "spec": 0.80522,
+        "hp::SOB_M_DC-14-12312": 0.72722,
+        "hp::SOB_M_PC-14-9146": 0.5895,
+        "hp::SOB_B_TA-14-16184": 0.48864,
+        "hp::SOB_M_MC-14-16456": 0.8143,
+        "hp::SOB_M_DC-14-20636": 0.98108
+      },
+      "B3_unified_two_views_slide": {
+        "img_acc": 0.89012,
+        "auc": 0.92664,
+        "patient_acc": 0.9625,
+        "sens": 0.90528,
+        "spec": 0.85066,
+        "hp::SOB_M_DC-14-12312": 0.6331,
+        "hp::SOB_M_PC-14-9146": 0.68128,
+        "hp::SOB_B_TA-14-16184": 0.42544,
+        "hp::SOB_M_MC-14-16456": 0.90572,
+        "hp::SOB_M_DC-14-20636": 0.94724
+      },
+      "B3_equals_B1": {
+        "max_abs_diff_p_img": 0.0,
+        "max_abs_diff_p_slide": 0.0
+      }
+    }
+  },
+  "exp3n": {
+    "A3_mag_decodable": {
+      "knn_mag_recovery_acc": 0.39602,
+      "chance": 0.2607,
+      "same_mag_neighbour_rate": 0.34158
+    },
+    "A4_per_mag_head": {
+      "40x": {
+        "n": 425.0,
+        "acc": 0.88048,
+        "auc": 0.9634,
+        "sens": 0.90466,
+        "spec": 0.8224
+      },
+      "100x": {
+        "n": 431.0,
+        "acc": 0.9179,
+        "auc": 0.96706,
+        "sens": 0.93606,
+        "spec": 0.86606
+      },
+      "200x": {
+        "n": 418.0,
+        "acc": 0.88804,
+        "auc": 0.94102,
+        "sens": 0.92574,
+        "spec": 0.79326
+      },
+      "400x": {
+        "n": 379.0,
+        "acc": 0.90872,
+        "auc": 0.97166,
+        "sens": 0.909,
+        "spec": 0.90786
+      }
+    },
+    "B_storage": {
+      "B1_split_image_view": {
+        "img_acc": 0.88008,
+        "auc": 0.92424,
+        "patient_acc": 0.975,
+        "sens": 0.92082,
+        "spec": 0.7738,
+        "hp::SOB_M_DC-14-12312": 0.77532,
+        "hp::SOB_M_PC-14-9146": 0.65916,
+        "hp::SOB_B_TA-14-16184": 0.5089,
+        "hp::SOB_M_MC-14-16456": 0.77342,
+        "hp::SOB_M_DC-14-20636": 0.9685
+      },
+      "B1_split_slide_view": {
+        "img_acc": 0.90308,
+        "auc": 0.91822,
+        "patient_acc": 0.975,
+        "sens": 0.92972,
+        "spec": 0.83364,
+        "hp::SOB_M_DC-14-12312": 0.72982,
+        "hp::SOB_M_PC-14-9146": 0.73824,
+        "hp::SOB_B_TA-14-16184": 0.43006,
+        "hp::SOB_M_MC-14-16456": 0.87754,
+        "hp::SOB_M_DC-14-20636": 0.99668
+      },
+      "B1_split_blend_50_50": {
+        "img_acc": 0.90018,
+        "auc": 0.9173,
+        "patient_acc": 0.9875,
+        "sens": 0.93056,
+        "spec": 0.82094,
+        "hp::SOB_M_DC-14-12312": 0.75258,
+        "hp::SOB_M_PC-14-9146": 0.69868,
+        "hp::SOB_B_TA-14-16184": 0.46946,
+        "hp::SOB_M_MC-14-16456": 0.8255,
+        "hp::SOB_M_DC-14-20636": 0.9826
+      },
+      "similarity_scale": {
+        "mean_sim_image_rows": 0.73636,
+        "mean_sim_centroid_rows": 0.76174,
+        "mean_top1_image": 0.99834,
+        "mean_top1_centroid": 0.99122,
+        "frac_queries_centroid_beats_best_image": 0.00678,
+        "std_sim_image_rows": 0.27308,
+        "std_sim_centroid_rows": 0.25568
+      },
+      "B2_merged_single_topk_k15": {
+        "img_acc": 0.8802,
+        "auc": 0.92424,
+        "patient_acc": 0.975,
+        "sens": 0.92084,
+        "spec": 0.77424,
+        "hp::SOB_M_DC-14-12312": 0.77488,
+        "hp::SOB_M_PC-14-9146": 0.65962,
+        "hp::SOB_B_TA-14-16184": 0.5088,
+        "hp::SOB_M_MC-14-16456": 0.77428,
+        "hp::SOB_M_DC-14-20636": 0.9685,
+        "mean_centroid_share_of_topk": 0.01042,
+        "frac_queries_zero_centroids": 0.85072
+      },
+      "B2_merged_single_topk_k20": {
+        "img_acc": 0.88218,
+        "auc": 0.9254,
+        "patient_acc": 0.975,
+        "sens": 0.92166,
+        "spec": 0.77904,
+        "hp::SOB_M_DC-14-12312": 0.76294,
+        "hp::SOB_M_PC-14-9146": 0.6652,
+        "hp::SOB_B_TA-14-16184": 0.50696,
+        "hp::SOB_M_MC-14-16456": 0.78006,
+        "hp::SOB_M_DC-14-20636": 0.96624,
+        "mean_centroid_share_of_topk": 0.0111,
+        "frac_queries_zero_centroids": 0.79358
+      },
+      "B2b_merged_zscored_levels": {
+        "img_acc": 0.88008,
+        "auc": 0.92424,
+        "patient_acc": 0.975,
+        "sens": 0.92082,
+        "spec": 0.7738,
+        "hp::SOB_M_DC-14-12312": 0.77532,
+        "hp::SOB_M_PC-14-9146": 0.65902,
+        "hp::SOB_B_TA-14-16184": 0.5089,
+        "hp::SOB_M_MC-14-16456": 0.77342,
+        "hp::SOB_M_DC-14-20636": 0.9685,
+        "mean_centroid_share_of_topk": 6e-05
+      },
+      "B3_unified_two_views_image": {
+        "img_acc": 0.88008,
+        "auc": 0.92424,
+        "patient_acc": 0.975,
+        "sens": 0.92082,
+        "spec": 0.7738,
+        "hp::SOB_M_DC-14-12312": 0.77532,
+        "hp::SOB_M_PC-14-9146": 0.65916,
+        "hp::SOB_B_TA-14-16184": 0.5089,
+        "hp::SOB_M_MC-14-16456": 0.77342,
+        "hp::SOB_M_DC-14-20636": 0.9685
+      },
+      "B3_unified_two_views_slide": {
+        "img_acc": 0.90308,
+        "auc": 0.91822,
+        "patient_acc": 0.975,
+        "sens": 0.92972,
+        "spec": 0.83364,
+        "hp::SOB_M_DC-14-12312": 0.72982,
+        "hp::SOB_M_PC-14-9146": 0.73824,
+        "hp::SOB_B_TA-14-16184": 0.43006,
+        "hp::SOB_M_MC-14-16456": 0.87754,
+        "hp::SOB_M_DC-14-20636": 0.99668
+      },
+      "B3_equals_B1": {
+        "max_abs_diff_p_img": 0.0,
+        "max_abs_diff_p_slide": 0.0
+      }
+    }
+  }
+}
