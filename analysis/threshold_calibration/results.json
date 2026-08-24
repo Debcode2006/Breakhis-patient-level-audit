@@ -1,0 +1,1234 @@
+[
+  {
+    "name": "exp1",
+    "runs_root": "runs\\exp1_swin_cls",
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "per_fold": [
+      {
+        "fold": 0,
+        "image": {
+          "cal": {
+            "threshold": 0.11523688212037086,
+            "val_accuracy": 0.8437317784256559,
+            "acc_at_0.5": 0.8309037900874635,
+            "plateau_lo": 0.10887478291988373,
+            "plateau_hi": 0.12689342349767685,
+            "youden_threshold": 0.3267648220062256
+          },
+          "test_0.5": {
+            "accuracy": 0.9243799153055051,
+            "sensitivity": 0.9514644351464435,
+            "specificity": 0.8537117903930131,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9274047186932849,
+            "sensitivity": 0.9849372384937238,
+            "specificity": 0.777292576419214,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.532743407993268,
+            "val_accuracy": 0.9285714285714286,
+            "acc_at_0.5": 0.9285714285714286,
+            "plateau_lo": 0.49,
+            "plateau_hi": 0.5750000000000001,
+            "youden_threshold": 0.532743407993268
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "image": {
+          "cal": {
+            "threshold": 0.855,
+            "val_accuracy": 0.8833481745325023,
+            "acc_at_0.5": 0.8735529830810329,
+            "plateau_lo": 0.8200000000000001,
+            "plateau_hi": 0.8906483054161072,
+            "youden_threshold": 0.9411591589450836
+          },
+          "test_0.5": {
+            "accuracy": 0.8560193587416818,
+            "sensitivity": 0.9087866108786611,
+            "specificity": 0.7183406113537117,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8427102238354507,
+            "sensitivity": 0.8493723849372385,
+            "specificity": 0.8253275109170306,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.3981761011071009,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.35000000000000003,
+            "plateau_hi": 0.445,
+            "youden_threshold": 0.3981761011071009
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.875,
+            "sensitivity": 1.0,
+            "specificity": 0.5,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "image": {
+          "cal": {
+            "threshold": 0.5706004798412323,
+            "val_accuracy": 0.8820375335120644,
+            "acc_at_0.5": 0.872207327971403,
+            "plateau_lo": 0.5706004798412323,
+            "plateau_hi": 0.5706004798412323,
+            "youden_threshold": 0.5706004798412323
+          },
+          "test_0.5": {
+            "accuracy": 0.9286146400483969,
+            "sensitivity": 0.9682008368200837,
+            "specificity": 0.8253275109170306,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9274047186932849,
+            "sensitivity": 0.9573221757322176,
+            "specificity": 0.8493449781659389,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.379695110341194,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.35000000000000003,
+            "plateau_hi": 0.41000000000000003,
+            "youden_threshold": 0.379695110341194
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "image": {
+          "cal": {
+            "threshold": 0.3249548882246017,
+            "val_accuracy": 0.9780309194467046,
+            "acc_at_0.5": 0.967453213995118,
+            "plateau_lo": 0.32,
+            "plateau_hi": 0.33,
+            "youden_threshold": 0.4084942638874054
+          },
+          "test_0.5": {
+            "accuracy": 0.8953418027828192,
+            "sensitivity": 0.8845188284518829,
+            "specificity": 0.9235807860262009,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9044162129461585,
+            "sensitivity": 0.9096234309623431,
+            "specificity": 0.8908296943231441,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.4929084589977307,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 1.0,
+            "plateau_lo": 0.12,
+            "plateau_hi": 0.865,
+            "youden_threshold": 0.4929084589977307
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "image": {
+          "cal": {
+            "threshold": 0.9017965793609619,
+            "val_accuracy": 0.7934579439252336,
+            "acc_at_0.5": 0.7794392523364486,
+            "plateau_lo": 0.885,
+            "plateau_hi": 0.91,
+            "youden_threshold": 0.9966134428977966
+          },
+          "test_0.5": {
+            "accuracy": 0.9225650332728372,
+            "sensitivity": 0.9079497907949791,
+            "specificity": 0.9606986899563319,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8947368421052632,
+            "sensitivity": 0.8644351464435146,
+            "specificity": 0.9737991266375546,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.9171537705489047,
+            "val_accuracy": 0.9230769230769231,
+            "acc_at_0.5": 0.8461538461538461,
+            "plateau_lo": 0.915,
+            "plateau_hi": 0.92,
+            "youden_threshold": 0.9171537705489047
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.875,
+            "sensitivity": 0.8333333333333334,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      }
+    ],
+    "per_fold_summary": {
+      "image": {
+        "mean_val_threshold": 0.5535177659094334,
+        "mean_test_0.5": 0.9053841500302481,
+        "mean_test_cal": 0.8993345432546883,
+        "mean_test_0.5_sens": 0.9241841004184101,
+        "mean_test_cal_sens": 0.9131380753138074,
+        "mean_test_0.5_spec": 0.8563318777292576,
+        "mean_test_cal_spec": 0.8633187772925763
+      },
+      "patient": {
+        "mean_val_threshold": 0.5441353697976397,
+        "mean_test_0.5": 0.9875,
+        "mean_test_cal": 0.9375
+      }
+    },
+    "pooled_oof": {
+      "image": {
+        "threshold": 0.44998921304941175,
+        "val_accuracy": 0.8657289002557544,
+        "val_acc_at_0.5": 0.8639705882352942,
+        "test_mean_0.5": {
+          "accuracy": 0.9053841500302481,
+          "sensitivity": 0.9241841004184101,
+          "specificity": 0.8563318777292576
+        },
+        "test_mean_cal": {
+          "accuracy": 0.9063520871143377,
+          "sensitivity": 0.930041841004184,
+          "specificity": 0.8445414847161572
+        },
+        "test_pooled_0.5": {
+          "accuracy": 0.9053841500302481,
+          "sensitivity": 0.92418410041841,
+          "specificity": 0.8563318777292577,
+          "n": 8265
+        },
+        "test_pooled_cal": {
+          "accuracy": 0.9063520871143376,
+          "sensitivity": 0.9300418410041841,
+          "specificity": 0.8445414847161572,
+          "n": 8265
+        }
+      },
+      "patient": {
+        "threshold": 0.379695110341194,
+        "val_accuracy": 0.9393939393939394,
+        "val_acc_at_0.5": 0.9242424242424242,
+        "test_mean_0.5": {
+          "accuracy": 0.9875,
+          "sensitivity": 1.0,
+          "specificity": 0.95
+        },
+        "test_mean_cal": {
+          "accuracy": 0.95,
+          "sensitivity": 1.0,
+          "specificity": 0.8
+        }
+      }
+    }
+  },
+  {
+    "name": "exp2",
+    "runs_root": "runs\\exp2_swin_mag_cls",
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "per_fold": [
+      {
+        "fold": 0,
+        "image": {
+          "cal": {
+            "threshold": 0.2150934059917927,
+            "val_accuracy": 0.8548104956268222,
+            "acc_at_0.5": 0.8431486880466472,
+            "plateau_lo": 0.18500000000000003,
+            "plateau_hi": 0.225,
+            "youden_threshold": 0.2246915355324745
+          },
+          "test_0.5": {
+            "accuracy": 0.9304295220810648,
+            "sensitivity": 0.9548117154811715,
+            "specificity": 0.8668122270742358,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9322444041137327,
+            "sensitivity": 0.9698744769874477,
+            "specificity": 0.834061135371179,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.5400318924549574,
+            "val_accuracy": 0.9285714285714286,
+            "acc_at_0.5": 0.9285714285714286,
+            "plateau_lo": 0.47000000000000003,
+            "plateau_hi": 0.61,
+            "youden_threshold": 0.5400318924549574
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "image": {
+          "cal": {
+            "threshold": 0.5477454751729965,
+            "val_accuracy": 0.8593054318788959,
+            "acc_at_0.5": 0.8557435440783615,
+            "plateau_lo": 0.53,
+            "plateau_hi": 0.59,
+            "youden_threshold": 0.9768134355545044
+          },
+          "test_0.5": {
+            "accuracy": 0.8753781004234725,
+            "sensitivity": 0.902928870292887,
+            "specificity": 0.8034934497816594,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8747731397459165,
+            "sensitivity": 0.8987447698744769,
+            "specificity": 0.8122270742358079,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.32485055649286193,
+            "val_accuracy": 0.9230769230769231,
+            "acc_at_0.5": 0.7692307692307693,
+            "plateau_lo": 0.21500000000000002,
+            "plateau_hi": 0.435,
+            "youden_threshold": 0.32485055649286193
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "image": {
+          "cal": {
+            "threshold": 0.35500000000000004,
+            "val_accuracy": 0.8838248436103664,
+            "acc_at_0.5": 0.8820375335120644,
+            "plateau_lo": 0.32126401364803314,
+            "plateau_hi": 0.42875657975673676,
+            "youden_threshold": 0.5921507477760315
+          },
+          "test_0.5": {
+            "accuracy": 0.9207501512401693,
+            "sensitivity": 0.9673640167364017,
+            "specificity": 0.7991266375545851,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9195402298850575,
+            "sensitivity": 0.9832635983263598,
+            "specificity": 0.7532751091703057,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.3252183385107438,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.29000000000000004,
+            "plateau_hi": 0.36000000000000004,
+            "youden_threshold": 0.3252183385107438
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "image": {
+          "cal": {
+            "threshold": 0.26592113077640533,
+            "val_accuracy": 0.985353946297803,
+            "acc_at_0.5": 0.9788445890968267,
+            "plateau_lo": 0.25,
+            "plateau_hi": 0.28500000000000003,
+            "youden_threshold": 0.26592113077640533
+          },
+          "test_0.5": {
+            "accuracy": 0.9237749546279492,
+            "sensitivity": 0.9171548117154812,
+            "specificity": 0.9410480349344978,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9298245614035088,
+            "sensitivity": 0.9288702928870293,
+            "specificity": 0.9323144104803494,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.4993420851864679,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 1.0,
+            "plateau_lo": 0.08,
+            "plateau_hi": 0.92,
+            "youden_threshold": 0.4993420851864679
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "image": {
+          "cal": {
+            "threshold": 0.8225793540477753,
+            "val_accuracy": 0.77196261682243,
+            "acc_at_0.5": 0.7579439252336448,
+            "plateau_lo": 0.8225793540477753,
+            "plateau_hi": 0.8225793540477753,
+            "youden_threshold": 0.8924213945865631
+          },
+          "test_0.5": {
+            "accuracy": 0.8366606170598911,
+            "sensitivity": 0.7849372384937239,
+            "specificity": 0.9716157205240175,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.7568058076225045,
+            "sensitivity": 0.6702928870292887,
+            "specificity": 0.982532751091703,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.47500000000000003,
+            "val_accuracy": 0.7692307692307693,
+            "acc_at_0.5": 0.7692307692307693,
+            "plateau_lo": 0.03,
+            "plateau_hi": 0.9400000000000001,
+            "youden_threshold": 0.9100082912692276
+          },
+          "test_0.5": {
+            "accuracy": 0.875,
+            "sensitivity": 0.8333333333333334,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 0.9166666666666666,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      }
+    ],
+    "per_fold_summary": {
+      "image": {
+        "mean_val_threshold": 0.4412678731977939,
+        "mean_test_0.5": 0.8973986690865094,
+        "mean_test_cal": 0.8826376285541441,
+        "mean_test_0.5_sens": 0.905439330543933,
+        "mean_test_cal_sens": 0.8902092050209205,
+        "mean_test_0.5_spec": 0.8764192139737992,
+        "mean_test_cal_spec": 0.862882096069869
+      },
+      "patient": {
+        "mean_val_threshold": 0.43288857452900614,
+        "mean_test_0.5": 0.9625,
+        "mean_test_cal": 0.9625
+      }
+    },
+    "pooled_oof": {
+      "image": {
+        "threshold": 0.42838285863399506,
+        "val_accuracy": 0.864769820971867,
+        "val_acc_at_0.5": 0.8644501278772379,
+        "test_mean_0.5": {
+          "accuracy": 0.8973986690865094,
+          "sensitivity": 0.905439330543933,
+          "specificity": 0.8764192139737992
+        },
+        "test_mean_cal": {
+          "accuracy": 0.9016333938294011,
+          "sensitivity": 0.9151464435146444,
+          "specificity": 0.8663755458515284
+        },
+        "test_pooled_0.5": {
+          "accuracy": 0.8973986690865093,
+          "sensitivity": 0.9054393305439331,
+          "specificity": 0.8764192139737991,
+          "n": 8265
+        },
+        "test_pooled_cal": {
+          "accuracy": 0.9016333938294011,
+          "sensitivity": 0.9151464435146444,
+          "specificity": 0.8663755458515284,
+          "n": 8265
+        }
+      },
+      "patient": {
+        "threshold": 0.3252183385107438,
+        "val_accuracy": 0.9090909090909091,
+        "val_acc_at_0.5": 0.8787878787878788,
+        "test_mean_0.5": {
+          "accuracy": 0.9625,
+          "sensitivity": 0.9666666666666666,
+          "specificity": 0.95
+        },
+        "test_mean_cal": {
+          "accuracy": 0.95,
+          "sensitivity": 0.9833333333333334,
+          "specificity": 0.85
+        }
+      }
+    }
+  },
+  {
+    "name": "exp3",
+    "runs_root": "runs\\exp3_swin_mag_supcon_cls",
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "per_fold": [
+      {
+        "fold": 0,
+        "image": {
+          "cal": {
+            "threshold": 0.4025,
+            "val_accuracy": 0.8478134110787172,
+            "acc_at_0.5": 0.8448979591836735,
+            "plateau_lo": 0.39,
+            "plateau_hi": 0.4575023353099823,
+            "youden_threshold": 0.681298553943634
+          },
+          "test_0.5": {
+            "accuracy": 0.9219600725952813,
+            "sensitivity": 0.9598326359832636,
+            "specificity": 0.8231441048034934,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.926799758015729,
+            "sensitivity": 0.9707112970711297,
+            "specificity": 0.8122270742358079,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.5685373645969369,
+            "val_accuracy": 0.9285714285714286,
+            "acc_at_0.5": 0.8571428571428571,
+            "plateau_lo": 0.505,
+            "plateau_hi": 0.63,
+            "youden_threshold": 0.5685373645969369
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "image": {
+          "cal": {
+            "threshold": 0.9134037494659424,
+            "val_accuracy": 0.8940338379341051,
+            "acc_at_0.5": 0.8780053428317008,
+            "plateau_lo": 0.9134037494659424,
+            "plateau_hi": 0.9134037494659424,
+            "youden_threshold": 0.9134037494659424
+          },
+          "test_0.5": {
+            "accuracy": 0.8693284936479129,
+            "sensitivity": 0.9238493723849373,
+            "specificity": 0.7270742358078602,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8396854204476709,
+            "sensitivity": 0.8393305439330544,
+            "specificity": 0.8406113537117904,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.37235391180976435,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.3,
+            "plateau_hi": 0.445,
+            "youden_threshold": 0.37235391180976435
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "image": {
+          "cal": {
+            "threshold": 0.04690049588680267,
+            "val_accuracy": 0.9070598748882931,
+            "acc_at_0.5": 0.8856121537086684,
+            "plateau_lo": 0.04690049588680267,
+            "plateau_hi": 0.04690049588680267,
+            "youden_threshold": 0.3655034852027893
+          },
+          "test_0.5": {
+            "accuracy": 0.853599516031458,
+            "sensitivity": 0.8443514644351464,
+            "specificity": 0.8777292576419214,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9086509376890503,
+            "sensitivity": 0.9882845188284519,
+            "specificity": 0.7008733624454149,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.11704424943997996,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.075,
+            "plateau_hi": 0.16,
+            "youden_threshold": 0.11704424943997996
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 0.9166666666666666,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "image": {
+          "cal": {
+            "threshold": 0.2912329137325287,
+            "val_accuracy": 0.9877949552481693,
+            "acc_at_0.5": 0.9788445890968267,
+            "plateau_lo": 0.2912329137325287,
+            "plateau_hi": 0.2912329137325287,
+            "youden_threshold": 0.2912329137325287
+          },
+          "test_0.5": {
+            "accuracy": 0.9098608590441621,
+            "sensitivity": 0.891213389121339,
+            "specificity": 0.9585152838427947,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9092558983666061,
+            "sensitivity": 0.900418410041841,
+            "specificity": 0.9323144104803494,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.4750785613707581,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 1.0,
+            "plateau_lo": 0.045000000000000005,
+            "plateau_hi": 0.905,
+            "youden_threshold": 0.4750785613707581
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 0.9166666666666666,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "image": {
+          "cal": {
+            "threshold": 0.7550589615106582,
+            "val_accuracy": 0.7897196261682243,
+            "acc_at_0.5": 0.7822429906542057,
+            "plateau_lo": 0.755,
+            "plateau_hi": 0.7551179230213165,
+            "youden_threshold": 0.8900972080230714
+          },
+          "test_0.5": {
+            "accuracy": 0.8741681790683605,
+            "sensitivity": 0.8276150627615063,
+            "specificity": 0.9956331877729258,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8215366001209922,
+            "sensitivity": 0.7548117154811715,
+            "specificity": 0.9956331877729258,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.8293136471427758,
+            "val_accuracy": 0.9230769230769231,
+            "acc_at_0.5": 0.7692307692307693,
+            "plateau_lo": 0.8200000000000001,
+            "plateau_hi": 0.8400000000000001,
+            "youden_threshold": 0.8293136471427758
+          },
+          "test_0.5": {
+            "accuracy": 0.875,
+            "sensitivity": 0.8333333333333334,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.8125,
+            "sensitivity": 0.75,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      }
+    ],
+    "per_fold_summary": {
+      "image": {
+        "mean_val_threshold": 0.48181922411918643,
+        "mean_test_0.5": 0.885783424077435,
+        "mean_test_cal": 0.8811857229280097,
+        "mean_test_0.5_sens": 0.8893723849372386,
+        "mean_test_cal_sens": 0.8907112970711297,
+        "mean_test_0.5_spec": 0.8764192139737992,
+        "mean_test_cal_spec": 0.8563318777292576
+      },
+      "patient": {
+        "mean_val_threshold": 0.472465546872043,
+        "mean_test_0.5": 0.9375,
+        "mean_test_cal": 0.9375
+      }
+    },
+    "pooled_oof": {
+      "image": {
+        "threshold": 0.36004069447517395,
+        "val_accuracy": 0.8773976982097187,
+        "val_acc_at_0.5": 0.8737212276214834,
+        "test_mean_0.5": {
+          "accuracy": 0.885783424077435,
+          "sensitivity": 0.8893723849372386,
+          "specificity": 0.8764192139737992
+        },
+        "test_mean_cal": {
+          "accuracy": 0.8954627949183303,
+          "sensitivity": 0.9097907949790794,
+          "specificity": 0.8580786026200874
+        },
+        "test_pooled_0.5": {
+          "accuracy": 0.8857834240774349,
+          "sensitivity": 0.8893723849372385,
+          "specificity": 0.8764192139737991,
+          "n": 8265
+        },
+        "test_pooled_cal": {
+          "accuracy": 0.8954627949183304,
+          "sensitivity": 0.9097907949790794,
+          "specificity": 0.8580786026200873,
+          "n": 8265
+        }
+      },
+      "patient": {
+        "threshold": 0.33974257615216874,
+        "val_accuracy": 0.9242424242424242,
+        "val_acc_at_0.5": 0.8939393939393939,
+        "test_mean_0.5": {
+          "accuracy": 0.9375,
+          "sensitivity": 0.9333333333333332,
+          "specificity": 0.95
+        },
+        "test_mean_cal": {
+          "accuracy": 0.9625,
+          "sensitivity": 1.0,
+          "specificity": 0.85
+        }
+      }
+    }
+  },
+  {
+    "name": "exp3n",
+    "runs_root": "runs\\exp3n_swin_supcon_cls",
+    "folds": [
+      0,
+      1,
+      2,
+      3,
+      4
+    ],
+    "per_fold": [
+      {
+        "fold": 0,
+        "image": {
+          "cal": {
+            "threshold": 0.10227939486503601,
+            "val_accuracy": 0.8437317784256559,
+            "acc_at_0.5": 0.8344023323615161,
+            "plateau_lo": 0.065,
+            "plateau_hi": 0.1258181557059288,
+            "youden_threshold": 0.16269751638174057
+          },
+          "test_0.5": {
+            "accuracy": 0.9292196007259528,
+            "sensitivity": 0.9640167364016736,
+            "specificity": 0.8384279475982532,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.925589836660617,
+            "sensitivity": 0.9807531380753138,
+            "specificity": 0.7816593886462883,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.4625,
+            "val_accuracy": 0.8571428571428571,
+            "acc_at_0.5": 0.7857142857142857,
+            "plateau_lo": 0.13,
+            "plateau_hi": 0.8200000000000001,
+            "youden_threshold": 0.6617822219991543
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 1,
+        "image": {
+          "cal": {
+            "threshold": 0.9098228383064271,
+            "val_accuracy": 0.9020480854853072,
+            "acc_at_0.5": 0.8904719501335708,
+            "plateau_lo": 0.909645676612854,
+            "plateau_hi": 0.91,
+            "youden_threshold": 0.9556097686290741
+          },
+          "test_0.5": {
+            "accuracy": 0.897156684815487,
+            "sensitivity": 0.9933054393305439,
+            "specificity": 0.6462882096069869,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8608590441621294,
+            "sensitivity": 0.906276150627615,
+            "specificity": 0.74235807860262,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.5876245717668245,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.9230769230769231,
+            "plateau_lo": 0.5876245717668245,
+            "plateau_hi": 0.5876245717668245,
+            "youden_threshold": 0.5876245717668245
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 2,
+        "image": {
+          "cal": {
+            "threshold": 0.3580452501773834,
+            "val_accuracy": 0.8650580875781948,
+            "acc_at_0.5": 0.8588025022341377,
+            "plateau_lo": 0.3580452501773834,
+            "plateau_hi": 0.3580452501773834,
+            "youden_threshold": 0.48979763954877853
+          },
+          "test_0.5": {
+            "accuracy": 0.895946763460375,
+            "sensitivity": 0.907112970711297,
+            "specificity": 0.8668122270742358,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9122807017543859,
+            "sensitivity": 0.9397489539748954,
+            "specificity": 0.8406113537117904,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.1704441438536165,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 0.8461538461538461,
+            "plateau_lo": 0.165,
+            "plateau_hi": 0.17500000000000002,
+            "youden_threshold": 0.1704441438536165
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.9375,
+            "sensitivity": 1.0,
+            "specificity": 0.75,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 3,
+        "image": {
+          "cal": {
+            "threshold": 0.10478145793080329,
+            "val_accuracy": 0.983726606997559,
+            "acc_at_0.5": 0.9820992676973149,
+            "plateau_lo": 0.09999999999999999,
+            "plateau_hi": 0.11,
+            "youden_threshold": 0.6942460721731186
+          },
+          "test_0.5": {
+            "accuracy": 0.9177253478523896,
+            "sensitivity": 0.9163179916317992,
+            "specificity": 0.9213973799126638,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.9237749546279492,
+            "sensitivity": 0.9389121338912134,
+            "specificity": 0.8842794759825328,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.5044506232355921,
+            "val_accuracy": 1.0,
+            "acc_at_0.5": 1.0,
+            "plateau_lo": 0.065,
+            "plateau_hi": 0.9450000000000001,
+            "youden_threshold": 0.5044506232355921
+          },
+          "test_0.5": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 1.0,
+            "sensitivity": 1.0,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      },
+      {
+        "fold": 4,
+        "image": {
+          "cal": {
+            "threshold": 0.890893965959549,
+            "val_accuracy": 0.7794392523364486,
+            "acc_at_0.5": 0.7616822429906542,
+            "plateau_lo": 0.89,
+            "plateau_hi": 0.895,
+            "youden_threshold": 0.9960737526416779
+          },
+          "test_0.5": {
+            "accuracy": 0.852994555353902,
+            "sensitivity": 0.8158995815899581,
+            "specificity": 0.9497816593886463,
+            "n": 1653
+          },
+          "test_cal": {
+            "accuracy": 0.8124621899576527,
+            "sensitivity": 0.7531380753138075,
+            "specificity": 0.9672489082969432,
+            "n": 1653
+          }
+        },
+        "patient": {
+          "cal": {
+            "threshold": 0.8906178029696037,
+            "val_accuracy": 0.8461538461538461,
+            "acc_at_0.5": 0.7692307692307693,
+            "plateau_lo": 0.855,
+            "plateau_hi": 0.925,
+            "youden_threshold": 0.8906178029696037
+          },
+          "test_0.5": {
+            "accuracy": 0.9375,
+            "sensitivity": 0.9166666666666666,
+            "specificity": 1.0,
+            "n": 16
+          },
+          "test_cal": {
+            "accuracy": 0.75,
+            "sensitivity": 0.6666666666666666,
+            "specificity": 1.0,
+            "n": 16
+          }
+        }
+      }
+    ],
+    "per_fold_summary": {
+      "image": {
+        "mean_val_threshold": 0.4731645814478398,
+        "mean_test_0.5": 0.8986085904416212,
+        "mean_test_cal": 0.8869933454325469,
+        "mean_test_0.5_sens": 0.9193305439330544,
+        "mean_test_cal_sens": 0.903765690376569,
+        "mean_test_0.5_spec": 0.8445414847161572,
+        "mean_test_cal_spec": 0.843231441048035
+      },
+      "patient": {
+        "mean_val_threshold": 0.5231274283651273,
+        "mean_test_0.5": 0.975,
+        "mean_test_cal": 0.925
+      }
+    },
+    "pooled_oof": {
+      "image": {
+        "threshold": 0.5400678110122681,
+        "val_accuracy": 0.8657289002557544,
+        "val_acc_at_0.5": 0.8654092071611253,
+        "test_mean_0.5": {
+          "accuracy": 0.8986085904416212,
+          "sensitivity": 0.9193305439330544,
+          "specificity": 0.8445414847161572
+        },
+        "test_mean_cal": {
+          "accuracy": 0.8981246218995766,
+          "sensitivity": 0.9168200836820084,
+          "specificity": 0.8493449781659388
+        },
+        "test_pooled_0.5": {
+          "accuracy": 0.8986085904416213,
+          "sensitivity": 0.9193305439330544,
+          "specificity": 0.8445414847161572,
+          "n": 8265
+        },
+        "test_pooled_cal": {
+          "accuracy": 0.8981246218995765,
+          "sensitivity": 0.9168200836820084,
+          "specificity": 0.8493449781659389,
+          "n": 8265
+        }
+      },
+      "patient": {
+        "threshold": 0.1704441438536165,
+        "val_accuracy": 0.9090909090909091,
+        "val_acc_at_0.5": 0.8636363636363636,
+        "test_mean_0.5": {
+          "accuracy": 0.975,
+          "sensitivity": 0.9833333333333334,
+          "specificity": 0.95
+        },
+        "test_mean_cal": {
+          "accuracy": 0.9375,
+          "sensitivity": 1.0,
+          "specificity": 0.75
+        }
+      }
+    }
+  }
+]
