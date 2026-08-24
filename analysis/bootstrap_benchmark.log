@@ -1,0 +1,60 @@
+Loading fold-ensemble predictions ...
+  exp1              1653 images   16 patients  thr=0.45
+  exp2              1653 images   16 patients  thr=0.428
+  exp3              1653 images   16 patients  thr=0.36
+  exp3n             1653 images   16 patients  thr=0.54
+  exp5_retrieval    1653 images   16 patients  thr=0.6923
+  expfm             1653 images   16 patients  thr=0.209
+
+Held-out set: 1653 images / 16 patients (4 benign / 12 malignant)
+
+Bootstrapping: 2000 resamples of 16 patients (seed 42) ...
+  500/2000
+  1000/2000
+  1500/2000
+  2000/2000
+
+Single-class resamples (AUC undefined, excluded): 23
+
+=== Point estimates, fold ensemble, locked thresholds ===
+model              img AUC   img acc   pat AUC   pat acc
+exp1                0.9736    0.9268    1.0000    1.0000
+exp2                0.9768    0.9274    1.0000    1.0000
+exp3                0.9772    0.9244    1.0000    1.0000
+exp3n               0.9761    0.9347    1.0000    1.0000
+exp5_retrieval      0.9758    0.9087    1.0000    1.0000
+expfm               0.9749    0.9189    1.0000    0.9375
+
+=== Paired deltas, 95% patient-clustered bootstrap CI ===
+
+  exp2-exp1
+    image_auc    +0.0032  [-0.0046, +0.0141]  P(d>0)=0.73   (straddles 0)
+    image_acc    +0.0005  [-0.0064, +0.0057]  P(d>0)=0.56   (straddles 0)
+    patient_acc  +0.0000  [+0.0000, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+  exp3-exp1
+    image_auc    +0.0038  [-0.0014, +0.0117]  P(d>0)=0.87   (straddles 0)
+    image_acc    -0.0023  [-0.0154, +0.0092]  P(d>0)=0.34   (straddles 0)
+    patient_acc  +0.0000  [+0.0000, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+  exp3n-exp1
+    image_auc    +0.0029  [-0.0041, +0.0112]  P(d>0)=0.80   (straddles 0)
+    image_acc    +0.0083  [-0.0135, +0.0344]  P(d>0)=0.74   (straddles 0)
+    patient_acc  +0.0000  [+0.0000, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+  expfm-exp1
+    image_auc    +0.0028  [-0.0490, +0.0573]  P(d>0)=0.53   (straddles 0)
+    image_acc    -0.0063  [-0.0836, +0.0755]  P(d>0)=0.43   (straddles 0)
+    patient_acc  -0.0605  [-0.1875, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+  exp3n-exp3
+    image_auc    -0.0009  [-0.0130, +0.0090]  P(d>0)=0.47   (straddles 0)
+    image_acc    +0.0106  [-0.0176, +0.0475]  P(d>0)=0.73   (straddles 0)
+    patient_acc  +0.0000  [+0.0000, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+  exp5_retrieval-exp3n
+    image_auc    -0.0003  [-0.0009, +0.0007]  P(d>0)=0.24   (straddles 0)
+    image_acc    -0.0254  [-0.0599, +0.0028]  P(d>0)=0.05   (straddles 0)
+    patient_acc  +0.0000  [+0.0000, +0.0000]  P(d>0)=0.00   (straddles 0)
+
+Written: D:\Projects\RAP-MST-v1\analysis\bootstrap_benchmark.json
