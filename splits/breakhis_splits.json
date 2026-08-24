@@ -1,0 +1,836 @@
+{
+  "schema_version": 2,
+  "dataset_root": "D:/Downloads/BreaKHis_v1",
+  "seed": 42,
+  "num_folds": 5,
+  "num_test_patients": 16,
+  "total_patients": 82,
+  "class_balance": {
+    "benign": 24,
+    "malignant": 58
+  },
+  "split_policy": {
+    "test_stratified_by": "tumor_subtype",
+    "fold_stratified_by": "class",
+    "reserve_subtypes": [
+      "PT"
+    ],
+    "max_test_image_fraction": 0.12,
+    "test_image_cap": 185.2,
+    "test_subtype_quota": {
+      "A": 1,
+      "F": 2,
+      "TA": 1,
+      "DC": 8,
+      "LC": 1,
+      "MC": 2,
+      "PC": 1
+    },
+    "reserved_to_cv": [
+      "SOB_B_PT-14-21998AB",
+      "SOB_B_PT-14-22704",
+      "SOB_B_PT-14-29315EF"
+    ],
+    "oversized_to_cv": [
+      "SOB_M_LC-14-15570"
+    ],
+    "rationale": "Test set stratified over the eight tumor subtypes; rare/oversized patients kept in the CV pool so the held-out image-level metric is representative and rare subtypes remain available for training."
+  },
+  "test_patients": [
+    "SOB_B_A-14-22549CD",
+    "SOB_B_F-14-21998CD",
+    "SOB_B_F-14-23060CD",
+    "SOB_B_TA-14-16184",
+    "SOB_M_DC-14-12312",
+    "SOB_M_DC-14-14926",
+    "SOB_M_DC-14-16188",
+    "SOB_M_DC-14-16336",
+    "SOB_M_DC-14-17614",
+    "SOB_M_DC-14-20636",
+    "SOB_M_DC-14-2523",
+    "SOB_M_DC-14-2985",
+    "SOB_M_LC-14-15570C",
+    "SOB_M_MC-14-16456",
+    "SOB_M_MC-14-19979C",
+    "SOB_M_PC-14-9146"
+  ],
+  "folds": [
+    {
+      "fold": 0,
+      "train_patients": [
+        "SOB_B_A-14-22549G",
+        "SOB_B_A-14-29960CD",
+        "SOB_B_F-14-14134E",
+        "SOB_B_F-14-21998EF",
+        "SOB_B_F-14-23060AB",
+        "SOB_B_F-14-25197",
+        "SOB_B_F-14-29960AB",
+        "SOB_B_F-14-9133",
+        "SOB_B_PT-14-22704",
+        "SOB_B_PT-14-29315EF",
+        "SOB_B_TA-14-13200",
+        "SOB_B_TA-14-15275",
+        "SOB_B_TA-14-16184CD",
+        "SOB_B_TA-14-19854C",
+        "SOB_B_TA-14-21978AB",
+        "SOB_B_TA-14-3411F",
+        "SOB_M_DC-14-10926",
+        "SOB_M_DC-14-11031",
+        "SOB_M_DC-14-13412",
+        "SOB_M_DC-14-13993",
+        "SOB_M_DC-14-14015",
+        "SOB_M_DC-14-15572",
+        "SOB_M_DC-14-15696",
+        "SOB_M_DC-14-15792",
+        "SOB_M_DC-14-16448",
+        "SOB_M_DC-14-16601",
+        "SOB_M_DC-14-16875",
+        "SOB_M_DC-14-17901",
+        "SOB_M_DC-14-17915",
+        "SOB_M_DC-14-20629",
+        "SOB_M_DC-14-2773",
+        "SOB_M_DC-14-2980",
+        "SOB_M_DC-14-3909",
+        "SOB_M_DC-14-4364",
+        "SOB_M_DC-14-4372",
+        "SOB_M_DC-14-5287",
+        "SOB_M_DC-14-5694",
+        "SOB_M_DC-14-5695",
+        "SOB_M_DC-14-6241",
+        "SOB_M_DC-14-8168",
+        "SOB_M_LC-14-12204",
+        "SOB_M_LC-14-13412",
+        "SOB_M_LC-14-16196",
+        "SOB_M_MC-14-13413",
+        "SOB_M_MC-14-13418DE",
+        "SOB_M_MC-14-18842",
+        "SOB_M_MC-14-18842D",
+        "SOB_M_MC-14-19979",
+        "SOB_M_PC-14-12465",
+        "SOB_M_PC-14-15687B",
+        "SOB_M_PC-14-15704",
+        "SOB_M_PC-14-19440"
+      ],
+      "val_patients": [
+        "SOB_B_A-14-22549AB",
+        "SOB_B_F-14-14134",
+        "SOB_B_F-14-23222AB",
+        "SOB_B_PT-14-21998AB",
+        "SOB_M_DC-14-11520",
+        "SOB_M_DC-14-11951",
+        "SOB_M_DC-14-14946",
+        "SOB_M_DC-14-16716",
+        "SOB_M_DC-14-18650",
+        "SOB_M_DC-14-9461",
+        "SOB_M_LC-14-15570",
+        "SOB_M_MC-14-10147",
+        "SOB_M_MC-14-12773",
+        "SOB_M_PC-15-190EF"
+      ]
+    },
+    {
+      "fold": 1,
+      "train_patients": [
+        "SOB_B_A-14-22549AB",
+        "SOB_B_A-14-22549G",
+        "SOB_B_A-14-29960CD",
+        "SOB_B_F-14-14134",
+        "SOB_B_F-14-14134E",
+        "SOB_B_F-14-23060AB",
+        "SOB_B_F-14-23222AB",
+        "SOB_B_F-14-25197",
+        "SOB_B_F-14-29960AB",
+        "SOB_B_F-14-9133",
+        "SOB_B_PT-14-21998AB",
+        "SOB_B_PT-14-22704",
+        "SOB_B_PT-14-29315EF",
+        "SOB_B_TA-14-15275",
+        "SOB_B_TA-14-19854C",
+        "SOB_B_TA-14-21978AB",
+        "SOB_M_DC-14-10926",
+        "SOB_M_DC-14-11520",
+        "SOB_M_DC-14-11951",
+        "SOB_M_DC-14-13412",
+        "SOB_M_DC-14-13993",
+        "SOB_M_DC-14-14946",
+        "SOB_M_DC-14-15792",
+        "SOB_M_DC-14-16448",
+        "SOB_M_DC-14-16601",
+        "SOB_M_DC-14-16716",
+        "SOB_M_DC-14-16875",
+        "SOB_M_DC-14-17901",
+        "SOB_M_DC-14-17915",
+        "SOB_M_DC-14-18650",
+        "SOB_M_DC-14-20629",
+        "SOB_M_DC-14-2773",
+        "SOB_M_DC-14-2980",
+        "SOB_M_DC-14-3909",
+        "SOB_M_DC-14-4364",
+        "SOB_M_DC-14-4372",
+        "SOB_M_DC-14-5287",
+        "SOB_M_DC-14-5694",
+        "SOB_M_DC-14-6241",
+        "SOB_M_DC-14-8168",
+        "SOB_M_DC-14-9461",
+        "SOB_M_LC-14-13412",
+        "SOB_M_LC-14-15570",
+        "SOB_M_LC-14-16196",
+        "SOB_M_MC-14-10147",
+        "SOB_M_MC-14-12773",
+        "SOB_M_MC-14-18842",
+        "SOB_M_MC-14-18842D",
+        "SOB_M_MC-14-19979",
+        "SOB_M_PC-14-12465",
+        "SOB_M_PC-14-15704",
+        "SOB_M_PC-14-19440",
+        "SOB_M_PC-15-190EF"
+      ],
+      "val_patients": [
+        "SOB_B_F-14-21998EF",
+        "SOB_B_TA-14-13200",
+        "SOB_B_TA-14-16184CD",
+        "SOB_B_TA-14-3411F",
+        "SOB_M_DC-14-11031",
+        "SOB_M_DC-14-14015",
+        "SOB_M_DC-14-15572",
+        "SOB_M_DC-14-15696",
+        "SOB_M_DC-14-5695",
+        "SOB_M_LC-14-12204",
+        "SOB_M_MC-14-13413",
+        "SOB_M_MC-14-13418DE",
+        "SOB_M_PC-14-15687B"
+      ]
+    },
+    {
+      "fold": 2,
+      "train_patients": [
+        "SOB_B_A-14-22549AB",
+        "SOB_B_A-14-22549G",
+        "SOB_B_A-14-29960CD",
+        "SOB_B_F-14-14134",
+        "SOB_B_F-14-21998EF",
+        "SOB_B_F-14-23222AB",
+        "SOB_B_F-14-25197",
+        "SOB_B_F-14-29960AB",
+        "SOB_B_F-14-9133",
+        "SOB_B_PT-14-21998AB",
+        "SOB_B_PT-14-29315EF",
+        "SOB_B_TA-14-13200",
+        "SOB_B_TA-14-15275",
+        "SOB_B_TA-14-16184CD",
+        "SOB_B_TA-14-21978AB",
+        "SOB_B_TA-14-3411F",
+        "SOB_M_DC-14-10926",
+        "SOB_M_DC-14-11031",
+        "SOB_M_DC-14-11520",
+        "SOB_M_DC-14-11951",
+        "SOB_M_DC-14-13412",
+        "SOB_M_DC-14-13993",
+        "SOB_M_DC-14-14015",
+        "SOB_M_DC-14-14946",
+        "SOB_M_DC-14-15572",
+        "SOB_M_DC-14-15696",
+        "SOB_M_DC-14-16601",
+        "SOB_M_DC-14-16716",
+        "SOB_M_DC-14-16875",
+        "SOB_M_DC-14-17901",
+        "SOB_M_DC-14-18650",
+        "SOB_M_DC-14-20629",
+        "SOB_M_DC-14-2773",
+        "SOB_M_DC-14-2980",
+        "SOB_M_DC-14-4364",
+        "SOB_M_DC-14-4372",
+        "SOB_M_DC-14-5287",
+        "SOB_M_DC-14-5694",
+        "SOB_M_DC-14-5695",
+        "SOB_M_DC-14-6241",
+        "SOB_M_DC-14-8168",
+        "SOB_M_DC-14-9461",
+        "SOB_M_LC-14-12204",
+        "SOB_M_LC-14-13412",
+        "SOB_M_LC-14-15570",
+        "SOB_M_LC-14-16196",
+        "SOB_M_MC-14-10147",
+        "SOB_M_MC-14-12773",
+        "SOB_M_MC-14-13413",
+        "SOB_M_MC-14-13418DE",
+        "SOB_M_PC-14-15687B",
+        "SOB_M_PC-14-15704",
+        "SOB_M_PC-15-190EF"
+      ],
+      "val_patients": [
+        "SOB_B_F-14-14134E",
+        "SOB_B_F-14-23060AB",
+        "SOB_B_PT-14-22704",
+        "SOB_B_TA-14-19854C",
+        "SOB_M_DC-14-15792",
+        "SOB_M_DC-14-16448",
+        "SOB_M_DC-14-17915",
+        "SOB_M_DC-14-3909",
+        "SOB_M_MC-14-18842",
+        "SOB_M_MC-14-18842D",
+        "SOB_M_MC-14-19979",
+        "SOB_M_PC-14-12465",
+        "SOB_M_PC-14-19440"
+      ]
+    },
+    {
+      "fold": 3,
+      "train_patients": [
+        "SOB_B_A-14-22549AB",
+        "SOB_B_A-14-22549G",
+        "SOB_B_F-14-14134",
+        "SOB_B_F-14-14134E",
+        "SOB_B_F-14-21998EF",
+        "SOB_B_F-14-23060AB",
+        "SOB_B_F-14-23222AB",
+        "SOB_B_F-14-25197",
+        "SOB_B_F-14-29960AB",
+        "SOB_B_PT-14-21998AB",
+        "SOB_B_PT-14-22704",
+        "SOB_B_PT-14-29315EF",
+        "SOB_B_TA-14-13200",
+        "SOB_B_TA-14-16184CD",
+        "SOB_B_TA-14-19854C",
+        "SOB_B_TA-14-3411F",
+        "SOB_M_DC-14-10926",
+        "SOB_M_DC-14-11031",
+        "SOB_M_DC-14-11520",
+        "SOB_M_DC-14-11951",
+        "SOB_M_DC-14-13993",
+        "SOB_M_DC-14-14015",
+        "SOB_M_DC-14-14946",
+        "SOB_M_DC-14-15572",
+        "SOB_M_DC-14-15696",
+        "SOB_M_DC-14-15792",
+        "SOB_M_DC-14-16448",
+        "SOB_M_DC-14-16716",
+        "SOB_M_DC-14-16875",
+        "SOB_M_DC-14-17915",
+        "SOB_M_DC-14-18650",
+        "SOB_M_DC-14-20629",
+        "SOB_M_DC-14-3909",
+        "SOB_M_DC-14-4364",
+        "SOB_M_DC-14-5287",
+        "SOB_M_DC-14-5695",
+        "SOB_M_DC-14-6241",
+        "SOB_M_DC-14-8168",
+        "SOB_M_DC-14-9461",
+        "SOB_M_LC-14-12204",
+        "SOB_M_LC-14-15570",
+        "SOB_M_LC-14-16196",
+        "SOB_M_MC-14-10147",
+        "SOB_M_MC-14-12773",
+        "SOB_M_MC-14-13413",
+        "SOB_M_MC-14-13418DE",
+        "SOB_M_MC-14-18842",
+        "SOB_M_MC-14-18842D",
+        "SOB_M_MC-14-19979",
+        "SOB_M_PC-14-12465",
+        "SOB_M_PC-14-15687B",
+        "SOB_M_PC-14-19440",
+        "SOB_M_PC-15-190EF"
+      ],
+      "val_patients": [
+        "SOB_B_A-14-29960CD",
+        "SOB_B_F-14-9133",
+        "SOB_B_TA-14-15275",
+        "SOB_B_TA-14-21978AB",
+        "SOB_M_DC-14-13412",
+        "SOB_M_DC-14-16601",
+        "SOB_M_DC-14-17901",
+        "SOB_M_DC-14-2773",
+        "SOB_M_DC-14-2980",
+        "SOB_M_DC-14-4372",
+        "SOB_M_DC-14-5694",
+        "SOB_M_LC-14-13412",
+        "SOB_M_PC-14-15704"
+      ]
+    },
+    {
+      "fold": 4,
+      "train_patients": [
+        "SOB_B_A-14-22549AB",
+        "SOB_B_A-14-29960CD",
+        "SOB_B_F-14-14134",
+        "SOB_B_F-14-14134E",
+        "SOB_B_F-14-21998EF",
+        "SOB_B_F-14-23060AB",
+        "SOB_B_F-14-23222AB",
+        "SOB_B_F-14-9133",
+        "SOB_B_PT-14-21998AB",
+        "SOB_B_PT-14-22704",
+        "SOB_B_TA-14-13200",
+        "SOB_B_TA-14-15275",
+        "SOB_B_TA-14-16184CD",
+        "SOB_B_TA-14-19854C",
+        "SOB_B_TA-14-21978AB",
+        "SOB_B_TA-14-3411F",
+        "SOB_M_DC-14-11031",
+        "SOB_M_DC-14-11520",
+        "SOB_M_DC-14-11951",
+        "SOB_M_DC-14-13412",
+        "SOB_M_DC-14-14015",
+        "SOB_M_DC-14-14946",
+        "SOB_M_DC-14-15572",
+        "SOB_M_DC-14-15696",
+        "SOB_M_DC-14-15792",
+        "SOB_M_DC-14-16448",
+        "SOB_M_DC-14-16601",
+        "SOB_M_DC-14-16716",
+        "SOB_M_DC-14-17901",
+        "SOB_M_DC-14-17915",
+        "SOB_M_DC-14-18650",
+        "SOB_M_DC-14-2773",
+        "SOB_M_DC-14-2980",
+        "SOB_M_DC-14-3909",
+        "SOB_M_DC-14-4372",
+        "SOB_M_DC-14-5694",
+        "SOB_M_DC-14-5695",
+        "SOB_M_DC-14-9461",
+        "SOB_M_LC-14-12204",
+        "SOB_M_LC-14-13412",
+        "SOB_M_LC-14-15570",
+        "SOB_M_MC-14-10147",
+        "SOB_M_MC-14-12773",
+        "SOB_M_MC-14-13413",
+        "SOB_M_MC-14-13418DE",
+        "SOB_M_MC-14-18842",
+        "SOB_M_MC-14-18842D",
+        "SOB_M_MC-14-19979",
+        "SOB_M_PC-14-12465",
+        "SOB_M_PC-14-15687B",
+        "SOB_M_PC-14-15704",
+        "SOB_M_PC-14-19440",
+        "SOB_M_PC-15-190EF"
+      ],
+      "val_patients": [
+        "SOB_B_A-14-22549G",
+        "SOB_B_F-14-25197",
+        "SOB_B_F-14-29960AB",
+        "SOB_B_PT-14-29315EF",
+        "SOB_M_DC-14-10926",
+        "SOB_M_DC-14-13993",
+        "SOB_M_DC-14-16875",
+        "SOB_M_DC-14-20629",
+        "SOB_M_DC-14-4364",
+        "SOB_M_DC-14-5287",
+        "SOB_M_DC-14-6241",
+        "SOB_M_DC-14-8168",
+        "SOB_M_LC-14-16196"
+      ]
+    }
+  ],
+  "patient_meta": {
+    "SOB_B_A-14-22549AB": {
+      "label": 0,
+      "tumor_type": "A",
+      "num_images": 121
+    },
+    "SOB_B_A-14-22549CD": {
+      "label": 0,
+      "tumor_type": "A",
+      "num_images": 132
+    },
+    "SOB_B_A-14-22549G": {
+      "label": 0,
+      "tumor_type": "A",
+      "num_images": 130
+    },
+    "SOB_B_A-14-29960CD": {
+      "label": 0,
+      "tumor_type": "A",
+      "num_images": 61
+    },
+    "SOB_B_F-14-14134": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 142
+    },
+    "SOB_B_F-14-14134E": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 94
+    },
+    "SOB_B_F-14-21998CD": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 137
+    },
+    "SOB_B_F-14-21998EF": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 121
+    },
+    "SOB_B_F-14-23060AB": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 81
+    },
+    "SOB_B_F-14-23060CD": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 57
+    },
+    "SOB_B_F-14-23222AB": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 68
+    },
+    "SOB_B_F-14-25197": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 120
+    },
+    "SOB_B_F-14-29960AB": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 68
+    },
+    "SOB_B_F-14-9133": {
+      "label": 0,
+      "tumor_type": "F",
+      "num_images": 126
+    },
+    "SOB_B_PT-14-21998AB": {
+      "label": 0,
+      "tumor_type": "PT",
+      "num_images": 235
+    },
+    "SOB_B_PT-14-22704": {
+      "label": 0,
+      "tumor_type": "PT",
+      "num_images": 158
+    },
+    "SOB_B_PT-14-29315EF": {
+      "label": 0,
+      "tumor_type": "PT",
+      "num_images": 60
+    },
+    "SOB_B_TA-14-13200": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 65
+    },
+    "SOB_B_TA-14-15275": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 53
+    },
+    "SOB_B_TA-14-16184": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 132
+    },
+    "SOB_B_TA-14-16184CD": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 124
+    },
+    "SOB_B_TA-14-19854C": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 64
+    },
+    "SOB_B_TA-14-21978AB": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 65
+    },
+    "SOB_B_TA-14-3411F": {
+      "label": 0,
+      "tumor_type": "TA",
+      "num_images": 66
+    },
+    "SOB_M_DC-14-10926": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 39
+    },
+    "SOB_M_DC-14-11031": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 60
+    },
+    "SOB_M_DC-14-11520": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 98
+    },
+    "SOB_M_DC-14-11951": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 100
+    },
+    "SOB_M_DC-14-12312": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 146
+    },
+    "SOB_M_DC-14-13412": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 123
+    },
+    "SOB_M_DC-14-13993": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 145
+    },
+    "SOB_M_DC-14-14015": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 95
+    },
+    "SOB_M_DC-14-14926": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 73
+    },
+    "SOB_M_DC-14-14946": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 131
+    },
+    "SOB_M_DC-14-15572": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 80
+    },
+    "SOB_M_DC-14-15696": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 83
+    },
+    "SOB_M_DC-14-15792": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 55
+    },
+    "SOB_M_DC-14-16188": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 87
+    },
+    "SOB_M_DC-14-16336": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 60
+    },
+    "SOB_M_DC-14-16448": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 53
+    },
+    "SOB_M_DC-14-16601": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 45
+    },
+    "SOB_M_DC-14-16716": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 137
+    },
+    "SOB_M_DC-14-16875": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 61
+    },
+    "SOB_M_DC-14-17614": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 129
+    },
+    "SOB_M_DC-14-17901": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 104
+    },
+    "SOB_M_DC-14-17915": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 79
+    },
+    "SOB_M_DC-14-18650": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 108
+    },
+    "SOB_M_DC-14-20629": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 125
+    },
+    "SOB_M_DC-14-20636": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 111
+    },
+    "SOB_M_DC-14-2523": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 75
+    },
+    "SOB_M_DC-14-2773": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 144
+    },
+    "SOB_M_DC-14-2980": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 84
+    },
+    "SOB_M_DC-14-2985": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 59
+    },
+    "SOB_M_DC-14-3909": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 95
+    },
+    "SOB_M_DC-14-4364": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 44
+    },
+    "SOB_M_DC-14-4372": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 84
+    },
+    "SOB_M_DC-14-5287": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 88
+    },
+    "SOB_M_DC-14-5694": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 90
+    },
+    "SOB_M_DC-14-5695": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 90
+    },
+    "SOB_M_DC-14-6241": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 78
+    },
+    "SOB_M_DC-14-8168": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 38
+    },
+    "SOB_M_DC-14-9461": {
+      "label": 1,
+      "tumor_type": "DC",
+      "num_images": 155
+    },
+    "SOB_M_LC-14-12204": {
+      "label": 1,
+      "tumor_type": "LC",
+      "num_images": 103
+    },
+    "SOB_M_LC-14-13412": {
+      "label": 1,
+      "tumor_type": "LC",
+      "num_images": 123
+    },
+    "SOB_M_LC-14-15570": {
+      "label": 1,
+      "tumor_type": "LC",
+      "num_images": 201
+    },
+    "SOB_M_LC-14-15570C": {
+      "label": 1,
+      "tumor_type": "LC",
+      "num_images": 125
+    },
+    "SOB_M_LC-14-16196": {
+      "label": 1,
+      "tumor_type": "LC",
+      "num_images": 74
+    },
+    "SOB_M_MC-14-10147": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 64
+    },
+    "SOB_M_MC-14-12773": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 90
+    },
+    "SOB_M_MC-14-13413": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 119
+    },
+    "SOB_M_MC-14-13418DE": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 55
+    },
+    "SOB_M_MC-14-16456": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 178
+    },
+    "SOB_M_MC-14-18842": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 62
+    },
+    "SOB_M_MC-14-18842D": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 64
+    },
+    "SOB_M_MC-14-19979": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 98
+    },
+    "SOB_M_MC-14-19979C": {
+      "label": 1,
+      "tumor_type": "MC",
+      "num_images": 62
+    },
+    "SOB_M_PC-14-12465": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 74
+    },
+    "SOB_M_PC-14-15687B": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 62
+    },
+    "SOB_M_PC-14-15704": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 127
+    },
+    "SOB_M_PC-14-19440": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 142
+    },
+    "SOB_M_PC-14-9146": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 90
+    },
+    "SOB_M_PC-15-190EF": {
+      "label": 1,
+      "tumor_type": "PC",
+      "num_images": 65
+    }
+  }
+}
