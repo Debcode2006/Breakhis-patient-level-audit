@@ -1,0 +1,284 @@
+2026-07-23 23:10:51 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- BUILD MEMORY BANK
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0]
+  output dir                : analysis\retrieval\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:10:51 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- MEMORY BANK  fold 0
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  run dir                   : runs\exp3n_swin_supcon_cls\20260723_010827_train_fold0
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_010827_train_fold0\checkpoints\best.pt
+  key (D1)                  : features
+  output                    : analysis\retrieval\exp3n\bank_fold0.npz
+  image size / batch        : 224 / 16
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:10:53 | INFO    | Encoding 4541 training images (52 patients) ...
+2026-07-23 23:11:12 | INFO    |   encoded 16 images ...
+2026-07-23 23:11:16 | INFO    |   encoded 416 images ...
+2026-07-23 23:11:19 | INFO    |   encoded 816 images ...
+2026-07-23 23:11:23 | INFO    |   encoded 1216 images ...
+2026-07-23 23:11:26 | INFO    |   encoded 1616 images ...
+2026-07-23 23:11:30 | INFO    |   encoded 2016 images ...
+2026-07-23 23:11:33 | INFO    |   encoded 2416 images ...
+2026-07-23 23:11:37 | INFO    |   encoded 2816 images ...
+2026-07-23 23:11:41 | INFO    |   encoded 3216 images ...
+2026-07-23 23:11:45 | INFO    |   encoded 3616 images ...
+2026-07-23 23:11:48 | INFO    |   encoded 4016 images ...
+2026-07-23 23:11:52 | INFO    |   encoded 4416 images ...
+2026-07-23 23:11:53 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ BANK SANITY  fold 0
+══════════════════════════════════════════════════════════════════════════
+  image rows                : 4541
+  slide rows                : 52  (= training patients)
+  bank ∩ val patients       : empty ✓
+  bank ∩ test patients      : empty ✓
+  key L2 norms              : 1.000000 .. 1.000000 ✓
+  mag shard sizes           : {'40': 1143, '100': 1223, '200': 1133, '400': 1042}
+  max image rows / patient  : 158
+  key dim                   : 1024
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:11:54 | INFO    | Saved bank -> analysis\retrieval\exp3n\bank_fold0.npz  (17.5 MB)
+2026-07-23 23:11:55 | INFO    | Saved summary -> analysis\retrieval\exp3n\bank_summary.json
+2026-07-23 23:12:06 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- BUILD MEMORY BANK
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [1]
+  output dir                : analysis\retrieval\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:12:06 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- MEMORY BANK  fold 1
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  run dir                   : runs\exp3n_swin_supcon_cls\20260723_013510_train_fold1
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_013510_train_fold1\checkpoints\best.pt
+  key (D1)                  : features
+  output                    : analysis\retrieval\exp3n\bank_fold1.npz
+  image size / batch        : 224 / 16
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:12:08 | INFO    | Encoding 5133 training images (53 patients) ...
+2026-07-23 23:12:29 | INFO    |   encoded 16 images ...
+2026-07-23 23:12:33 | INFO    |   encoded 416 images ...
+2026-07-23 23:12:38 | INFO    |   encoded 816 images ...
+2026-07-23 23:12:43 | INFO    |   encoded 1216 images ...
+2026-07-23 23:12:47 | INFO    |   encoded 1616 images ...
+2026-07-23 23:12:52 | INFO    |   encoded 2016 images ...
+2026-07-23 23:12:56 | INFO    |   encoded 2416 images ...
+2026-07-23 23:13:01 | INFO    |   encoded 2816 images ...
+2026-07-23 23:13:06 | INFO    |   encoded 3216 images ...
+2026-07-23 23:13:11 | INFO    |   encoded 3616 images ...
+2026-07-23 23:13:16 | INFO    |   encoded 4016 images ...
+2026-07-23 23:13:21 | INFO    |   encoded 4416 images ...
+2026-07-23 23:13:25 | INFO    |   encoded 4816 images ...
+2026-07-23 23:13:29 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ BANK SANITY  fold 1
+══════════════════════════════════════════════════════════════════════════
+  image rows                : 5133
+  slide rows                : 53  (= training patients)
+  bank ∩ val patients       : empty ✓
+  bank ∩ test patients      : empty ✓
+  key L2 norms              : 1.000000 .. 1.000000 ✓
+  mag shard sizes           : {'40': 1291, '100': 1335, '200': 1320, '400': 1187}
+  max image rows / patient  : 235
+  key dim                   : 1024
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:13:30 | INFO    | Saved bank -> analysis\retrieval\exp3n\bank_fold1.npz  (19.8 MB)
+2026-07-23 23:13:32 | INFO    | Saved summary -> analysis\retrieval\exp3n\bank_summary.json
+2026-07-23 23:13:44 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- BUILD MEMORY BANK
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [2]
+  output dir                : analysis\retrieval\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:13:44 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- MEMORY BANK  fold 2
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  run dir                   : runs\exp3n_swin_supcon_cls\20260723_015949_train_fold2
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_015949_train_fold2\checkpoints\best.pt
+  key (D1)                  : features
+  output                    : analysis\retrieval\exp3n\bank_fold2.npz
+  image size / batch        : 224 / 16
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:13:47 | INFO    | Encoding 5137 training images (53 patients) ...
+2026-07-23 23:14:10 | INFO    |   encoded 16 images ...
+2026-07-23 23:14:15 | INFO    |   encoded 416 images ...
+2026-07-23 23:14:19 | INFO    |   encoded 816 images ...
+2026-07-23 23:14:24 | INFO    |   encoded 1216 images ...
+2026-07-23 23:14:28 | INFO    |   encoded 1616 images ...
+2026-07-23 23:14:33 | INFO    |   encoded 2016 images ...
+2026-07-23 23:14:38 | INFO    |   encoded 2416 images ...
+2026-07-23 23:14:43 | INFO    |   encoded 2816 images ...
+2026-07-23 23:14:48 | INFO    |   encoded 3216 images ...
+2026-07-23 23:14:53 | INFO    |   encoded 3616 images ...
+2026-07-23 23:14:57 | INFO    |   encoded 4016 images ...
+2026-07-23 23:15:01 | INFO    |   encoded 4416 images ...
+2026-07-23 23:15:05 | INFO    |   encoded 4816 images ...
+2026-07-23 23:15:09 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ BANK SANITY  fold 2
+══════════════════════════════════════════════════════════════════════════
+  image rows                : 5137
+  slide rows                : 53  (= training patients)
+  bank ∩ val patients       : empty ✓
+  bank ∩ test patients      : empty ✓
+  key L2 norms              : 1.000000 .. 1.000000 ✓
+  mag shard sizes           : {'40': 1274, '100': 1347, '200': 1318, '400': 1198}
+  max image rows / patient  : 235
+  key dim                   : 1024
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:15:10 | INFO    | Saved bank -> analysis\retrieval\exp3n\bank_fold2.npz  (19.8 MB)
+2026-07-23 23:15:11 | INFO    | Saved summary -> analysis\retrieval\exp3n\bank_summary.json
+2026-07-23 23:15:24 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- BUILD MEMORY BANK
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [3]
+  output dir                : analysis\retrieval\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:15:24 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- MEMORY BANK  fold 3
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  run dir                   : runs\exp3n_swin_supcon_cls\20260723_025321_train_fold3
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_025321_train_fold3\checkpoints\best.pt
+  key (D1)                  : features
+  output                    : analysis\retrieval\exp3n\bank_fold3.npz
+  image size / batch        : 224 / 16
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:15:27 | INFO    | Encoding 5027 training images (53 patients) ...
+2026-07-23 23:15:50 | INFO    |   encoded 16 images ...
+2026-07-23 23:15:54 | INFO    |   encoded 416 images ...
+2026-07-23 23:15:58 | INFO    |   encoded 816 images ...
+2026-07-23 23:16:01 | INFO    |   encoded 1216 images ...
+2026-07-23 23:16:05 | INFO    |   encoded 1616 images ...
+2026-07-23 23:16:09 | INFO    |   encoded 2016 images ...
+2026-07-23 23:16:12 | INFO    |   encoded 2416 images ...
+2026-07-23 23:16:16 | INFO    |   encoded 2816 images ...
+2026-07-23 23:16:20 | INFO    |   encoded 3216 images ...
+2026-07-23 23:16:24 | INFO    |   encoded 3616 images ...
+2026-07-23 23:16:27 | INFO    |   encoded 4016 images ...
+2026-07-23 23:16:31 | INFO    |   encoded 4416 images ...
+2026-07-23 23:16:35 | INFO    |   encoded 4816 images ...
+2026-07-23 23:16:37 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ BANK SANITY  fold 3
+══════════════════════════════════════════════════════════════════════════
+  image rows                : 5027
+  slide rows                : 53  (= training patients)
+  bank ∩ val patients       : empty ✓
+  bank ∩ test patients      : empty ✓
+  key L2 norms              : 1.000000 .. 1.000000 ✓
+  mag shard sizes           : {'40': 1276, '100': 1329, '200': 1287, '400': 1135}
+  max image rows / patient  : 235
+  key dim                   : 1024
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:16:39 | INFO    | Saved bank -> analysis\retrieval\exp3n\bank_fold3.npz  (19.4 MB)
+2026-07-23 23:16:40 | INFO    | Saved summary -> analysis\retrieval\exp3n\bank_summary.json
+2026-07-23 23:16:53 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- BUILD MEMORY BANK
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [4]
+  output dir                : analysis\retrieval\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:16:53 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B1 -- MEMORY BANK  fold 4
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  run dir                   : runs\exp3n_swin_supcon_cls\20260723_075322_train_fold4
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_075322_train_fold4\checkpoints\best.pt
+  key (D1)                  : features
+  output                    : analysis\retrieval\exp3n\bank_fold4.npz
+  image size / batch        : 224 / 16
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:16:56 | INFO    | Encoding 5186 training images (53 patients) ...
+2026-07-23 23:17:19 | INFO    |   encoded 16 images ...
+2026-07-23 23:17:23 | INFO    |   encoded 416 images ...
+2026-07-23 23:17:28 | INFO    |   encoded 816 images ...
+2026-07-23 23:17:33 | INFO    |   encoded 1216 images ...
+2026-07-23 23:17:36 | INFO    |   encoded 1616 images ...
+2026-07-23 23:17:40 | INFO    |   encoded 2016 images ...
+2026-07-23 23:17:44 | INFO    |   encoded 2416 images ...
+2026-07-23 23:17:47 | INFO    |   encoded 2816 images ...
+2026-07-23 23:17:51 | INFO    |   encoded 3216 images ...
+2026-07-23 23:17:55 | INFO    |   encoded 3616 images ...
+2026-07-23 23:17:59 | INFO    |   encoded 4016 images ...
+2026-07-23 23:18:03 | INFO    |   encoded 4416 images ...
+2026-07-23 23:18:06 | INFO    |   encoded 4816 images ...
+2026-07-23 23:18:09 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ BANK SANITY  fold 4
+══════════════════════════════════════════════════════════════════════════
+  image rows                : 5186
+  slide rows                : 53  (= training patients)
+  bank ∩ val patients       : empty ✓
+  bank ∩ test patients      : empty ✓
+  key L2 norms              : 1.000000 .. 1.000000 ✓
+  mag shard sizes           : {'40': 1296, '100': 1366, '200': 1322, '400': 1202}
+  max image rows / patient  : 235
+  key dim                   : 1024
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:18:11 | INFO    | Saved bank -> analysis\retrieval\exp3n\bank_fold4.npz  (20.0 MB)
+2026-07-23 23:18:12 | INFO    | Saved summary -> analysis\retrieval\exp3n\bank_summary.json
