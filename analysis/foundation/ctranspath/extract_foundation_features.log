@@ -1,0 +1,37 @@
+2026-07-28 19:57:00 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE F1 -- FOUNDATION FEATURE EXTRACTION
+══════════════════════════════════════════════════════════════════════════
+  encoder                   : ctranspath
+  output                    : analysis\foundation\ctranspath\features.npz
+  image size / batch        : 224 / 32
+  transform                 : Resize((224, 224)) -> ToTensor -> Normalize(ImageNet mean/std)  [rap_mst.data.transforms, train=False]
+  magnifications            : all four
+  seed / deterministic      : 42 / True
+──────────────────────────────────────────────────────────────────────────
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+  torch / timm              : 2.3.1+cu121 / 1.0.9
+──────────────────────────────────────────────────────────────────────────
+2026-07-28 19:57:00 | INFO    | Loading the frozen encoder (downloads on first use) ...
+2026-07-28 19:57:03 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ FROZEN ENCODER
+══════════════════════════════════════════════════════════════════════════
+  hub id                    : hf-hub:1aurent/swin_tiny_patch4_window7_224.CTransPath
+  patch embed               : convstem
+  pooling                   : avg
+  feature dim               : 768
+  parameters                : 27,520,038 (27.52M), all frozen
+  weights verified          : 183/183 checkpoint tensors identical in the model ✓
+──────────────────────────────────────────────────────────────────────────
+2026-07-28 19:57:03 | INFO    | Encoding 7909 images ...
+2026-07-28 19:59:40 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE SANITY
+══════════════════════════════════════════════════════════════════════════
+  rows                      : 7909  (82 patients)
+  feature dim               : 768
+  benign / malignant        : 2480 / 5429
+  magnification counts      : {40: 1995, 100: 2081, 200: 2013, 400: 1820}
+  L2 norm range             : 2.885 .. 4.638
+  mean per-dim std          : 0.0867  (non-degenerate ✓)
+  non-finite values         : 0 ✓
+──────────────────────────────────────────────────────────────────────────
+2026-07-28 19:59:42 | INFO    | Saved feature cache -> analysis\foundation\ctranspath\features.npz  (22.6 MB)
