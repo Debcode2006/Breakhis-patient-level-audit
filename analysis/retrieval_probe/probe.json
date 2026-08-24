@@ -1,0 +1,4744 @@
+{
+  "exp1": {
+    "spaces": {
+      "embeddings": {
+        "knn_acc": 0.8886,
+        "knn_auc": 0.9163,
+        "knn_patient_acc": 0.95,
+        "same_mag_rate": 0.3139,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.0633,
+        "same_subtype_rate": 0.3314,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.0747
+      }
+    },
+    "hubness": {
+      "Nk_skewness": 1.0307,
+      "never_retrieved_frac": 0.0292,
+      "top1pct_share": 0.0355,
+      "top10pct_share": 0.2459
+    },
+    "prototypes_vs_knn": {
+      "binary_prototype": {
+        "img_acc": 0.8837,
+        "auc": 0.9428,
+        "patient_acc": 0.9625
+      },
+      "subtype_prototype": {
+        "img_acc": 0.8918,
+        "auc": 0.9212,
+        "patient_acc": 0.975
+      },
+      "knn_uniform": {
+        "img_acc": 0.8886,
+        "auc": 0.9099,
+        "patient_acc": 0.95
+      },
+      "knn_softmax": {
+        "img_acc": 0.8886,
+        "auc": 0.9163,
+        "patient_acc": 0.95
+      }
+    },
+    "subtype_purity": {
+      "A": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.8318,
+        "top_neighbour_subtypes": [
+          "F",
+          "TA",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.704,
+          0.139,
+          0.085
+        ]
+      },
+      "F": {
+        "n_images": 194.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.2692,
+        "binary_knn_acc": 0.966,
+        "top_neighbour_subtypes": [
+          "A",
+          "F",
+          "TA"
+        ],
+        "top_neighbour_fracs": [
+          0.402,
+          0.279,
+          0.277
+        ]
+      },
+      "TA": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.5151,
+        "top_neighbour_subtypes": [
+          "F",
+          "PC",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.348,
+          0.262,
+          0.147
+        ]
+      },
+      "DC": {
+        "n_images": 740.0,
+        "n_patients": 8.0,
+        "same_subtype_precision_at_k": 0.6182,
+        "binary_knn_acc": 0.9411,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "LC"
+        ],
+        "top_neighbour_fracs": [
+          0.661,
+          0.136,
+          0.084
+        ]
+      },
+      "LC": {
+        "n_images": 125.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.9968,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "A"
+        ],
+        "top_neighbour_fracs": [
+          0.623,
+          0.371,
+          0.003
+        ]
+      },
+      "MC": {
+        "n_images": 240.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.1587,
+        "binary_knn_acc": 0.9133,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "LC"
+        ],
+        "top_neighbour_fracs": [
+          0.367,
+          0.212,
+          0.133
+        ]
+      },
+      "PC": {
+        "n_images": 90.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.7045,
+        "top_neighbour_subtypes": [
+          "TA",
+          "DC",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.324,
+          0.305,
+          0.234
+        ]
+      }
+    },
+    "per_patient": {
+      "SOB_B_A-14-22549CD": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.1485,
+        "retrieval_mean_prob": 0.1996,
+        "param_img_acc": 0.8924,
+        "retrieval_img_acc": 0.8318
+      },
+      "SOB_B_F-14-21998CD": {
+        "label": 0.0,
+        "n": 137.0,
+        "param_mean_prob": 0.0573,
+        "retrieval_mean_prob": 0.046,
+        "param_img_acc": 0.9737,
+        "retrieval_img_acc": 0.9883
+      },
+      "SOB_B_F-14-23060CD": {
+        "label": 0.0,
+        "n": 57.0,
+        "param_mean_prob": 0.1218,
+        "retrieval_mean_prob": 0.1333,
+        "param_img_acc": 0.9193,
+        "retrieval_img_acc": 0.9123
+      },
+      "SOB_B_TA-14-16184": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.3577,
+        "retrieval_mean_prob": 0.5149,
+        "param_img_acc": 0.6712,
+        "retrieval_img_acc": 0.5151
+      },
+      "SOB_M_DC-14-12312": {
+        "label": 1.0,
+        "n": 146.0,
+        "param_mean_prob": 0.6644,
+        "retrieval_mean_prob": 0.6701,
+        "param_img_acc": 0.6863,
+        "retrieval_img_acc": 0.7027
+      },
+      "SOB_M_DC-14-14926": {
+        "label": 1.0,
+        "n": 73.0,
+        "param_mean_prob": 0.994,
+        "retrieval_mean_prob": 0.9865,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16188": {
+        "label": 1.0,
+        "n": 87.0,
+        "param_mean_prob": 0.9954,
+        "retrieval_mean_prob": 0.9854,
+        "param_img_acc": 0.9977,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16336": {
+        "label": 1.0,
+        "n": 60.0,
+        "param_mean_prob": 0.9851,
+        "retrieval_mean_prob": 0.9891,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-17614": {
+        "label": 1.0,
+        "n": 129.0,
+        "param_mean_prob": 0.9978,
+        "retrieval_mean_prob": 0.9897,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-20636": {
+        "label": 1.0,
+        "n": 111.0,
+        "param_mean_prob": 0.9928,
+        "retrieval_mean_prob": 0.9837,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-2523": {
+        "label": 1.0,
+        "n": 75.0,
+        "param_mean_prob": 0.968,
+        "retrieval_mean_prob": 0.9902,
+        "param_img_acc": 0.9813,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-2985": {
+        "label": 1.0,
+        "n": 59.0,
+        "param_mean_prob": 0.9287,
+        "retrieval_mean_prob": 0.9595,
+        "param_img_acc": 0.9627,
+        "retrieval_img_acc": 0.9966
+      },
+      "SOB_M_LC-14-15570C": {
+        "label": 1.0,
+        "n": 125.0,
+        "param_mean_prob": 0.9705,
+        "retrieval_mean_prob": 0.9669,
+        "param_img_acc": 0.9904,
+        "retrieval_img_acc": 0.9968
+      },
+      "SOB_M_MC-14-16456": {
+        "label": 1.0,
+        "n": 178.0,
+        "param_mean_prob": 0.9083,
+        "retrieval_mean_prob": 0.8441,
+        "param_img_acc": 0.9326,
+        "retrieval_img_acc": 0.9056
+      },
+      "SOB_M_MC-14-19979C": {
+        "label": 1.0,
+        "n": 62.0,
+        "param_mean_prob": 0.946,
+        "retrieval_mean_prob": 0.8642,
+        "param_img_acc": 0.9678,
+        "retrieval_img_acc": 0.9355
+      },
+      "SOB_M_PC-14-9146": {
+        "label": 1.0,
+        "n": 90.0,
+        "param_mean_prob": 0.7173,
+        "retrieval_mean_prob": 0.642,
+        "param_img_acc": 0.7133,
+        "retrieval_img_acc": 0.7045
+      }
+    },
+    "fusion_sweep": [
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9059,
+        "auc": 0.9506,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.855
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9477,
+        "patient_acc": 0.9875,
+        "sens": 0.9244,
+        "spec": 0.8559
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9059,
+        "auc": 0.9552,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.855
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9547,
+        "patient_acc": 0.9875,
+        "sens": 0.9244,
+        "spec": 0.8559
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9059,
+        "auc": 0.9556,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.855
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9554,
+        "patient_acc": 0.9875,
+        "sens": 0.9244,
+        "spec": 0.8559
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.903,
+        "auc": 0.9549,
+        "patient_acc": 0.9875,
+        "sens": 0.9227,
+        "spec": 0.8515
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9059,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8546
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9055,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9248,
+        "spec": 0.855
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9047,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9249,
+        "spec": 0.852
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9055,
+        "auc": 0.9526,
+        "patient_acc": 0.9875,
+        "sens": 0.9252,
+        "spec": 0.8541
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9055,
+        "auc": 0.9553,
+        "patient_acc": 0.9875,
+        "sens": 0.9252,
+        "spec": 0.8541
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9551,
+        "patient_acc": 0.9875,
+        "sens": 0.9248,
+        "spec": 0.8546
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9059,
+        "auc": 0.9556,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.855
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9059,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9253,
+        "spec": 0.855
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9041,
+        "auc": 0.9551,
+        "patient_acc": 0.9875,
+        "sens": 0.9245,
+        "spec": 0.8507
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9063,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8559
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9061,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8554
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9062,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9257,
+        "spec": 0.8554
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9064,
+        "auc": 0.946,
+        "patient_acc": 0.9875,
+        "sens": 0.9259,
+        "spec": 0.8554
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9052,
+        "auc": 0.9545,
+        "patient_acc": 0.9875,
+        "sens": 0.9252,
+        "spec": 0.8528
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.905,
+        "auc": 0.9542,
+        "patient_acc": 0.9875,
+        "sens": 0.925,
+        "spec": 0.8528
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9052,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9252,
+        "spec": 0.8528
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9049,
+        "auc": 0.9554,
+        "patient_acc": 0.9875,
+        "sens": 0.9249,
+        "spec": 0.8528
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9027,
+        "auc": 0.9547,
+        "patient_acc": 0.9875,
+        "sens": 0.9239,
+        "spec": 0.8476
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8987,
+        "auc": 0.9378,
+        "patient_acc": 0.9875,
+        "sens": 0.9257,
+        "spec": 0.8284
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.8533
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9049,
+        "auc": 0.9556,
+        "patient_acc": 0.9875,
+        "sens": 0.9247,
+        "spec": 0.8533
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9036,
+        "auc": 0.9552,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8498
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9017,
+        "auc": 0.9413,
+        "patient_acc": 0.9875,
+        "sens": 0.9247,
+        "spec": 0.8419
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9058,
+        "auc": 0.9558,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.8546
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9065,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9264,
+        "spec": 0.8546
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9065,
+        "auc": 0.9556,
+        "patient_acc": 0.9875,
+        "sens": 0.9264,
+        "spec": 0.8546
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9065,
+        "auc": 0.9446,
+        "patient_acc": 0.9875,
+        "sens": 0.9264,
+        "spec": 0.8546
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9055,
+        "auc": 0.9551,
+        "patient_acc": 0.9875,
+        "sens": 0.9259,
+        "spec": 0.8524
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9049,
+        "auc": 0.9549,
+        "patient_acc": 0.9875,
+        "sens": 0.9253,
+        "spec": 0.8515
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.903,
+        "auc": 0.9529,
+        "patient_acc": 0.9875,
+        "sens": 0.9254,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9259,
+        "spec": 0.852
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9048,
+        "auc": 0.9554,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8506
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9035,
+        "auc": 0.9547,
+        "patient_acc": 0.9875,
+        "sens": 0.926,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.901,
+        "auc": 0.9357,
+        "patient_acc": 0.9875,
+        "sens": 0.9284,
+        "spec": 0.8297
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9058,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9259,
+        "spec": 0.8533
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9051,
+        "auc": 0.9556,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8519
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9033,
+        "auc": 0.9552,
+        "patient_acc": 0.9875,
+        "sens": 0.9249,
+        "spec": 0.8472
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9019,
+        "auc": 0.9393,
+        "patient_acc": 0.9875,
+        "sens": 0.9255,
+        "spec": 0.8402
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9058,
+        "auc": 0.9558,
+        "patient_acc": 0.9875,
+        "sens": 0.9257,
+        "spec": 0.8537
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9061,
+        "auc": 0.9557,
+        "patient_acc": 0.9875,
+        "sens": 0.9262,
+        "spec": 0.8537
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9056,
+        "auc": 0.9555,
+        "patient_acc": 0.9875,
+        "sens": 0.9267,
+        "spec": 0.8506
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9056,
+        "auc": 0.9432,
+        "patient_acc": 0.9875,
+        "sens": 0.9267,
+        "spec": 0.8506
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0149,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9054,
+        "auc": 0.9559,
+        "patient_acc": 0.9875,
+        "sens": 0.9242,
+        "spec": 0.8563
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9018,
+        "auc": 0.9382,
+        "patient_acc": 0.975,
+        "sens": 0.9225,
+        "spec": 0.8476
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9016,
+        "auc": 0.9539,
+        "patient_acc": 0.975,
+        "sens": 0.9224,
+        "spec": 0.8476
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8911,
+        "auc": 0.9387,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8175
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8979,
+        "auc": 0.9433,
+        "patient_acc": 0.975,
+        "sens": 0.9225,
+        "spec": 0.8336
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9048,
+        "auc": 0.947,
+        "patient_acc": 0.975,
+        "sens": 0.9252,
+        "spec": 0.8515
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0294,
+        "img_acc": 0.9053,
+        "auc": 0.9517,
+        "patient_acc": 0.975,
+        "sens": 0.9248,
+        "spec": 0.8541
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9025,
+        "auc": 0.9482,
+        "patient_acc": 0.975,
+        "sens": 0.9247,
+        "spec": 0.8445
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9028,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8485
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8961,
+        "auc": 0.9386,
+        "patient_acc": 0.975,
+        "sens": 0.9234,
+        "spec": 0.8249
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9015,
+        "auc": 0.9427,
+        "patient_acc": 0.975,
+        "sens": 0.9252,
+        "spec": 0.8397
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.06,
+        "img_acc": 0.9025,
+        "auc": 0.9522,
+        "patient_acc": 0.975,
+        "sens": 0.9242,
+        "spec": 0.8459
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8951,
+        "auc": 0.9202,
+        "patient_acc": 0.9625,
+        "sens": 0.9292,
+        "spec": 0.8061
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8764,
+        "auc": 0.8932,
+        "patient_acc": 0.95,
+        "sens": 0.9114,
+        "spec": 0.7847
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8886,
+        "auc": 0.9098,
+        "patient_acc": 0.95,
+        "sens": 0.9235,
+        "spec": 0.7974
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.893,
+        "auc": 0.9174,
+        "patient_acc": 0.95,
+        "sens": 0.9265,
+        "spec": 0.8057
+      }
+    ]
+  },
+  "exp2": {
+    "spaces": {
+      "embeddings": {
+        "knn_acc": 0.8886,
+        "knn_auc": 0.9144,
+        "knn_patient_acc": 0.9625,
+        "same_mag_rate": 0.9957,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.7451,
+        "same_subtype_rate": 0.3191,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.0624
+      },
+      "emb_nomag": {
+        "knn_acc": 0.8857,
+        "knn_auc": 0.9173,
+        "knn_patient_acc": 0.975,
+        "same_mag_rate": 0.3323,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.0816,
+        "same_subtype_rate": 0.3253,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.0686
+      },
+      "mag_block": {
+        "knn_acc": 0.634,
+        "knn_auc": 0.4329,
+        "knn_patient_acc": 0.75,
+        "same_mag_rate": 1.0,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.7494,
+        "same_subtype_rate": 0.2035,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": -0.0532
+      }
+    },
+    "hubness": {
+      "Nk_skewness": 1.0281,
+      "never_retrieved_frac": 0.0292,
+      "top1pct_share": 0.0351,
+      "top10pct_share": 0.247
+    },
+    "prototypes_vs_knn": {
+      "binary_prototype": {
+        "img_acc": 0.886,
+        "auc": 0.9314,
+        "patient_acc": 0.95
+      },
+      "subtype_prototype": {
+        "img_acc": 0.8918,
+        "auc": 0.9033,
+        "patient_acc": 0.9375
+      },
+      "knn_uniform": {
+        "img_acc": 0.8857,
+        "auc": 0.9137,
+        "patient_acc": 0.975
+      },
+      "knn_softmax": {
+        "img_acc": 0.8857,
+        "auc": 0.9173,
+        "patient_acc": 0.975
+      }
+    },
+    "subtype_purity": {
+      "A": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.747,
+        "top_neighbour_subtypes": [
+          "F",
+          "TA",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.505,
+          0.232,
+          0.097
+        ]
+      },
+      "F": {
+        "n_images": 194.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.2598,
+        "binary_knn_acc": 0.9629,
+        "top_neighbour_subtypes": [
+          "F",
+          "A",
+          "TA"
+        ],
+        "top_neighbour_fracs": [
+          0.422,
+          0.352,
+          0.199
+        ]
+      },
+      "TA": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.5621,
+        "top_neighbour_subtypes": [
+          "F",
+          "A",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.379,
+          0.197,
+          0.163
+        ]
+      },
+      "DC": {
+        "n_images": 740.0,
+        "n_patients": 8.0,
+        "same_subtype_precision_at_k": 0.6069,
+        "binary_knn_acc": 0.934,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "LC"
+        ],
+        "top_neighbour_fracs": [
+          0.584,
+          0.186,
+          0.119
+        ]
+      },
+      "LC": {
+        "n_images": 125.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.9952,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.733,
+          0.262,
+          0.004
+        ]
+      },
+      "MC": {
+        "n_images": 240.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.1593,
+        "binary_knn_acc": 0.9433,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "LC"
+        ],
+        "top_neighbour_fracs": [
+          0.482,
+          0.156,
+          0.128
+        ]
+      },
+      "PC": {
+        "n_images": 90.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.6933,
+        "top_neighbour_subtypes": [
+          "MC",
+          "DC",
+          "TA"
+        ],
+        "top_neighbour_fracs": [
+          0.33,
+          0.3,
+          0.212
+        ]
+      }
+    },
+    "per_patient": {
+      "SOB_B_A-14-22549CD": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.1343,
+        "retrieval_mean_prob": 0.2886,
+        "param_img_acc": 0.8939,
+        "retrieval_img_acc": 0.747
+      },
+      "SOB_B_F-14-21998CD": {
+        "label": 0.0,
+        "n": 137.0,
+        "param_mean_prob": 0.037,
+        "retrieval_mean_prob": 0.0714,
+        "param_img_acc": 0.9839,
+        "retrieval_img_acc": 0.9766
+      },
+      "SOB_B_F-14-23060CD": {
+        "label": 0.0,
+        "n": 57.0,
+        "param_mean_prob": 0.0703,
+        "retrieval_mean_prob": 0.1156,
+        "param_img_acc": 0.9719,
+        "retrieval_img_acc": 0.9298
+      },
+      "SOB_B_TA-14-16184": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.3062,
+        "retrieval_mean_prob": 0.4519,
+        "param_img_acc": 0.7061,
+        "retrieval_img_acc": 0.5621
+      },
+      "SOB_M_DC-14-12312": {
+        "label": 1.0,
+        "n": 146.0,
+        "param_mean_prob": 0.6048,
+        "retrieval_mean_prob": 0.6485,
+        "param_img_acc": 0.6383,
+        "retrieval_img_acc": 0.6685
+      },
+      "SOB_M_DC-14-14926": {
+        "label": 1.0,
+        "n": 73.0,
+        "param_mean_prob": 0.951,
+        "retrieval_mean_prob": 0.9688,
+        "param_img_acc": 0.9726,
+        "retrieval_img_acc": 0.9973
+      },
+      "SOB_M_DC-14-16188": {
+        "label": 1.0,
+        "n": 87.0,
+        "param_mean_prob": 0.9909,
+        "retrieval_mean_prob": 0.9899,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16336": {
+        "label": 1.0,
+        "n": 60.0,
+        "param_mean_prob": 0.9532,
+        "retrieval_mean_prob": 0.9967,
+        "param_img_acc": 0.9933,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-17614": {
+        "label": 1.0,
+        "n": 129.0,
+        "param_mean_prob": 0.9944,
+        "retrieval_mean_prob": 0.9937,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-20636": {
+        "label": 1.0,
+        "n": 111.0,
+        "param_mean_prob": 0.9686,
+        "retrieval_mean_prob": 0.9651,
+        "param_img_acc": 0.9838,
+        "retrieval_img_acc": 0.9982
+      },
+      "SOB_M_DC-14-2523": {
+        "label": 1.0,
+        "n": 75.0,
+        "param_mean_prob": 0.9663,
+        "retrieval_mean_prob": 0.9942,
+        "param_img_acc": 0.992,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-2985": {
+        "label": 1.0,
+        "n": 59.0,
+        "param_mean_prob": 0.9074,
+        "retrieval_mean_prob": 0.9743,
+        "param_img_acc": 0.939,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_LC-14-15570C": {
+        "label": 1.0,
+        "n": 125.0,
+        "param_mean_prob": 0.9331,
+        "retrieval_mean_prob": 0.9724,
+        "param_img_acc": 0.9728,
+        "retrieval_img_acc": 0.9952
+      },
+      "SOB_M_MC-14-16456": {
+        "label": 1.0,
+        "n": 178.0,
+        "param_mean_prob": 0.8695,
+        "retrieval_mean_prob": 0.8706,
+        "param_img_acc": 0.9045,
+        "retrieval_img_acc": 0.9303
+      },
+      "SOB_M_MC-14-19979C": {
+        "label": 1.0,
+        "n": 62.0,
+        "param_mean_prob": 0.9449,
+        "retrieval_mean_prob": 0.9234,
+        "param_img_acc": 0.9806,
+        "retrieval_img_acc": 0.9806
+      },
+      "SOB_M_PC-14-9146": {
+        "label": 1.0,
+        "n": 90.0,
+        "param_mean_prob": 0.647,
+        "retrieval_mean_prob": 0.642,
+        "param_img_acc": 0.6645,
+        "retrieval_img_acc": 0.6933
+      }
+    },
+    "fusion_sweep": [
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8985,
+        "auc": 0.9509,
+        "patient_acc": 0.975,
+        "sens": 0.9075,
+        "spec": 0.8751
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8999,
+        "auc": 0.9471,
+        "patient_acc": 0.975,
+        "sens": 0.9096,
+        "spec": 0.8747
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8781,
+        "auc": 0.8944,
+        "patient_acc": 0.975,
+        "sens": 0.913,
+        "spec": 0.7874
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8985,
+        "auc": 0.9543,
+        "patient_acc": 0.975,
+        "sens": 0.9075,
+        "spec": 0.8751
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8999,
+        "auc": 0.9538,
+        "patient_acc": 0.975,
+        "sens": 0.9096,
+        "spec": 0.8747
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.9009,
+        "auc": 0.9526,
+        "patient_acc": 0.975,
+        "sens": 0.9145,
+        "spec": 0.8655
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8999,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9096,
+        "spec": 0.8747
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.9004,
+        "auc": 0.9539,
+        "patient_acc": 0.975,
+        "sens": 0.9128,
+        "spec": 0.8681
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8994,
+        "auc": 0.9545,
+        "patient_acc": 0.975,
+        "sens": 0.9101,
+        "spec": 0.8716
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8993,
+        "auc": 0.9468,
+        "patient_acc": 0.975,
+        "sens": 0.9103,
+        "spec": 0.8708
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8981,
+        "auc": 0.9526,
+        "patient_acc": 0.975,
+        "sens": 0.9078,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8982,
+        "auc": 0.9506,
+        "patient_acc": 0.975,
+        "sens": 0.9088,
+        "spec": 0.8708
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8857,
+        "auc": 0.9137,
+        "patient_acc": 0.975,
+        "sens": 0.9242,
+        "spec": 0.7851
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8981,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9078,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8985,
+        "auc": 0.9541,
+        "patient_acc": 0.975,
+        "sens": 0.9091,
+        "spec": 0.8708
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8991,
+        "auc": 0.9527,
+        "patient_acc": 0.975,
+        "sens": 0.9137,
+        "spec": 0.8611
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8996,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9096,
+        "spec": 0.8734
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.9005,
+        "auc": 0.9538,
+        "patient_acc": 0.975,
+        "sens": 0.9133,
+        "spec": 0.8673
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.9003,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9118,
+        "spec": 0.8703
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9002,
+        "auc": 0.9445,
+        "patient_acc": 0.975,
+        "sens": 0.9118,
+        "spec": 0.8699
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8981,
+        "auc": 0.9532,
+        "patient_acc": 0.975,
+        "sens": 0.9081,
+        "spec": 0.8721
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8981,
+        "auc": 0.9524,
+        "patient_acc": 0.975,
+        "sens": 0.9091,
+        "spec": 0.8694
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.889,
+        "auc": 0.9182,
+        "patient_acc": 0.975,
+        "sens": 0.9297,
+        "spec": 0.783
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.898,
+        "auc": 0.9545,
+        "patient_acc": 0.975,
+        "sens": 0.9081,
+        "spec": 0.8716
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8982,
+        "auc": 0.9541,
+        "patient_acc": 0.975,
+        "sens": 0.9093,
+        "spec": 0.8694
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8994,
+        "auc": 0.953,
+        "patient_acc": 0.975,
+        "sens": 0.9147,
+        "spec": 0.8598
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8984,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9096,
+        "spec": 0.869
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8998,
+        "auc": 0.9538,
+        "patient_acc": 0.975,
+        "sens": 0.9138,
+        "spec": 0.8633
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8986,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9106,
+        "spec": 0.8673
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8986,
+        "auc": 0.9429,
+        "patient_acc": 0.975,
+        "sens": 0.9106,
+        "spec": 0.8673
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8981,
+        "auc": 0.9536,
+        "patient_acc": 0.975,
+        "sens": 0.9085,
+        "spec": 0.8712
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8976,
+        "auc": 0.9526,
+        "patient_acc": 0.975,
+        "sens": 0.9094,
+        "spec": 0.8668
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.898,
+        "auc": 0.9545,
+        "patient_acc": 0.975,
+        "sens": 0.9085,
+        "spec": 0.8707
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8979,
+        "auc": 0.9541,
+        "patient_acc": 0.975,
+        "sens": 0.9094,
+        "spec": 0.8677
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8982,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.91,
+        "spec": 0.8677
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8996,
+        "auc": 0.9539,
+        "patient_acc": 0.975,
+        "sens": 0.9141,
+        "spec": 0.8616
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8988,
+        "auc": 0.9544,
+        "patient_acc": 0.975,
+        "sens": 0.9114,
+        "spec": 0.866
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8988,
+        "auc": 0.9415,
+        "patient_acc": 0.975,
+        "sens": 0.9114,
+        "spec": 0.866
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.9009,
+        "auc": 0.9376,
+        "patient_acc": 0.9625,
+        "sens": 0.9145,
+        "spec": 0.8655
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8893,
+        "auc": 0.9393,
+        "patient_acc": 0.9625,
+        "sens": 0.9172,
+        "spec": 0.8166
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8985,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9075,
+        "spec": 0.8751
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8955,
+        "auc": 0.9435,
+        "patient_acc": 0.9625,
+        "sens": 0.9158,
+        "spec": 0.8423
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8984,
+        "auc": 0.9547,
+        "patient_acc": 0.9625,
+        "sens": 0.9073,
+        "spec": 0.8751
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8994,
+        "auc": 0.9547,
+        "patient_acc": 0.9625,
+        "sens": 0.9091,
+        "spec": 0.8742
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8981,
+        "auc": 0.9446,
+        "patient_acc": 0.9625,
+        "sens": 0.913,
+        "spec": 0.8594
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8932,
+        "auc": 0.9373,
+        "patient_acc": 0.9625,
+        "sens": 0.9218,
+        "spec": 0.8183
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8985,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9078,
+        "spec": 0.8743
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.899,
+        "auc": 0.941,
+        "patient_acc": 0.9625,
+        "sens": 0.916,
+        "spec": 0.8546
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8986,
+        "auc": 0.9547,
+        "patient_acc": 0.9625,
+        "sens": 0.9081,
+        "spec": 0.8738
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8999,
+        "auc": 0.9547,
+        "patient_acc": 0.9625,
+        "sens": 0.9103,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8986,
+        "auc": 0.949,
+        "patient_acc": 0.9625,
+        "sens": 0.9145,
+        "spec": 0.8572
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8959,
+        "auc": 0.9349,
+        "patient_acc": 0.9625,
+        "sens": 0.9253,
+        "spec": 0.8192
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.898,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9081,
+        "spec": 0.8716
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8975,
+        "auc": 0.9388,
+        "patient_acc": 0.9625,
+        "sens": 0.915,
+        "spec": 0.852
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8978,
+        "auc": 0.9548,
+        "patient_acc": 0.9625,
+        "sens": 0.9078,
+        "spec": 0.8716
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8984,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9094,
+        "spec": 0.8694
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8979,
+        "auc": 0.9491,
+        "patient_acc": 0.9625,
+        "sens": 0.9145,
+        "spec": 0.8546
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8904,
+        "auc": 0.9186,
+        "patient_acc": 0.9625,
+        "sens": 0.9325,
+        "spec": 0.7804
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8991,
+        "auc": 0.953,
+        "patient_acc": 0.9625,
+        "sens": 0.9146,
+        "spec": 0.8585
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8945,
+        "auc": 0.9321,
+        "patient_acc": 0.9625,
+        "sens": 0.9237,
+        "spec": 0.8183
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.898,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9085,
+        "spec": 0.8707
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8975,
+        "auc": 0.9365,
+        "patient_acc": 0.9625,
+        "sens": 0.9151,
+        "spec": 0.8515
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8979,
+        "auc": 0.9548,
+        "patient_acc": 0.9625,
+        "sens": 0.9083,
+        "spec": 0.8707
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8988,
+        "auc": 0.9546,
+        "patient_acc": 0.9625,
+        "sens": 0.9106,
+        "spec": 0.8681
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0145,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0289,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.058,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8974,
+        "auc": 0.955,
+        "patient_acc": 0.9625,
+        "sens": 0.9054,
+        "spec": 0.8764
+      }
+    ]
+  },
+  "exp3": {
+    "spaces": {
+      "embeddings": {
+        "knn_acc": 0.8975,
+        "knn_auc": 0.9211,
+        "knn_patient_acc": 0.9625,
+        "same_mag_rate": 1.0,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.7494,
+        "same_subtype_rate": 0.3304,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.0737
+      },
+      "emb_nomag": {
+        "knn_acc": 0.8863,
+        "knn_auc": 0.9242,
+        "knn_patient_acc": 0.9625,
+        "same_mag_rate": 0.3369,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.0863,
+        "same_subtype_rate": 0.3578,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.1011
+      },
+      "mag_block": {
+        "knn_acc": 0.634,
+        "knn_auc": 0.4329,
+        "knn_patient_acc": 0.75,
+        "same_mag_rate": 1.0,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.7494,
+        "same_subtype_rate": 0.2035,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": -0.0532
+      },
+      "projections": {
+        "knn_acc": 0.8953,
+        "knn_auc": 0.9257,
+        "knn_patient_acc": 0.9625,
+        "same_mag_rate": 0.9756,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.725,
+        "same_subtype_rate": 0.3339,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.0772
+      }
+    },
+    "hubness": {
+      "Nk_skewness": 1.2062,
+      "never_retrieved_frac": 0.0397,
+      "top1pct_share": 0.0385,
+      "top10pct_share": 0.2622
+    },
+    "prototypes_vs_knn": {
+      "binary_prototype": {
+        "img_acc": 0.8846,
+        "auc": 0.944,
+        "patient_acc": 0.9375
+      },
+      "subtype_prototype": {
+        "img_acc": 0.8867,
+        "auc": 0.9197,
+        "patient_acc": 0.9375
+      },
+      "knn_uniform": {
+        "img_acc": 0.8863,
+        "auc": 0.9204,
+        "patient_acc": 0.9625
+      },
+      "knn_softmax": {
+        "img_acc": 0.8863,
+        "auc": 0.9242,
+        "patient_acc": 0.9625
+      }
+    },
+    "subtype_purity": {
+      "A": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.8288,
+        "top_neighbour_subtypes": [
+          "F",
+          "TA",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.62,
+          0.166,
+          0.141
+        ]
+      },
+      "F": {
+        "n_images": 194.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.2521,
+        "binary_knn_acc": 0.967,
+        "top_neighbour_subtypes": [
+          "A",
+          "TA",
+          "F"
+        ],
+        "top_neighbour_fracs": [
+          0.383,
+          0.277,
+          0.273
+        ]
+      },
+      "TA": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.5439,
+        "top_neighbour_subtypes": [
+          "F",
+          "PC",
+          "A"
+        ],
+        "top_neighbour_fracs": [
+          0.404,
+          0.216,
+          0.179
+        ]
+      },
+      "DC": {
+        "n_images": 740.0,
+        "n_patients": 8.0,
+        "same_subtype_precision_at_k": 0.6627,
+        "binary_knn_acc": 0.9513,
+        "top_neighbour_subtypes": [
+          "DC",
+          "LC",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.694,
+          0.11,
+          0.105
+        ]
+      },
+      "LC": {
+        "n_images": 125.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.9984,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.62,
+          0.363,
+          0.012
+        ]
+      },
+      "MC": {
+        "n_images": 240.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.2176,
+        "binary_knn_acc": 0.8825,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.232,
+          0.229,
+          0.222
+        ]
+      },
+      "PC": {
+        "n_images": 90.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.6178,
+        "top_neighbour_subtypes": [
+          "MC",
+          "TA",
+          "DC"
+        ],
+        "top_neighbour_fracs": [
+          0.426,
+          0.267,
+          0.156
+        ]
+      }
+    },
+    "per_patient": {
+      "SOB_B_A-14-22549CD": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.1133,
+        "retrieval_mean_prob": 0.2067,
+        "param_img_acc": 0.9121,
+        "retrieval_img_acc": 0.8288
+      },
+      "SOB_B_F-14-21998CD": {
+        "label": 0.0,
+        "n": 137.0,
+        "param_mean_prob": 0.0383,
+        "retrieval_mean_prob": 0.0594,
+        "param_img_acc": 0.9766,
+        "retrieval_img_acc": 0.9679
+      },
+      "SOB_B_F-14-23060CD": {
+        "label": 0.0,
+        "n": 57.0,
+        "param_mean_prob": 0.0571,
+        "retrieval_mean_prob": 0.1035,
+        "param_img_acc": 0.9719,
+        "retrieval_img_acc": 0.9649
+      },
+      "SOB_B_TA-14-16184": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.3162,
+        "retrieval_mean_prob": 0.4886,
+        "param_img_acc": 0.6955,
+        "retrieval_img_acc": 0.5439
+      },
+      "SOB_M_DC-14-12312": {
+        "label": 1.0,
+        "n": 146.0,
+        "param_mean_prob": 0.5768,
+        "retrieval_mean_prob": 0.7272,
+        "param_img_acc": 0.563,
+        "retrieval_img_acc": 0.7603
+      },
+      "SOB_M_DC-14-14926": {
+        "label": 1.0,
+        "n": 73.0,
+        "param_mean_prob": 0.9716,
+        "retrieval_mean_prob": 0.9862,
+        "param_img_acc": 0.9945,
+        "retrieval_img_acc": 0.9973
+      },
+      "SOB_M_DC-14-16188": {
+        "label": 1.0,
+        "n": 87.0,
+        "param_mean_prob": 0.9874,
+        "retrieval_mean_prob": 0.9893,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16336": {
+        "label": 1.0,
+        "n": 60.0,
+        "param_mean_prob": 0.9875,
+        "retrieval_mean_prob": 0.9996,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-17614": {
+        "label": 1.0,
+        "n": 129.0,
+        "param_mean_prob": 0.9923,
+        "retrieval_mean_prob": 0.9968,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-20636": {
+        "label": 1.0,
+        "n": 111.0,
+        "param_mean_prob": 0.9158,
+        "retrieval_mean_prob": 0.9811,
+        "param_img_acc": 0.9405,
+        "retrieval_img_acc": 0.9946
+      },
+      "SOB_M_DC-14-2523": {
+        "label": 1.0,
+        "n": 75.0,
+        "param_mean_prob": 0.976,
+        "retrieval_mean_prob": 0.9998,
+        "param_img_acc": 0.992,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-2985": {
+        "label": 1.0,
+        "n": 59.0,
+        "param_mean_prob": 0.9465,
+        "retrieval_mean_prob": 0.9837,
+        "param_img_acc": 0.9729,
+        "retrieval_img_acc": 0.9966
+      },
+      "SOB_M_LC-14-15570C": {
+        "label": 1.0,
+        "n": 125.0,
+        "param_mean_prob": 0.9694,
+        "retrieval_mean_prob": 0.9672,
+        "param_img_acc": 0.992,
+        "retrieval_img_acc": 0.9984
+      },
+      "SOB_M_MC-14-16456": {
+        "label": 1.0,
+        "n": 178.0,
+        "param_mean_prob": 0.8524,
+        "retrieval_mean_prob": 0.8143,
+        "param_img_acc": 0.8708,
+        "retrieval_img_acc": 0.8494
+      },
+      "SOB_M_MC-14-19979C": {
+        "label": 1.0,
+        "n": 62.0,
+        "param_mean_prob": 0.9303,
+        "retrieval_mean_prob": 0.9078,
+        "param_img_acc": 0.9678,
+        "retrieval_img_acc": 0.9774
+      },
+      "SOB_M_PC-14-9146": {
+        "label": 1.0,
+        "n": 90.0,
+        "param_mean_prob": 0.6392,
+        "retrieval_mean_prob": 0.5895,
+        "param_img_acc": 0.6311,
+        "retrieval_img_acc": 0.6178
+      }
+    },
+    "fusion_sweep": [
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8997,
+        "auc": 0.9474,
+        "patient_acc": 0.9875,
+        "sens": 0.9172,
+        "spec": 0.8541
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8964,
+        "auc": 0.9456,
+        "patient_acc": 0.9875,
+        "sens": 0.9128,
+        "spec": 0.8537
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8923,
+        "auc": 0.958,
+        "patient_acc": 0.9875,
+        "sens": 0.9024,
+        "spec": 0.8659
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8969,
+        "auc": 0.9443,
+        "patient_acc": 0.9875,
+        "sens": 0.9113,
+        "spec": 0.8594
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8973,
+        "auc": 0.9455,
+        "patient_acc": 0.975,
+        "sens": 0.9073,
+        "spec": 0.8712
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8906,
+        "auc": 0.9441,
+        "patient_acc": 0.975,
+        "sens": 0.921,
+        "spec": 0.8114
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8996,
+        "auc": 0.9476,
+        "patient_acc": 0.975,
+        "sens": 0.921,
+        "spec": 0.8436
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8957,
+        "auc": 0.9507,
+        "patient_acc": 0.975,
+        "sens": 0.9048,
+        "spec": 0.872
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8949,
+        "auc": 0.9539,
+        "patient_acc": 0.975,
+        "sens": 0.9043,
+        "spec": 0.8703
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8956,
+        "auc": 0.944,
+        "patient_acc": 0.975,
+        "sens": 0.9201,
+        "spec": 0.8314
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8952,
+        "auc": 0.9505,
+        "patient_acc": 0.975,
+        "sens": 0.9048,
+        "spec": 0.8703
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8939,
+        "auc": 0.9576,
+        "patient_acc": 0.975,
+        "sens": 0.9034,
+        "spec": 0.869
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8939,
+        "auc": 0.949,
+        "patient_acc": 0.975,
+        "sens": 0.9038,
+        "spec": 0.8681
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8924,
+        "auc": 0.9599,
+        "patient_acc": 0.975,
+        "sens": 0.9029,
+        "spec": 0.8651
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8921,
+        "auc": 0.9481,
+        "patient_acc": 0.975,
+        "sens": 0.9016,
+        "spec": 0.8673
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8754,
+        "auc": 0.8966,
+        "patient_acc": 0.9625,
+        "sens": 0.9135,
+        "spec": 0.776
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8973,
+        "auc": 0.9603,
+        "patient_acc": 0.9625,
+        "sens": 0.9073,
+        "spec": 0.8712
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8863,
+        "auc": 0.9201,
+        "patient_acc": 0.9625,
+        "sens": 0.9173,
+        "spec": 0.8052
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8955,
+        "auc": 0.9603,
+        "patient_acc": 0.9625,
+        "sens": 0.9051,
+        "spec": 0.8703
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8887,
+        "auc": 0.9247,
+        "patient_acc": 0.9625,
+        "sens": 0.9173,
+        "spec": 0.814
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8938,
+        "auc": 0.9602,
+        "patient_acc": 0.9625,
+        "sens": 0.9033,
+        "spec": 0.869
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8937,
+        "auc": 0.942,
+        "patient_acc": 0.9625,
+        "sens": 0.9165,
+        "spec": 0.834
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.89,
+        "auc": 0.9259,
+        "patient_acc": 0.9625,
+        "sens": 0.9183,
+        "spec": 0.8162
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8938,
+        "auc": 0.9407,
+        "patient_acc": 0.9625,
+        "sens": 0.9162,
+        "spec": 0.8354
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8909,
+        "auc": 0.9515,
+        "patient_acc": 0.95,
+        "sens": 0.8977,
+        "spec": 0.8729
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8979,
+        "auc": 0.9606,
+        "patient_acc": 0.95,
+        "sens": 0.9076,
+        "spec": 0.8725
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8961,
+        "auc": 0.9607,
+        "patient_acc": 0.95,
+        "sens": 0.9048,
+        "spec": 0.8734
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8894,
+        "auc": 0.9555,
+        "patient_acc": 0.95,
+        "sens": 0.8957,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8955,
+        "auc": 0.9605,
+        "patient_acc": 0.95,
+        "sens": 0.9054,
+        "spec": 0.8694
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8951,
+        "auc": 0.9606,
+        "patient_acc": 0.95,
+        "sens": 0.9046,
+        "spec": 0.8703
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8886,
+        "auc": 0.9584,
+        "patient_acc": 0.95,
+        "sens": 0.8949,
+        "spec": 0.8721
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8939,
+        "auc": 0.9604,
+        "patient_acc": 0.95,
+        "sens": 0.9043,
+        "spec": 0.8668
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8939,
+        "auc": 0.9605,
+        "patient_acc": 0.95,
+        "sens": 0.9038,
+        "spec": 0.8681
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8879,
+        "auc": 0.959,
+        "patient_acc": 0.95,
+        "sens": 0.8944,
+        "spec": 0.8712
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8941,
+        "auc": 0.9602,
+        "patient_acc": 0.95,
+        "sens": 0.9046,
+        "spec": 0.8668
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8885,
+        "auc": 0.9574,
+        "patient_acc": 0.9375,
+        "sens": 0.8929,
+        "spec": 0.8773
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8885,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8929,
+        "spec": 0.8773
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8909,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.8977,
+        "spec": 0.8729
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8885,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8929,
+        "spec": 0.8773
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8909,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8977,
+        "spec": 0.8729
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8887,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8929,
+        "spec": 0.8777
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8909,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8974,
+        "spec": 0.8738
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8877,
+        "auc": 0.9586,
+        "patient_acc": 0.9375,
+        "sens": 0.892,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8877,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.892,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8896,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.896,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8877,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.892,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8899,
+        "auc": 0.9605,
+        "patient_acc": 0.9375,
+        "sens": 0.8964,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8878,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8922,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8899,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8964,
+        "spec": 0.8729
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8868,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.8912,
+        "spec": 0.8755
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.887,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8914,
+        "spec": 0.8755
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8887,
+        "auc": 0.9603,
+        "patient_acc": 0.9375,
+        "sens": 0.895,
+        "spec": 0.8721
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8871,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8915,
+        "spec": 0.8755
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8889,
+        "auc": 0.9605,
+        "patient_acc": 0.9375,
+        "sens": 0.8955,
+        "spec": 0.8716
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8873,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8915,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8893,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8959,
+        "spec": 0.8721
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8865,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.8909,
+        "spec": 0.8751
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8865,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8909,
+        "spec": 0.8751
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8879,
+        "auc": 0.9603,
+        "patient_acc": 0.9375,
+        "sens": 0.8945,
+        "spec": 0.8708
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8867,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8909,
+        "spec": 0.876
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8884,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.8949,
+        "spec": 0.8716
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8866,
+        "auc": 0.9606,
+        "patient_acc": 0.9375,
+        "sens": 0.8909,
+        "spec": 0.8755
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8885,
+        "auc": 0.9605,
+        "patient_acc": 0.9375,
+        "sens": 0.8954,
+        "spec": 0.8708
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8921,
+        "auc": 0.9604,
+        "patient_acc": 0.9375,
+        "sens": 0.9016,
+        "spec": 0.8673
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0116,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0265,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0576,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8858,
+        "auc": 0.9607,
+        "patient_acc": 0.9375,
+        "sens": 0.8894,
+        "spec": 0.8764
+      }
+    ]
+  },
+  "exp3n": {
+    "spaces": {
+      "embeddings": {
+        "knn_acc": 0.8801,
+        "knn_auc": 0.9242,
+        "knn_patient_acc": 0.975,
+        "same_mag_rate": 0.3416,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.091,
+        "same_subtype_rate": 0.3614,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.1047
+      },
+      "projections": {
+        "knn_acc": 0.8843,
+        "knn_auc": 0.9281,
+        "knn_patient_acc": 0.975,
+        "same_mag_rate": 0.3349,
+        "same_mag_chance": 0.2506,
+        "mag_lock_lift": 0.0843,
+        "same_subtype_rate": 0.3622,
+        "same_subtype_chance": 0.2567,
+        "subtype_lift": 0.1055
+      }
+    },
+    "hubness": {
+      "Nk_skewness": 1.3371,
+      "never_retrieved_frac": 0.0399,
+      "top1pct_share": 0.0416,
+      "top10pct_share": 0.2693
+    },
+    "prototypes_vs_knn": {
+      "binary_prototype": {
+        "img_acc": 0.8935,
+        "auc": 0.9311,
+        "patient_acc": 0.975
+      },
+      "subtype_prototype": {
+        "img_acc": 0.899,
+        "auc": 0.9045,
+        "patient_acc": 0.975
+      },
+      "knn_uniform": {
+        "img_acc": 0.8801,
+        "auc": 0.9122,
+        "patient_acc": 0.975
+      },
+      "knn_softmax": {
+        "img_acc": 0.8801,
+        "auc": 0.9242,
+        "patient_acc": 0.975
+      }
+    },
+    "subtype_purity": {
+      "A": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.7697,
+        "top_neighbour_subtypes": [
+          "F",
+          "TA",
+          "MC"
+        ],
+        "top_neighbour_fracs": [
+          0.566,
+          0.21,
+          0.135
+        ]
+      },
+      "F": {
+        "n_images": 194.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.3168,
+        "binary_knn_acc": 0.965,
+        "top_neighbour_subtypes": [
+          "A",
+          "F",
+          "TA"
+        ],
+        "top_neighbour_fracs": [
+          0.418,
+          0.287,
+          0.238
+        ]
+      },
+      "TA": {
+        "n_images": 132.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.4969,
+        "top_neighbour_subtypes": [
+          "F",
+          "A",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.323,
+          0.228,
+          0.223
+        ]
+      },
+      "DC": {
+        "n_images": 740.0,
+        "n_patients": 8.0,
+        "same_subtype_precision_at_k": 0.6812,
+        "binary_knn_acc": 0.9643,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "LC"
+        ],
+        "top_neighbour_fracs": [
+          0.716,
+          0.116,
+          0.106
+        ]
+      },
+      "LC": {
+        "n_images": 125.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.9872,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.608,
+          0.385,
+          0.004
+        ]
+      },
+      "MC": {
+        "n_images": 240.0,
+        "n_patients": 2.0,
+        "same_subtype_precision_at_k": 0.1329,
+        "binary_knn_acc": 0.8383,
+        "top_neighbour_subtypes": [
+          "DC",
+          "MC",
+          "PC"
+        ],
+        "top_neighbour_fracs": [
+          0.276,
+          0.193,
+          0.192
+        ]
+      },
+      "PC": {
+        "n_images": 90.0,
+        "n_patients": 1.0,
+        "same_subtype_precision_at_k": 0.0,
+        "binary_knn_acc": 0.6911,
+        "top_neighbour_subtypes": [
+          "MC",
+          "TA",
+          "DC"
+        ],
+        "top_neighbour_fracs": [
+          0.406,
+          0.262,
+          0.182
+        ]
+      }
+    },
+    "per_patient": {
+      "SOB_B_A-14-22549CD": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.1482,
+        "retrieval_mean_prob": 0.2449,
+        "param_img_acc": 0.8788,
+        "retrieval_img_acc": 0.7697
+      },
+      "SOB_B_F-14-21998CD": {
+        "label": 0.0,
+        "n": 137.0,
+        "param_mean_prob": 0.0494,
+        "retrieval_mean_prob": 0.0615,
+        "param_img_acc": 0.965,
+        "retrieval_img_acc": 0.9591
+      },
+      "SOB_B_F-14-23060CD": {
+        "label": 0.0,
+        "n": 57.0,
+        "param_mean_prob": 0.0453,
+        "retrieval_mean_prob": 0.0719,
+        "param_img_acc": 0.9719,
+        "retrieval_img_acc": 0.9789
+      },
+      "SOB_B_TA-14-16184": {
+        "label": 0.0,
+        "n": 132.0,
+        "param_mean_prob": 0.3701,
+        "retrieval_mean_prob": 0.5089,
+        "param_img_acc": 0.6303,
+        "retrieval_img_acc": 0.4969
+      },
+      "SOB_M_DC-14-12312": {
+        "label": 1.0,
+        "n": 146.0,
+        "param_mean_prob": 0.7115,
+        "retrieval_mean_prob": 0.7753,
+        "param_img_acc": 0.7425,
+        "retrieval_img_acc": 0.826
+      },
+      "SOB_M_DC-14-14926": {
+        "label": 1.0,
+        "n": 73.0,
+        "param_mean_prob": 0.9921,
+        "retrieval_mean_prob": 0.9877,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16188": {
+        "label": 1.0,
+        "n": 87.0,
+        "param_mean_prob": 0.995,
+        "retrieval_mean_prob": 0.9902,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-16336": {
+        "label": 1.0,
+        "n": 60.0,
+        "param_mean_prob": 0.9786,
+        "retrieval_mean_prob": 0.9969,
+        "param_img_acc": 0.9967,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-17614": {
+        "label": 1.0,
+        "n": 129.0,
+        "param_mean_prob": 0.9967,
+        "retrieval_mean_prob": 0.997,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-20636": {
+        "label": 1.0,
+        "n": 111.0,
+        "param_mean_prob": 0.9858,
+        "retrieval_mean_prob": 0.9685,
+        "param_img_acc": 0.9982,
+        "retrieval_img_acc": 0.9946
+      },
+      "SOB_M_DC-14-2523": {
+        "label": 1.0,
+        "n": 75.0,
+        "param_mean_prob": 0.9898,
+        "retrieval_mean_prob": 0.9991,
+        "param_img_acc": 1.0,
+        "retrieval_img_acc": 1.0
+      },
+      "SOB_M_DC-14-2985": {
+        "label": 1.0,
+        "n": 59.0,
+        "param_mean_prob": 0.9337,
+        "retrieval_mean_prob": 0.978,
+        "param_img_acc": 0.9458,
+        "retrieval_img_acc": 0.9932
+      },
+      "SOB_M_LC-14-15570C": {
+        "label": 1.0,
+        "n": 125.0,
+        "param_mean_prob": 0.9574,
+        "retrieval_mean_prob": 0.9639,
+        "param_img_acc": 0.9744,
+        "retrieval_img_acc": 0.9872
+      },
+      "SOB_M_MC-14-16456": {
+        "label": 1.0,
+        "n": 178.0,
+        "param_mean_prob": 0.8485,
+        "retrieval_mean_prob": 0.7734,
+        "param_img_acc": 0.8618,
+        "retrieval_img_acc": 0.8034
+      },
+      "SOB_M_MC-14-19979C": {
+        "label": 1.0,
+        "n": 62.0,
+        "param_mean_prob": 0.9348,
+        "retrieval_mean_prob": 0.8866,
+        "param_img_acc": 0.9581,
+        "retrieval_img_acc": 0.9387
+      },
+      "SOB_M_PC-14-9146": {
+        "label": 1.0,
+        "n": 90.0,
+        "param_mean_prob": 0.7259,
+        "retrieval_mean_prob": 0.6592,
+        "param_img_acc": 0.7245,
+        "retrieval_img_acc": 0.6911
+      }
+    },
+    "fusion_sweep": [
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8948,
+        "auc": 0.9397,
+        "patient_acc": 0.9875,
+        "sens": 0.9267,
+        "spec": 0.8113
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8928,
+        "auc": 0.9396,
+        "patient_acc": 0.9875,
+        "sens": 0.9259,
+        "spec": 0.8065
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8969,
+        "auc": 0.9378,
+        "patient_acc": 0.9875,
+        "sens": 0.93,
+        "spec": 0.8105
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.9009,
+        "auc": 0.957,
+        "patient_acc": 0.975,
+        "sens": 0.9227,
+        "spec": 0.8441
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9025,
+        "auc": 0.9539,
+        "patient_acc": 0.975,
+        "sens": 0.925,
+        "spec": 0.8437
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9039,
+        "auc": 0.944,
+        "patient_acc": 0.975,
+        "sens": 0.9285,
+        "spec": 0.8397
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.9009,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9227,
+        "spec": 0.8441
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9025,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.925,
+        "spec": 0.8437
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9039,
+        "auc": 0.9582,
+        "patient_acc": 0.975,
+        "sens": 0.9285,
+        "spec": 0.8397
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.3,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8862,
+        "auc": 0.9399,
+        "patient_acc": 0.975,
+        "sens": 0.9212,
+        "spec": 0.7948
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.9009,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9227,
+        "spec": 0.8441
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9025,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.925,
+        "spec": 0.8437
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9048,
+        "auc": 0.9588,
+        "patient_acc": 0.975,
+        "sens": 0.9295,
+        "spec": 0.8402
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8996,
+        "auc": 0.9441,
+        "patient_acc": 0.975,
+        "sens": 0.929,
+        "spec": 0.8227
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.9008,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9225,
+        "spec": 0.8441
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9016,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.924,
+        "spec": 0.8432
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9024,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9264,
+        "spec": 0.8397
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.902,
+        "auc": 0.9471,
+        "patient_acc": 0.975,
+        "sens": 0.9264,
+        "spec": 0.8384
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 5.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8999,
+        "auc": 0.9577,
+        "patient_acc": 0.975,
+        "sens": 0.922,
+        "spec": 0.8423
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9016,
+        "auc": 0.9571,
+        "patient_acc": 0.975,
+        "sens": 0.9244,
+        "spec": 0.8424
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9025,
+        "auc": 0.9534,
+        "patient_acc": 0.975,
+        "sens": 0.9274,
+        "spec": 0.8376
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8801,
+        "auc": 0.9119,
+        "patient_acc": 0.975,
+        "sens": 0.9208,
+        "spec": 0.7738
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8999,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.922,
+        "spec": 0.8423
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9014,
+        "auc": 0.9589,
+        "patient_acc": 0.975,
+        "sens": 0.924,
+        "spec": 0.8424
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9026,
+        "auc": 0.9585,
+        "patient_acc": 0.975,
+        "sens": 0.927,
+        "spec": 0.8389
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9011,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8424
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9022,
+        "auc": 0.9588,
+        "patient_acc": 0.975,
+        "sens": 0.9264,
+        "spec": 0.8393
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9019,
+        "auc": 0.9427,
+        "patient_acc": 0.975,
+        "sens": 0.9289,
+        "spec": 0.8314
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9009,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9234,
+        "spec": 0.8424
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9012,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9247,
+        "spec": 0.8397
+      },
+      {
+        "k": 15.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9012,
+        "auc": 0.9456,
+        "patient_acc": 0.975,
+        "sens": 0.9247,
+        "spec": 0.8397
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 15.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8999,
+        "auc": 0.9581,
+        "patient_acc": 0.975,
+        "sens": 0.922,
+        "spec": 0.8423
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9013,
+        "auc": 0.9575,
+        "patient_acc": 0.975,
+        "sens": 0.924,
+        "spec": 0.8419
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9011,
+        "auc": 0.9543,
+        "patient_acc": 0.975,
+        "sens": 0.9262,
+        "spec": 0.8354
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8844,
+        "auc": 0.9193,
+        "patient_acc": 0.975,
+        "sens": 0.9254,
+        "spec": 0.7777
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.901,
+        "auc": 0.9588,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8419
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9002,
+        "auc": 0.9583,
+        "patient_acc": 0.975,
+        "sens": 0.925,
+        "spec": 0.8354
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9008,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9235,
+        "spec": 0.8415
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9001,
+        "auc": 0.9587,
+        "patient_acc": 0.975,
+        "sens": 0.9245,
+        "spec": 0.8362
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8998,
+        "auc": 0.9428,
+        "patient_acc": 0.975,
+        "sens": 0.9274,
+        "spec": 0.8279
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9005,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.923,
+        "spec": 0.8419
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.901,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9243,
+        "spec": 0.8402
+      },
+      {
+        "k": 30.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.901,
+        "auc": 0.9457,
+        "patient_acc": 0.975,
+        "sens": 0.9243,
+        "spec": 0.8402
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 30.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8999,
+        "auc": 0.9587,
+        "patient_acc": 0.975,
+        "sens": 0.9217,
+        "spec": 0.8432
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9008,
+        "auc": 0.9581,
+        "patient_acc": 0.975,
+        "sens": 0.9233,
+        "spec": 0.8419
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9001,
+        "auc": 0.956,
+        "patient_acc": 0.975,
+        "sens": 0.9254,
+        "spec": 0.834
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8855,
+        "auc": 0.9227,
+        "patient_acc": 0.975,
+        "sens": 0.9284,
+        "spec": 0.7738
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8999,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8428
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9009,
+        "auc": 0.9588,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8415
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.3,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.8992,
+        "auc": 0.9583,
+        "patient_acc": 0.975,
+        "sens": 0.924,
+        "spec": 0.8345
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9003,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.923,
+        "spec": 0.841
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9001,
+        "auc": 0.9587,
+        "patient_acc": 0.975,
+        "sens": 0.9245,
+        "spec": 0.8362
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.5,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9002,
+        "auc": 0.9412,
+        "patient_acc": 0.975,
+        "sens": 0.9277,
+        "spec": 0.8284
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8998,
+        "auc": 0.9592,
+        "patient_acc": 0.975,
+        "sens": 0.9218,
+        "spec": 0.8423
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.9003,
+        "auc": 0.9591,
+        "patient_acc": 0.975,
+        "sens": 0.9225,
+        "spec": 0.8423
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.9005,
+        "auc": 0.959,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8402
+      },
+      {
+        "k": 50.0,
+        "alpha": 0.7,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.9005,
+        "auc": 0.9445,
+        "patient_acc": 0.975,
+        "sens": 0.9237,
+        "spec": 0.8402
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.05,
+        "gated_frac": 0.0097,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.1,
+        "gated_frac": 0.0196,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.2,
+        "gated_frac": 0.0429,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 50.0,
+        "alpha": 1.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8986,
+        "auc": 0.9593,
+        "patient_acc": 0.975,
+        "sens": 0.9193,
+        "spec": 0.8445
+      },
+      {
+        "k": 5.0,
+        "alpha": 0.0,
+        "tau": 0.5,
+        "gated_frac": 1.0,
+        "img_acc": 0.8713,
+        "auc": 0.8873,
+        "patient_acc": 0.9625,
+        "sens": 0.9153,
+        "spec": 0.7563
+      }
+    ]
+  }
+}
