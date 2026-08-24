@@ -1,0 +1,83 @@
+device=cuda  experiments=['exp1', 'exp3']
+folds=[0, 1, 2, 3, 4]
+extracting exp1 fold 0 ...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+extracting exp3 fold 0 ...
+extracting exp1 fold 1 ...
+extracting exp3 fold 1 ...
+extracting exp1 fold 2 ...
+extracting exp3 fold 2 ...
+extracting exp1 fold 3 ...
+extracting exp3 fold 3 ...
+extracting exp1 fold 4 ...
+extracting exp3 fold 4 ...
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+C:\Users\DEBANJAN\anaconda3\envs\rapmst\lib\site-packages\umap\umap_.py:1952: UserWarning: n_jobs value 1 overridden to 1 by setting random_state. Use no seed for parallelism.
+  warn(
+  exp1/embeddings fold 0: sil_bin=0.737 sil_sub=-0.200 kNN=0.884
+  exp1/embeddings fold 1: sil_bin=0.563 sil_sub=-0.336 kNN=0.846
+  exp1/embeddings fold 2: sil_bin=0.610 sil_sub=-0.091 kNN=0.895
+  exp1/embeddings fold 3: sil_bin=0.588 sil_sub=-0.186 kNN=0.883
+  exp1/embeddings fold 4: sil_bin=0.616 sil_sub=-0.234 kNN=0.934
+  exp3/embeddings fold 0: sil_bin=0.659 sil_sub=-0.129 kNN=0.911
+  exp3/embeddings fold 1: sil_bin=0.515 sil_sub=-0.170 kNN=0.846
+  exp3/embeddings fold 2: sil_bin=0.453 sil_sub=-0.203 kNN=0.892
+  exp3/embeddings fold 3: sil_bin=0.620 sil_sub=-0.148 kNN=0.898
+  exp3/embeddings fold 4: sil_bin=0.596 sil_sub=-0.137 kNN=0.941
+  exp3/projections fold 0: sil_bin=0.746 sil_sub=-0.241 kNN=0.912
+  exp3/projections fold 1: sil_bin=0.623 sil_sub=-0.356 kNN=0.832
+  exp3/projections fold 2: sil_bin=0.545 sil_sub=-0.423 kNN=0.901
+  exp3/projections fold 3: sil_bin=0.745 sil_sub=-0.437 kNN=0.895
+  exp3/projections fold 4: sil_bin=0.684 sil_sub=-0.282 kNN=0.936
+  wrote analysis\embeddings\umap_binary.png
+  wrote analysis\embeddings\umap_subtype.png
+  wrote analysis\embeddings\umap_testset_binary.png
+  wrote analysis\embeddings\umap_testset_subtype.png
+
+==================================================================================
+SEPARATION METRICS  (mean over folds; higher = better-structured space)
+  column                  sil_binary  sil_subtype  kNN_blocked
+  exp1 · embeddings            0.623       -0.210        0.889
+  exp3 · embeddings            0.569       -0.158        0.898
+  exp3 · projections           0.669       -0.348        0.895
+
+Saved figures + metrics + per-fold .npz under analysis\embeddings
