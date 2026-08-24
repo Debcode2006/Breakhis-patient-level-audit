@@ -1,0 +1,61 @@
+# =============================================================================
+# RAP-MST — what is versioned and what is not
+#
+# Rule: commit everything a reader needs to audit a number, and nothing that a
+# documented command regenerates. Every excluded artifact below names the script
+# that rebuilds it.
+# =============================================================================
+
+# --- Python ------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.venv/
+venv/
+env/
+
+# --- Training runs -----------------------------------------------------------
+# runs/<experiment>/<timestamp>_train_fold<k>/ — ~14 GB of checkpoints, logs,
+# tensorboard events and per-run configs. Rebuilt by scripts/train.py
+# (~2 GPU-hours per fold) and scripts/train_linear_probe.py (~15 s per fold).
+runs/
+
+# --- Model weights -----------------------------------------------------------
+*.pt
+*.pth
+# ...except the fusion gate: 147 parameters, 4.6 KB, fitted once on pooled
+# out-of-fold validation and shared by all five folds. Without it the retrieval
+# results are not reproducible from the committed artifacts alone.
+!analysis/retrieval/**/gate.pt
+
+# --- Analysis caches ---------------------------------------------------------
+# Large regenerable feature dumps. The JSON summaries, logs and probability
+# vectors beside them are small and stay versioned — they are the evidence.
+#   analysis/embeddings/embeddings/<exp>_fold<k>.npz   ~6.5 MB x 20
+#       -> scripts/visualize_embeddings.py
+#   analysis/retrieval/<exp>/bank_fold<k>.npz          ~18 MB x 5
+#       -> scripts/build_memory_bank.py        (~10 min GPU)
+#   analysis/retrieval_keys/<exp>/cache_fold<k>.npz    ~86 MB x 10
+#       -> scripts/retrieval_key_ablation.py --stage cache
+#   analysis/foundation/<encoder>/features.npz         ~21 MB
+#       -> scripts/extract_foundation_features.py      (~3 min GPU)
+analysis/**/*.npz
+!analysis/embeddings/fig4_umap_cache.npz
+!analysis/**/probs_*.npz
+
+# --- Generated figures -------------------------------------------------------
+# images/ is the output directory for every figure in the paper. Figures 1-2 are
+# rendered from assets/schematics/*.svg by scripts/render_svg_figures.py;
+# Figures 3-5 are drawn from the committed analysis artifacts by
+# scripts/assemble_figures.py. Nothing here is a source file.
+images/*
+!images/.gitkeep
+
+# --- OS / editor -------------------------------------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+*.swp
