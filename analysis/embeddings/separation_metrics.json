@@ -1,0 +1,272 @@
+[
+  {
+    "experiment": "exp1",
+    "vector": "embeddings",
+    "fold": 0,
+    "silhouette_binary": 0.7372268755894928,
+    "silhouette_subtype": -0.20048270128763268,
+    "knn_blocked_acc": 0.8844525105868118,
+    "k": 15
+  },
+  {
+    "experiment": "exp1",
+    "vector": "embeddings",
+    "fold": 1,
+    "silhouette_binary": 0.5629276885739476,
+    "silhouette_subtype": -0.33629269292693514,
+    "knn_blocked_acc": 0.8457350272232305,
+    "k": 15
+  },
+  {
+    "experiment": "exp1",
+    "vector": "embeddings",
+    "fold": 2,
+    "silhouette_binary": 0.6097113486804653,
+    "silhouette_subtype": -0.09095117703001465,
+    "knn_blocked_acc": 0.8953418027828192,
+    "k": 15
+  },
+  {
+    "experiment": "exp1",
+    "vector": "embeddings",
+    "fold": 3,
+    "silhouette_binary": 0.5883555619281732,
+    "silhouette_subtype": -0.1862404331419426,
+    "knn_blocked_acc": 0.8832425892317,
+    "k": 15
+  },
+  {
+    "experiment": "exp1",
+    "vector": "embeddings",
+    "fold": 4,
+    "silhouette_binary": 0.6157993020344079,
+    "silhouette_subtype": -0.23404046498714484,
+    "knn_blocked_acc": 0.9340592861464004,
+    "k": 15
+  },
+  {
+    "experiment": "exp2",
+    "vector": "embeddings",
+    "fold": 0,
+    "silhouette_binary": 0.63801069096788,
+    "silhouette_subtype": -0.07558136088861826,
+    "knn_blocked_acc": 0.9140955837870538,
+    "k": 15
+  },
+  {
+    "experiment": "exp2",
+    "vector": "embeddings",
+    "fold": 1,
+    "silhouette_binary": 0.5416570219895243,
+    "silhouette_subtype": -0.19354851699937442,
+    "knn_blocked_acc": 0.8457350272232305,
+    "k": 15
+  },
+  {
+    "experiment": "exp2",
+    "vector": "embeddings",
+    "fold": 2,
+    "silhouette_binary": 0.5273817847979277,
+    "silhouette_subtype": -0.0880314075790144,
+    "knn_blocked_acc": 0.9068360556563824,
+    "k": 15
+  },
+  {
+    "experiment": "exp2",
+    "vector": "embeddings",
+    "fold": 3,
+    "silhouette_binary": 0.5867651389371026,
+    "silhouette_subtype": -0.11013059030736387,
+    "knn_blocked_acc": 0.9032062915910466,
+    "k": 15
+  },
+  {
+    "experiment": "exp2",
+    "vector": "embeddings",
+    "fold": 4,
+    "silhouette_binary": 0.3949711882624028,
+    "silhouette_subtype": -0.19115718431390402,
+    "knn_blocked_acc": 0.8723532970356926,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "embeddings",
+    "fold": 0,
+    "silhouette_binary": 0.6588396615322325,
+    "silhouette_subtype": -0.12938507582843414,
+    "knn_blocked_acc": 0.911070780399274,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "embeddings",
+    "fold": 1,
+    "silhouette_binary": 0.514787334790074,
+    "silhouette_subtype": -0.1704303324487923,
+    "knn_blocked_acc": 0.8457350272232305,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "embeddings",
+    "fold": 2,
+    "silhouette_binary": 0.4533759137593596,
+    "silhouette_subtype": -0.20330359255100725,
+    "knn_blocked_acc": 0.8917120387174834,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "embeddings",
+    "fold": 3,
+    "silhouette_binary": 0.620396236095054,
+    "silhouette_subtype": -0.14798830293519946,
+    "knn_blocked_acc": 0.8983666061705989,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "embeddings",
+    "fold": 4,
+    "silhouette_binary": 0.5955453900879131,
+    "silhouette_subtype": -0.13708417147958554,
+    "knn_blocked_acc": 0.940713853599516,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "embeddings",
+    "fold": 0,
+    "silhouette_binary": 0.7732005984356051,
+    "silhouette_subtype": -0.052255556900333996,
+    "knn_blocked_acc": 0.8941318814277072,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "embeddings",
+    "fold": 1,
+    "silhouette_binary": 0.6900038836380143,
+    "silhouette_subtype": -0.24632064852282548,
+    "knn_blocked_acc": 0.8632788868723533,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "embeddings",
+    "fold": 2,
+    "silhouette_binary": 0.6044395191333359,
+    "silhouette_subtype": -0.10392471040589389,
+    "knn_blocked_acc": 0.8590441621294616,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "embeddings",
+    "fold": 3,
+    "silhouette_binary": 0.7255343173681608,
+    "silhouette_subtype": -0.2537112065794027,
+    "knn_blocked_acc": 0.8898971566848155,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "embeddings",
+    "fold": 4,
+    "silhouette_binary": 0.6049879292024395,
+    "silhouette_subtype": -0.26488024782709746,
+    "knn_blocked_acc": 0.8941318814277072,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "projections",
+    "fold": 0,
+    "silhouette_binary": 0.74636108624293,
+    "silhouette_subtype": -0.24075913327149193,
+    "knn_blocked_acc": 0.9122807017543859,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "projections",
+    "fold": 1,
+    "silhouette_binary": 0.623388972036949,
+    "silhouette_subtype": -0.35637447298909475,
+    "knn_blocked_acc": 0.8318209316394435,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "projections",
+    "fold": 2,
+    "silhouette_binary": 0.5448873218249964,
+    "silhouette_subtype": -0.4231090279066747,
+    "knn_blocked_acc": 0.9013914095583787,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "projections",
+    "fold": 3,
+    "silhouette_binary": 0.7454677505808256,
+    "silhouette_subtype": -0.43706178357289927,
+    "knn_blocked_acc": 0.8947368421052632,
+    "k": 15
+  },
+  {
+    "experiment": "exp3",
+    "vector": "projections",
+    "fold": 4,
+    "silhouette_binary": 0.6841122848122905,
+    "silhouette_subtype": -0.28249501683507483,
+    "knn_blocked_acc": 0.9364791288566243,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "projections",
+    "fold": 0,
+    "silhouette_binary": 0.7979001343702744,
+    "silhouette_subtype": -0.13657335178026483,
+    "knn_blocked_acc": 0.8989715668481548,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "projections",
+    "fold": 1,
+    "silhouette_binary": 0.652446768827624,
+    "silhouette_subtype": -0.22994445686022566,
+    "knn_blocked_acc": 0.8656987295825771,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "projections",
+    "fold": 2,
+    "silhouette_binary": 0.6563755176778262,
+    "silhouette_subtype": -0.2179341266619961,
+    "knn_blocked_acc": 0.8560193587416818,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "projections",
+    "fold": 3,
+    "silhouette_binary": 0.7734707240310182,
+    "silhouette_subtype": -0.39764211031263247,
+    "knn_blocked_acc": 0.8983666061705989,
+    "k": 15
+  },
+  {
+    "experiment": "exp3n",
+    "vector": "projections",
+    "fold": 4,
+    "silhouette_binary": 0.6267193510242882,
+    "silhouette_subtype": -0.3898963071394204,
+    "knn_blocked_acc": 0.9026013309134906,
+    "k": 15
+  }
+]
