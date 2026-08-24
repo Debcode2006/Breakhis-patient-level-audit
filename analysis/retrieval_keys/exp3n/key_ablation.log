@@ -1,0 +1,937 @@
+2026-07-24 02:05:53 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0]
+  stage                     : cache
+  grid size                 : 29 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:05:57 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE  fold 0
+══════════════════════════════════════════════════════════════════════════
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_010827_train_fold0\checkpoints\best.pt
+  bank split                : 4541 images / 52 train patients
+  val split                 : 1715 images / 14 val patients
+  output                    : analysis\retrieval_keys\exp3n\cache_fold0.npz
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:06:22 | INFO    |   [fold0/bank] encoded 16 images ...
+2026-07-24 02:06:37 | INFO    |   [fold0/bank] encoded 816 images ...
+2026-07-24 02:06:54 | INFO    |   [fold0/bank] encoded 1616 images ...
+2026-07-24 02:07:11 | INFO    |   [fold0/bank] encoded 2416 images ...
+2026-07-24 02:07:28 | INFO    |   [fold0/bank] encoded 3216 images ...
+2026-07-24 02:07:45 | INFO    |   [fold0/bank] encoded 4016 images ...
+2026-07-24 02:08:23 | INFO    |   [fold0/val] encoded 16 images ...
+2026-07-24 02:08:41 | INFO    |   [fold0/val] encoded 816 images ...
+2026-07-24 02:08:58 | INFO    |   [fold0/val] encoded 1616 images ...
+2026-07-24 02:09:08 | INFO    | fold 0: cached -> analysis\retrieval_keys\exp3n\cache_fold0.npz  (91.2 MB)
+2026-07-24 02:10:39 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [1, 2, 3, 4]
+  stage                     : cache
+  grid size                 : 29 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:10:42 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE  fold 1
+══════════════════════════════════════════════════════════════════════════
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_013510_train_fold1\checkpoints\best.pt
+  bank split                : 5133 images / 53 train patients
+  val split                 : 1123 images / 13 val patients
+  output                    : analysis\retrieval_keys\exp3n\cache_fold1.npz
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:11:06 | INFO    |   [fold1/bank] encoded 16 images ...
+2026-07-24 02:11:15 | INFO    |   [fold1/bank] encoded 816 images ...
+2026-07-24 02:11:22 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0]
+  stage                     : eval
+  grid size                 : 29 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:11:23 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 02:11:23 | INFO    | 
+2026-07-24 02:11:23 | INFO    | [1/15] key='features' transform='none'  (features (D1 baseline))
+2026-07-24 02:11:24 | INFO    |   [fold1/bank] encoded 1616 images ...
+2026-07-24 02:11:29 | INFO    |     dim= 1024 eff_rank=   1.09 | p_img auc=0.8215 acc=0.8338 | p_final auc=0.8415 (+0.0002) acc=0.8350 (+0.0006) pat=0.7857
+2026-07-24 02:11:29 | INFO    |     corr(param,img)=0.990 auc|param wrong=0.003 best blend auc=0.8419 (alpha=0.82, +0.0006) | w=[0.8788, 0.121, 0.0002] | mag_lock=0.37 subtype_lift=+0.177
+2026-07-24 02:11:29 | INFO    | 
+2026-07-24 02:11:29 | INFO    | [2/15] key='fpn.std' transform='none'  (fpn.std)
+2026-07-24 02:11:34 | INFO    |     dim= 1024 eff_rank=   2.88 | p_img auc=0.8280 acc=0.8309 | p_final auc=0.8438 (+0.0025) acc=0.8373 (+0.0029) pat=0.7857
+2026-07-24 02:11:34 | INFO    |     corr(param,img)=0.977 auc|param wrong=0.011 best blend auc=0.8441 (alpha=0.10, +0.0029) | w=[0.8794, 0.1166, 0.004] | mag_lock=0.36 subtype_lift=+0.172
+2026-07-24 02:11:34 | INFO    | 
+2026-07-24 02:11:34 | INFO    | [3/15] key='fpn.gap@0' transform='none'  (fpn.gap@0)
+2026-07-24 02:11:35 | INFO    |   [fold1/bank] encoded 2416 images ...
+2026-07-24 02:11:38 | INFO    |     dim=  256 eff_rank=   1.14 | p_img auc=0.8204 acc=0.8280 | p_final auc=0.8416 (+0.0003) acc=0.8338 (-0.0006) pat=0.7857
+2026-07-24 02:11:38 | INFO    |     corr(param,img)=0.987 auc|param wrong=0.002 best blend auc=0.8418 (alpha=0.82, +0.0005) | w=[0.8998, 0.1002, 0.0] | mag_lock=0.38 subtype_lift=+0.185
+2026-07-24 02:11:38 | INFO    | 
+2026-07-24 02:11:38 | INFO    | [4/15] key='features' transform='center'  (features  center)
+2026-07-24 02:11:45 | INFO    |     dim= 1024 eff_rank=   1.19 | p_img auc=0.8196 acc=0.8251 | p_final auc=0.8416 (+0.0003) acc=0.8344 (+0.0000) pat=0.7857
+2026-07-24 02:11:45 | INFO    |     corr(param,img)=0.983 auc|param wrong=0.003 best blend auc=0.8418 (alpha=0.85, +0.0005) | w=[0.8943, 0.1057, 0.0] | mag_lock=0.38 subtype_lift=+0.179
+2026-07-24 02:11:45 | INFO    | 
+2026-07-24 02:11:45 | INFO    | [5/15] key='features' transform='pca_drop:1'  (features  pca_drop:1)
+2026-07-24 02:11:45 | INFO    |   [fold1/bank] encoded 3216 images ...
+2026-07-24 02:11:53 | INFO    |     dim= 1024 eff_rank=   4.32 | p_img auc=0.8280 acc=0.8280 | p_final auc=0.8433 (+0.0020) acc=0.8367 (+0.0023) pat=0.8571
+2026-07-24 02:11:53 | INFO    |     corr(param,img)=0.969 auc|param wrong=0.008 best blend auc=0.8443 (alpha=0.13, +0.0030) | w=[0.6412, 0.0932, 0.2656] | mag_lock=0.40 subtype_lift=+0.176
+2026-07-24 02:11:53 | INFO    | 
+2026-07-24 02:11:53 | INFO    | [6/15] key='features' transform='pca_drop:3'  (features  pca_drop:3)
+2026-07-24 02:11:56 | INFO    |   [fold1/bank] encoded 4016 images ...
+2026-07-24 02:12:02 | INFO    |     dim= 1024 eff_rank=   5.56 | p_img auc=0.8304 acc=0.8093 | p_final auc=0.8511 (+0.0098) acc=0.8309 (-0.0035) pat=0.8571
+2026-07-24 02:12:02 | INFO    |     corr(param,img)=0.934 auc|param wrong=0.034 best blend auc=0.8531 (alpha=0.64, +0.0118) | w=[0.6104, 0.0877, 0.3019] | mag_lock=0.43 subtype_lift=+0.169
+2026-07-24 02:12:02 | INFO    | 
+2026-07-24 02:12:02 | INFO    | [7/15] key='features' transform='pca_drop:10'  (features  pca_drop:10)
+2026-07-24 02:12:07 | INFO    |   [fold1/bank] encoded 4816 images ...
+2026-07-24 02:12:11 | INFO    |     dim= 1024 eff_rank=  14.64 | p_img auc=0.8332 acc=0.8251 | p_final auc=0.8611 (+0.0198) acc=0.8414 (+0.0070) pat=0.8571
+2026-07-24 02:12:11 | INFO    |     corr(param,img)=0.933 auc|param wrong=0.034 best blend auc=0.8547 (alpha=0.84, +0.0134) | w=[0.4497, 0.1792, 0.3711] | mag_lock=0.51 subtype_lift=+0.188
+2026-07-24 02:12:11 | INFO    | 
+2026-07-24 02:12:11 | INFO    | [8/15] key='features' transform='whiten:64'  (features  whiten:64)
+2026-07-24 02:12:18 | INFO    |     dim=   64 eff_rank=  41.47 | p_img auc=0.8232 acc=0.8216 | p_final auc=0.8418 (+0.0005) acc=0.8373 (+0.0029) pat=0.7857
+2026-07-24 02:12:18 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.017 best blend auc=0.8429 (alpha=0.64, +0.0016) | w=[0.8874, 0.0483, 0.0643] | mag_lock=0.50 subtype_lift=+0.181
+2026-07-24 02:12:18 | INFO    | 
+2026-07-24 02:12:18 | INFO    | [9/15] key='features' transform='whiten:128'  (features  whiten:128)
+2026-07-24 02:12:25 | INFO    |     dim=  128 eff_rank=  80.16 | p_img auc=0.8249 acc=0.8210 | p_final auc=0.8396 (-0.0017) acc=0.8379 (+0.0035) pat=0.7857
+2026-07-24 02:12:25 | INFO    |     corr(param,img)=0.955 auc|param wrong=0.016 best blend auc=0.8433 (alpha=0.42, +0.0020) | w=[0.861, 0.0468, 0.0922] | mag_lock=0.53 subtype_lift=+0.193
+2026-07-24 02:12:25 | INFO    | 
+2026-07-24 02:12:25 | INFO    | [10/15] key='features' transform='whiten:256'  (features  whiten:256)
+2026-07-24 02:12:32 | INFO    |     dim=  256 eff_rank= 156.48 | p_img auc=0.8247 acc=0.8233 | p_final auc=0.8418 (+0.0005) acc=0.8455 (+0.0111) pat=0.8571
+2026-07-24 02:12:32 | INFO    |     corr(param,img)=0.962 auc|param wrong=0.015 best blend auc=0.8437 (alpha=0.37, +0.0024) | w=[0.7877, 0.0452, 0.1671] | mag_lock=0.53 subtype_lift=+0.189
+2026-07-24 02:12:32 | INFO    | 
+2026-07-24 02:12:32 | INFO    | [11/15] key='features' transform='center,drop_dirs'  (features  drop_clf_dir)
+2026-07-24 02:12:39 | INFO    |     dim= 1024 eff_rank=   1.25 | p_img auc=0.8196 acc=0.8268 | p_final auc=0.8418 (+0.0005) acc=0.8344 (+0.0000) pat=0.7857
+2026-07-24 02:12:39 | INFO    |     corr(param,img)=0.982 auc|param wrong=0.003 best blend auc=0.8417 (alpha=0.82, +0.0004) | w=[0.8871, 0.1128, 0.0001] | mag_lock=0.38 subtype_lift=+0.178
+2026-07-24 02:12:39 | INFO    | 
+2026-07-24 02:12:39 | INFO    | [12/15] key='features' transform='center,drop_dirs,whiten:128'  (features  drop_clf+whiten:128)
+2026-07-24 02:12:43 | INFO    |   [fold1/val] encoded 16 images ...
+2026-07-24 02:12:48 | INFO    |     dim=  128 eff_rank=  80.17 | p_img auc=0.8248 acc=0.8198 | p_final auc=0.8396 (-0.0017) acc=0.8362 (+0.0018) pat=0.7857
+2026-07-24 02:12:48 | INFO    |     corr(param,img)=0.955 auc|param wrong=0.016 best blend auc=0.8433 (alpha=0.45, +0.0020) | w=[0.8694, 0.0341, 0.0965] | mag_lock=0.53 subtype_lift=+0.193
+2026-07-24 02:12:48 | INFO    | 
+2026-07-24 02:12:48 | INFO    | [13/15] key='fpn.std' transform='whiten:128'  (fpn.std  whiten:128)
+2026-07-24 02:12:51 | INFO    |   [fold1/val] encoded 816 images ...
+2026-07-24 02:12:55 | INFO    |     dim=  128 eff_rank= 110.83 | p_img auc=0.8279 acc=0.8134 | p_final auc=0.8439 (+0.0026) acc=0.8367 (+0.0023) pat=0.7857
+2026-07-24 02:12:55 | INFO    |     corr(param,img)=0.942 auc|param wrong=0.018 best blend auc=0.8445 (alpha=0.50, +0.0032) | w=[0.8216, 0.0776, 0.1008] | mag_lock=0.46 subtype_lift=+0.169
+2026-07-24 02:12:55 | INFO    | 
+2026-07-24 02:12:55 | INFO    | [14/15] key='fpn.std' transform='pca_drop:1'  (fpn.std  pca_drop:1)
+2026-07-24 02:13:02 | INFO    |     dim= 1024 eff_rank=   3.53 | p_img auc=0.8259 acc=0.8210 | p_final auc=0.8425 (+0.0012) acc=0.8362 (+0.0018) pat=0.7857
+2026-07-24 02:13:02 | INFO    |     corr(param,img)=0.974 auc|param wrong=0.007 best blend auc=0.8420 (alpha=0.23, +0.0007) | w=[0.9087, 0.0913, 0.0] | mag_lock=0.38 subtype_lift=+0.173
+2026-07-24 02:13:02 | INFO    | 
+2026-07-24 02:13:02 | INFO    | [15/15] key='fpn.gap@0' transform='whiten:128'  (fpn.gap@0 whiten:128)
+2026-07-24 02:13:06 | INFO    |     dim=  128 eff_rank=  90.15 | p_img auc=0.8218 acc=0.8157 | p_final auc=0.8461 (+0.0048) acc=0.8391 (+0.0047) pat=0.8571
+2026-07-24 02:13:06 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.018 best blend auc=0.8427 (alpha=0.56, +0.0015) | w=[0.7863, 0.0397, 0.174] | mag_lock=0.55 subtype_lift=+0.194
+2026-07-24 02:13:06 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation.json
+2026-07-24 02:13:06 | INFO    | 
+key / transform                      dim    eff   p_img   p_fin    dAUC    dAcc   corr   blend
+2026-07-24 02:13:06 | INFO    | ----------------------------------------------------------------------------------------------
+2026-07-24 02:13:06 | INFO    | features / pca_drop:10              1024  14.64  0.8332  0.8611 +0.0198 +0.0070  0.933 +0.0134
+2026-07-24 02:13:06 | INFO    | features / pca_drop:3               1024   5.56  0.8304  0.8511 +0.0098 -0.0035  0.934 +0.0118
+2026-07-24 02:13:06 | INFO    | fpn.gap@0 / whiten:128               128  90.15  0.8218  0.8461 +0.0048 +0.0047  0.948 +0.0015
+2026-07-24 02:13:06 | INFO    | fpn.std / whiten:128                 128 110.83  0.8279  0.8439 +0.0026 +0.0023  0.942 +0.0032
+2026-07-24 02:13:06 | INFO    | fpn.std / none                      1024   2.88  0.8280  0.8438 +0.0025 +0.0029  0.977 +0.0029
+2026-07-24 02:13:06 | INFO    | features / pca_drop:1               1024   4.32  0.8280  0.8433 +0.0020 +0.0023  0.969 +0.0030
+2026-07-24 02:13:06 | INFO    | fpn.std / pca_drop:1                1024   3.53  0.8259  0.8425 +0.0012 +0.0018  0.974 +0.0007
+2026-07-24 02:13:06 | INFO    | features / whiten:64                  64  41.47  0.8232  0.8418 +0.0005 +0.0029  0.948 +0.0016
+2026-07-24 02:13:06 | INFO    | features / whiten:256                256 156.48  0.8247  0.8418 +0.0005 +0.0111  0.962 +0.0024
+2026-07-24 02:13:06 | INFO    | features / center,drop_dirs         1024   1.25  0.8196  0.8418 +0.0005 +0.0000  0.982 +0.0004
+2026-07-24 02:13:06 | INFO    | fpn.gap@0 / none                     256   1.14  0.8204  0.8416 +0.0003 -0.0006  0.987 +0.0005
+2026-07-24 02:13:06 | INFO    | features / center                   1024   1.19  0.8196  0.8416 +0.0003 +0.0000  0.983 +0.0005
+2026-07-24 02:13:06 | INFO    | features / none                     1024   1.09  0.8215  0.8415 +0.0002 +0.0006  0.990 +0.0006
+2026-07-24 02:13:06 | INFO    | features / whiten:128                128  80.16  0.8249  0.8396 -0.0017 +0.0035  0.955 +0.0020
+2026-07-24 02:13:06 | INFO    | features / center,drop_dirs,whiten   128  80.17  0.8248  0.8396 -0.0017 +0.0018  0.955 +0.0020
+2026-07-24 02:13:07 | INFO    | fold 1: cached -> analysis\retrieval_keys\exp3n\cache_fold1.npz  (90.7 MB)
+2026-07-24 02:13:11 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE  fold 2
+══════════════════════════════════════════════════════════════════════════
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_015949_train_fold2\checkpoints\best.pt
+  bank split                : 5137 images / 53 train patients
+  val split                 : 1119 images / 13 val patients
+  output                    : analysis\retrieval_keys\exp3n\cache_fold2.npz
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:13:34 | INFO    |   [fold2/bank] encoded 16 images ...
+2026-07-24 02:13:44 | INFO    |   [fold2/bank] encoded 816 images ...
+2026-07-24 02:13:54 | INFO    |   [fold2/bank] encoded 1616 images ...
+2026-07-24 02:14:04 | INFO    |   [fold2/bank] encoded 2416 images ...
+2026-07-24 02:14:14 | INFO    |   [fold2/bank] encoded 3216 images ...
+2026-07-24 02:14:25 | INFO    |   [fold2/bank] encoded 4016 images ...
+2026-07-24 02:14:33 | INFO    |   [fold2/bank] encoded 4816 images ...
+2026-07-24 02:15:03 | INFO    |   [fold2/val] encoded 16 images ...
+2026-07-24 02:15:12 | INFO    |   [fold2/val] encoded 816 images ...
+2026-07-24 02:15:26 | INFO    | fold 2: cached -> analysis\retrieval_keys\exp3n\cache_fold2.npz  (93.3 MB)
+2026-07-24 02:15:30 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE  fold 3
+══════════════════════════════════════════════════════════════════════════
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_025321_train_fold3\checkpoints\best.pt
+  bank split                : 5027 images / 53 train patients
+  val split                 : 1229 images / 13 val patients
+  output                    : analysis\retrieval_keys\exp3n\cache_fold3.npz
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:15:53 | INFO    |   [fold3/bank] encoded 16 images ...
+2026-07-24 02:16:02 | INFO    |   [fold3/bank] encoded 816 images ...
+2026-07-24 02:16:12 | INFO    |   [fold3/bank] encoded 1616 images ...
+2026-07-24 02:16:22 | INFO    |   [fold3/bank] encoded 2416 images ...
+2026-07-24 02:16:33 | INFO    |   [fold3/bank] encoded 3216 images ...
+2026-07-24 02:16:43 | INFO    |   [fold3/bank] encoded 4016 images ...
+2026-07-24 02:16:53 | INFO    |   [fold3/bank] encoded 4816 images ...
+2026-07-24 02:17:19 | INFO    |   [fold3/val] encoded 16 images ...
+2026-07-24 02:17:29 | INFO    |   [fold3/val] encoded 816 images ...
+2026-07-24 02:17:43 | INFO    | fold 3: cached -> analysis\retrieval_keys\exp3n\cache_fold3.npz  (92.4 MB)
+2026-07-24 02:17:47 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ CACHE  fold 4
+══════════════════════════════════════════════════════════════════════════
+  checkpoint                : runs\exp3n_swin_supcon_cls\20260723_075322_train_fold4\checkpoints\best.pt
+  bank split                : 5186 images / 53 train patients
+  val split                 : 1070 images / 13 val patients
+  output                    : analysis\retrieval_keys\exp3n\cache_fold4.npz
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:18:09 | INFO    |   [fold4/bank] encoded 16 images ...
+2026-07-24 02:18:18 | INFO    |   [fold4/bank] encoded 816 images ...
+2026-07-24 02:18:28 | INFO    |   [fold4/bank] encoded 1616 images ...
+2026-07-24 02:18:38 | INFO    |   [fold4/bank] encoded 2416 images ...
+2026-07-24 02:18:48 | INFO    |   [fold4/bank] encoded 3216 images ...
+2026-07-24 02:18:58 | INFO    |   [fold4/bank] encoded 4016 images ...
+2026-07-24 02:19:08 | INFO    |   [fold4/bank] encoded 4816 images ...
+2026-07-24 02:19:35 | INFO    |   [fold4/val] encoded 16 images ...
+2026-07-24 02:19:44 | INFO    |   [fold4/val] encoded 816 images ...
+2026-07-24 02:19:58 | INFO    | fold 4: cached -> analysis\retrieval_keys\exp3n\cache_fold4.npz  (91.3 MB)
+2026-07-24 02:20:36 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  stage                     : eval
+  grid size                 : 39 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:20:37 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 02:20:38 | INFO    | loaded cache_fold1.npz: 5133 bank rows, 1123 val rows
+2026-07-24 02:20:39 | INFO    | loaded cache_fold2.npz: 5137 bank rows, 1119 val rows
+2026-07-24 02:20:40 | INFO    | loaded cache_fold3.npz: 5027 bank rows, 1229 val rows
+2026-07-24 02:20:41 | INFO    | loaded cache_fold4.npz: 5186 bank rows, 1070 val rows
+2026-07-24 02:20:41 | INFO    | 
+2026-07-24 02:20:41 | INFO    | [1/39] key='features' transform='none'  (features (D1 baseline))
+2026-07-24 02:21:04 | INFO    |     dim= 1024 eff_rank=   1.19 | p_img auc=0.8678 acc=0.8496 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=0.8788
+2026-07-24 02:21:04 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.056 best blend auc=0.8864 (alpha=0.89, +0.0009) | w=[0.8226, 0.1468, 0.0306] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 02:21:04 | INFO    | 
+2026-07-24 02:21:04 | INFO    | [2/39] key='projections' transform='none'  (projections (SupCon))
+2026-07-24 02:21:26 | INFO    |     dim=  128 eff_rank=   1.08 | p_img auc=0.8660 acc=0.8523 | p_final auc=0.8858 (+0.0003) | LOSO auc=0.8832 (-0.0023) acc=0.8645 (-0.0009) pat=0.8636
+2026-07-24 02:21:26 | INFO    |     corr(param,img)=0.944 auc|param wrong=0.060 best blend auc=0.8862 (alpha=0.91, +0.0008) | w=[0.8546, 0.145, 0.0004] | mag_lock=0.41 subtype_lift=+0.131
+2026-07-24 02:21:26 | INFO    | 
+2026-07-24 02:21:26 | INFO    | [3/39] key='fpn.std' transform='none'  (fpn.std)
+2026-07-24 02:21:56 | INFO    |     dim= 1024 eff_rank=   2.71 | p_img auc=0.8699 acc=0.8378 | p_final auc=0.8860 (+0.0005) | LOSO auc=0.8846 (-0.0009) acc=0.8637 (-0.0017) pat=0.8636
+2026-07-24 02:21:56 | INFO    |     corr(param,img)=0.937 auc|param wrong=0.057 best blend auc=0.8868 (alpha=0.87, +0.0013) | w=[0.8576, 0.1397, 0.0028] | mag_lock=0.38 subtype_lift=+0.139
+2026-07-24 02:21:56 | INFO    | 
+2026-07-24 02:21:56 | INFO    | [4/39] key='fpn.max' transform='none'  (fpn.max)
+2026-07-24 02:22:18 | INFO    |     dim= 1024 eff_rank=   1.60 | p_img auc=0.8682 acc=0.8381 | p_final auc=0.8853 (-0.0002) | LOSO auc=0.8838 (-0.0017) acc=0.8629 (-0.0025) pat=0.8636
+2026-07-24 02:22:18 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.055 best blend auc=0.8863 (alpha=0.88, +0.0008) | w=[0.8642, 0.1357, 0.0001] | mag_lock=0.37 subtype_lift=+0.141
+2026-07-24 02:22:18 | INFO    | 
+2026-07-24 02:22:18 | INFO    | [5/39] key='fpn.gem' transform='none'  (fpn.gem)
+2026-07-24 02:22:43 | INFO    |     dim= 1024 eff_rank=   1.25 | p_img auc=0.8675 acc=0.8435 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8841 (-0.0014) acc=0.8630 (-0.0024) pat=0.8636
+2026-07-24 02:22:43 | INFO    |     corr(param,img)=0.946 auc|param wrong=0.054 best blend auc=0.8865 (alpha=0.91, +0.0010) | w=[0.8187, 0.1392, 0.0421] | mag_lock=0.40 subtype_lift=+0.138
+2026-07-24 02:22:43 | INFO    | 
+2026-07-24 02:22:43 | INFO    | [6/39] key='fpn.gap@0' transform='none'  (fpn.gap@0)
+2026-07-24 02:23:05 | INFO    |     dim=  256 eff_rank=   1.24 | p_img auc=0.8655 acc=0.8453 | p_final auc=0.8855 (+0.0000) | LOSO auc=0.8831 (-0.0024) acc=0.8606 (-0.0048) pat=0.8636
+2026-07-24 02:23:05 | INFO    |     corr(param,img)=0.945 auc|param wrong=0.051 best blend auc=0.8856 (alpha=0.92, +0.0001) | w=[0.8395, 0.1231, 0.0374] | mag_lock=0.42 subtype_lift=+0.133
+2026-07-24 02:23:05 | INFO    | 
+2026-07-24 02:23:05 | INFO    | [7/39] key='fpn.gap@1' transform='none'  (fpn.gap@1)
+2026-07-24 02:23:25 | INFO    |     dim=  256 eff_rank=   1.16 | p_img auc=0.8687 acc=0.8558 | p_final auc=0.8864 (+0.0009) | LOSO auc=0.8839 (-0.0016) acc=0.8638 (-0.0016) pat=0.8788
+2026-07-24 02:23:25 | INFO    |     corr(param,img)=0.947 auc|param wrong=0.065 best blend auc=0.8863 (alpha=0.88, +0.0008) | w=[0.8433, 0.1565, 0.0002] | mag_lock=0.41 subtype_lift=+0.126
+2026-07-24 02:23:25 | INFO    | 
+2026-07-24 02:23:25 | INFO    | [8/39] key='fpn.gap@2' transform='none'  (fpn.gap@2)
+2026-07-24 02:23:48 | INFO    |     dim=  256 eff_rank=   1.17 | p_img auc=0.8618 acc=0.8394 | p_final auc=0.8853 (-0.0002) | LOSO auc=0.8843 (-0.0012) acc=0.8635 (-0.0019) pat=0.8788
+2026-07-24 02:23:48 | INFO    |     corr(param,img)=0.929 auc|param wrong=0.067 best blend auc=0.8862 (alpha=0.91, +0.0008) | w=[0.9057, 0.0943, 0.0] | mag_lock=0.38 subtype_lift=+0.120
+2026-07-24 02:23:48 | INFO    | 
+2026-07-24 02:23:48 | INFO    | [9/39] key='fpn.gap@3' transform='none'  (fpn.gap@3)
+2026-07-24 02:24:10 | INFO    |     dim=  256 eff_rank=   1.44 | p_img auc=0.8658 acc=0.8429 | p_final auc=0.8850 (-0.0005) | LOSO auc=0.8837 (-0.0018) acc=0.8625 (-0.0029) pat=0.8788
+2026-07-24 02:24:10 | INFO    |     corr(param,img)=0.930 auc|param wrong=0.067 best blend auc=0.8861 (alpha=0.93, +0.0007) | w=[0.8881, 0.1119, 0.0] | mag_lock=0.32 subtype_lift=+0.136
+2026-07-24 02:24:10 | INFO    | 
+2026-07-24 02:24:10 | INFO    | [10/39] key='fpn.std@0' transform='none'  (fpn.std@0)
+2026-07-24 02:24:36 | INFO    |     dim=  256 eff_rank=   2.61 | p_img auc=0.8693 acc=0.8421 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8832 (-0.0023) acc=0.8609 (-0.0045) pat=0.8636
+2026-07-24 02:24:36 | INFO    |     corr(param,img)=0.939 auc|param wrong=0.053 best blend auc=0.8865 (alpha=0.89, +0.0010) | w=[0.8745, 0.1254, 0.0001] | mag_lock=0.41 subtype_lift=+0.144
+2026-07-24 02:24:36 | INFO    | 
+2026-07-24 02:24:36 | INFO    | [11/39] key='fpn.std@3' transform='none'  (fpn.std@3)
+2026-07-24 02:24:58 | INFO    |     dim=  256 eff_rank=   2.07 | p_img auc=0.8584 acc=0.8266 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8827 (-0.0028) acc=0.8609 (-0.0045) pat=0.8636
+2026-07-24 02:24:58 | INFO    |     corr(param,img)=0.905 auc|param wrong=0.067 best blend auc=0.8862 (alpha=0.97, +0.0007) | w=[0.8909, 0.1091, 0.0001] | mag_lock=0.29 subtype_lift=+0.124
+2026-07-24 02:24:58 | INFO    | 
+2026-07-24 02:24:58 | INFO    | [12/39] key='fpn.gap.ln' transform='none'  (fpn.gap.ln)
+2026-07-24 02:25:21 | INFO    |     dim= 1024 eff_rank=   1.20 | p_img auc=0.8667 acc=0.8501 | p_final auc=0.8859 (+0.0004) | LOSO auc=0.8834 (-0.0021) acc=0.8606 (-0.0048) pat=0.8636
+2026-07-24 02:25:21 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.055 best blend auc=0.8863 (alpha=0.91, +0.0008) | w=[0.8261, 0.1393, 0.0347] | mag_lock=0.41 subtype_lift=+0.134
+2026-07-24 02:25:21 | INFO    | 
+2026-07-24 02:25:21 | INFO    | [13/39] key='features+fpn.std' transform='none'  (features+fpn.std)
+2026-07-24 02:25:52 | INFO    |     dim= 2048 eff_rank=   1.42 | p_img auc=0.8686 acc=0.8456 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8848 (-0.0007) acc=0.8613 (-0.0041) pat=0.8636
+2026-07-24 02:25:52 | INFO    |     corr(param,img)=0.946 auc|param wrong=0.057 best blend auc=0.8865 (alpha=0.89, +0.0010) | w=[0.8549, 0.1437, 0.0014] | mag_lock=0.39 subtype_lift=+0.141
+2026-07-24 02:25:52 | INFO    | 
+2026-07-24 02:25:52 | INFO    | [14/39] key='features+projections' transform='none'  (features+projections)
+2026-07-24 02:26:17 | INFO    |     dim= 1152 eff_rank=   1.16 | p_img auc=0.8672 acc=0.8512 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8834 (-0.0021) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 02:26:17 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.057 best blend auc=0.8864 (alpha=0.90, +0.0009) | w=[0.8149, 0.1499, 0.0352] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 02:26:17 | INFO    | 
+2026-07-24 02:26:17 | INFO    | [15/39] key='features' transform='center'  (features  center)
+2026-07-24 02:27:00 | INFO    |     dim= 1024 eff_rank=   1.39 | p_img auc=0.8657 acc=0.8480 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8829 (-0.0026) acc=0.8603 (-0.0051) pat=0.8636
+2026-07-24 02:27:00 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8862 (alpha=0.89, +0.0007) | w=[0.8648, 0.1352, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 02:27:00 | INFO    | 
+2026-07-24 02:27:00 | INFO    | [16/39] key='features' transform='pca_drop:1'  (features  pca_drop:1)
+2026-07-24 02:27:50 | INFO    |     dim= 1024 eff_rank=   3.54 | p_img auc=0.8622 acc=0.8358 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8825 (-0.0030) acc=0.8622 (-0.0032) pat=0.8788
+2026-07-24 02:27:50 | INFO    |     corr(param,img)=0.912 auc|param wrong=0.076 best blend auc=0.8872 (alpha=0.88, +0.0017) | w=[0.7983, 0.1158, 0.0859] | mag_lock=0.45 subtype_lift=+0.136
+2026-07-24 02:27:50 | INFO    | 
+2026-07-24 02:27:50 | INFO    | [17/39] key='features' transform='pca_drop:3'  (features  pca_drop:3)
+2026-07-24 02:28:37 | INFO    |     dim= 1024 eff_rank=   7.06 | p_img auc=0.8612 acc=0.8370 | p_final auc=0.8916 (+0.0061) | LOSO auc=0.8862 (+0.0007) acc=0.8625 (-0.0029) pat=0.8636
+2026-07-24 02:28:37 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.098 best blend auc=0.8887 (alpha=0.89, +0.0032) | w=[0.7098, 0.0712, 0.219] | mag_lock=0.48 subtype_lift=+0.141
+2026-07-24 02:28:37 | INFO    | 
+2026-07-24 02:28:37 | INFO    | [18/39] key='features' transform='pca_drop:10'  (features  pca_drop:10)
+2026-07-24 02:29:20 | INFO    |     dim= 1024 eff_rank=  19.36 | p_img auc=0.8585 acc=0.8405 | p_final auc=0.8930 (+0.0075) | LOSO auc=0.8866 (+0.0011) acc=0.8601 (-0.0053) pat=0.8788
+2026-07-24 02:29:20 | INFO    |     corr(param,img)=0.892 auc|param wrong=0.086 best blend auc=0.8884 (alpha=0.85, +0.0029) | w=[0.6552, 0.0902, 0.2546] | mag_lock=0.52 subtype_lift=+0.151
+2026-07-24 02:29:20 | INFO    | 
+2026-07-24 02:29:20 | INFO    | [19/39] key='features' transform='pca_drop:20'  (features  pca_drop:20)
+2026-07-24 02:30:15 | INFO    |     dim= 1024 eff_rank=  33.30 | p_img auc=0.8593 acc=0.8413 | p_final auc=0.8931 (+0.0076) | LOSO auc=0.8897 (+0.0042) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 02:30:15 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.080 best blend auc=0.8863 (alpha=0.92, +0.0008) | w=[0.6582, 0.0596, 0.2823] | mag_lock=0.51 subtype_lift=+0.136
+2026-07-24 02:30:15 | INFO    | 
+2026-07-24 02:30:15 | INFO    | [20/39] key='features' transform='pca_drop:50'  (features  pca_drop:50)
+2026-07-24 02:31:09 | INFO    |     dim= 1024 eff_rank=  72.53 | p_img auc=0.8655 acc=0.8382 | p_final auc=0.8925 (+0.0070) | LOSO auc=0.8815 (-0.0040) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 02:31:09 | INFO    |     corr(param,img)=0.907 auc|param wrong=0.069 best blend auc=0.8867 (alpha=0.85, +0.0012) | w=[0.6313, 0.0603, 0.3084] | mag_lock=0.49 subtype_lift=+0.137
+2026-07-24 02:31:09 | INFO    | 
+2026-07-24 02:31:09 | INFO    | [21/39] key='features' transform='pca_drop:100'  (features  pca_drop:100)
+2026-07-24 02:31:52 | INFO    |     dim= 1024 eff_rank= 117.51 | p_img auc=0.8758 acc=0.8371 | p_final auc=0.8848 (-0.0007) | LOSO auc=0.8706 (-0.0149) acc=0.8598 (-0.0056) pat=0.8636
+2026-07-24 02:31:52 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.084 best blend auc=0.8895 (alpha=0.70, +0.0040) | w=[0.6123, 0.1744, 0.2133] | mag_lock=0.46 subtype_lift=+0.131
+2026-07-24 02:31:52 | INFO    | 
+2026-07-24 02:31:52 | INFO    | [22/39] key='features' transform='pca_drop:200'  (features  pca_drop:200)
+2026-07-24 02:32:33 | INFO    |     dim= 1024 eff_rank= 168.20 | p_img auc=0.8691 acc=0.8405 | p_final auc=0.8830 (-0.0025) | LOSO auc=0.8613 (-0.0242) acc=0.8574 (-0.0080) pat=0.8636
+2026-07-24 02:32:33 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.078 best blend auc=0.8905 (alpha=0.81, +0.0050) | w=[0.5701, 0.3135, 0.1165] | mag_lock=0.40 subtype_lift=+0.107
+2026-07-24 02:32:33 | INFO    | 
+2026-07-24 02:32:33 | INFO    | [23/39] key='features' transform='whiten:64'  (features  whiten:64)
+2026-07-24 02:33:15 | INFO    |     dim=   64 eff_rank=  52.69 | p_img auc=0.8640 acc=0.8390 | p_final auc=0.8872 (+0.0017) | LOSO auc=0.8842 (-0.0013) acc=0.8574 (-0.0080) pat=0.8485
+2026-07-24 02:33:15 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.082 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8846, 0.0444, 0.071] | mag_lock=0.55 subtype_lift=+0.149
+2026-07-24 02:33:15 | INFO    | 
+2026-07-24 02:33:15 | INFO    | [24/39] key='features' transform='whiten:128'  (features  whiten:128)
+2026-07-24 02:33:59 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8663 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 02:33:59 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.077 best blend auc=0.8860 (alpha=0.93, +0.0005) | w=[0.8675, 0.0284, 0.104] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:33:59 | INFO    | 
+2026-07-24 02:33:59 | INFO    | [25/39] key='features' transform='whiten:256'  (features  whiten:256)
+2026-07-24 02:34:40 | INFO    |     dim=  256 eff_rank= 203.68 | p_img auc=0.8670 acc=0.8384 | p_final auc=0.8883 (+0.0028) | LOSO auc=0.8865 (+0.0010) acc=0.8624 (-0.0030) pat=0.8788
+2026-07-24 02:34:40 | INFO    |     corr(param,img)=0.913 auc|param wrong=0.065 best blend auc=0.8858 (alpha=0.93, +0.0003) | w=[0.829, 0.0302, 0.1408] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 02:34:40 | INFO    | 
+2026-07-24 02:34:40 | INFO    | [26/39] key='features' transform='whiten:512'  (features  whiten:512)
+2026-07-24 02:35:19 | INFO    |     dim=  512 eff_rank= 364.13 | p_img auc=0.8689 acc=0.8441 | p_final auc=0.8885 (+0.0030) | LOSO auc=0.8863 (+0.0008) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 02:35:19 | INFO    |     corr(param,img)=0.926 auc|param wrong=0.059 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8259, 0.0389, 0.1352] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 02:35:19 | INFO    | 
+2026-07-24 02:35:19 | INFO    | [27/39] key='features' transform='pca_drop:3,whiten:128'  (features  pca_drop:3+whiten)
+2026-07-24 02:36:06 | INFO    |     dim=  128 eff_rank= 103.94 | p_img auc=0.8670 acc=0.8379 | p_final auc=0.8904 (+0.0049) | LOSO auc=0.8869 (+0.0014) acc=0.8617 (-0.0037) pat=0.8788
+2026-07-24 02:36:06 | INFO    |     corr(param,img)=0.901 auc|param wrong=0.075 best blend auc=0.8860 (alpha=0.92, +0.0005) | w=[0.7222, 0.0276, 0.2502] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:36:06 | INFO    | 
+2026-07-24 02:36:06 | INFO    | [28/39] key='features' transform='center,drop_dirs'  (features  drop_clf_dir)
+2026-07-24 02:36:37 | INFO    |     dim= 1024 eff_rank=   1.47 | p_img auc=0.8657 acc=0.8485 | p_final auc=0.8854 (-0.0001) | LOSO auc=0.8829 (-0.0026) acc=0.8621 (-0.0033) pat=0.8636
+2026-07-24 02:36:37 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8861 (alpha=0.89, +0.0006) | w=[0.8586, 0.1414, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 02:36:37 | INFO    | 
+2026-07-24 02:36:37 | INFO    | [29/39] key='features' transform='center,drop_dirs,whiten:128'  (features  drop_clf+whiten:128)
+2026-07-24 02:37:22 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8661 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 02:37:22 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.076 best blend auc=0.8860 (alpha=0.94, +0.0005) | w=[0.87, 0.0285, 0.1015] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:37:22 | INFO    | 
+2026-07-24 02:37:22 | INFO    | [30/39] key='projections' transform='whiten:64'  (projections whiten:64)
+2026-07-24 02:37:41 | INFO    |     dim=   64 eff_rank=  38.27 | p_img auc=0.8650 acc=0.8355 | p_final auc=0.8858 (+0.0003) | LOSO auc=0.8826 (-0.0029) acc=0.8589 (-0.0065) pat=0.8485
+2026-07-24 02:37:41 | INFO    |     corr(param,img)=0.885 auc|param wrong=0.100 best blend auc=0.8861 (alpha=0.96, +0.0006) | w=[0.9036, 0.0544, 0.042] | mag_lock=0.49 subtype_lift=+0.145
+2026-07-24 02:37:41 | INFO    | 
+2026-07-24 02:37:41 | INFO    | [31/39] key='projections' transform='pca_drop:1'  (projections pca_drop:1)
+2026-07-24 02:38:00 | INFO    |     dim=  128 eff_rank=   6.04 | p_img auc=0.8636 acc=0.8378 | p_final auc=0.8850 (-0.0005) | LOSO auc=0.8833 (-0.0022) acc=0.8605 (-0.0049) pat=0.8788
+2026-07-24 02:38:00 | INFO    |     corr(param,img)=0.921 auc|param wrong=0.076 best blend auc=0.8859 (alpha=0.94, +0.0004) | w=[0.8742, 0.1076, 0.0183] | mag_lock=0.43 subtype_lift=+0.136
+2026-07-24 02:38:00 | INFO    | 
+2026-07-24 02:38:00 | INFO    | [32/39] key='projections' transform='pca_drop:10'  (projections pca_drop:10)
+2026-07-24 02:38:19 | INFO    |     dim=  128 eff_rank=  16.04 | p_img auc=0.8658 acc=0.8344 | p_final auc=0.8836 (-0.0019) | LOSO auc=0.8806 (-0.0049) acc=0.8627 (-0.0027) pat=0.8636
+2026-07-24 02:38:19 | INFO    |     corr(param,img)=0.903 auc|param wrong=0.077 best blend auc=0.8855 (alpha=0.99, +0.0001) | w=[0.8382, 0.05, 0.1118] | mag_lock=0.49 subtype_lift=+0.149
+2026-07-24 02:38:19 | INFO    | 
+2026-07-24 02:38:19 | INFO    | [33/39] key='fpn.std' transform='whiten:128'  (fpn.std  whiten:128)
+2026-07-24 02:38:55 | INFO    |     dim=  128 eff_rank= 120.41 | p_img auc=0.8632 acc=0.8323 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8829 (-0.0026) acc=0.8558 (-0.0096) pat=0.8636
+2026-07-24 02:38:55 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.073 best blend auc=0.8859 (alpha=0.92, +0.0004) | w=[0.8199, 0.0834, 0.0967] | mag_lock=0.48 subtype_lift=+0.140
+2026-07-24 02:38:55 | INFO    | 
+2026-07-24 02:38:55 | INFO    | [34/39] key='fpn.std' transform='pca_drop:1'  (fpn.std  pca_drop:1)
+2026-07-24 02:39:31 | INFO    |     dim= 1024 eff_rank=   4.68 | p_img auc=0.8618 acc=0.8390 | p_final auc=0.8856 (+0.0001) | LOSO auc=0.8823 (-0.0032) acc=0.8608 (-0.0046) pat=0.8636
+2026-07-24 02:39:31 | INFO    |     corr(param,img)=0.928 auc|param wrong=0.059 best blend auc=0.8855 (alpha=0.97, +0.0000) | w=[0.8715, 0.1103, 0.0182] | mag_lock=0.40 subtype_lift=+0.135
+2026-07-24 02:39:31 | INFO    | 
+2026-07-24 02:39:31 | INFO    | [35/39] key='fpn.std' transform='pca_drop:10'  (fpn.std  pca_drop:10)
+2026-07-24 02:40:06 | INFO    |     dim= 1024 eff_rank=  30.22 | p_img auc=0.8597 acc=0.8342 | p_final auc=0.8791 (-0.0064) | LOSO auc=0.8748 (-0.0107) acc=0.8582 (-0.0072) pat=0.8636
+2026-07-24 02:40:06 | INFO    |     corr(param,img)=0.890 auc|param wrong=0.089 best blend auc=0.8855 (alpha=1.00, +0.0000) | w=[0.7506, 0.0842, 0.1653] | mag_lock=0.45 subtype_lift=+0.138
+2026-07-24 02:40:06 | INFO    | 
+2026-07-24 02:40:06 | INFO    | [36/39] key='fpn.gap@0' transform='whiten:128'  (fpn.gap@0 whiten:128)
+2026-07-24 02:40:25 | INFO    |     dim=  128 eff_rank= 106.89 | p_img auc=0.8647 acc=0.8360 | p_final auc=0.8891 (+0.0036) | LOSO auc=0.8874 (+0.0019) acc=0.8589 (-0.0065) pat=0.8636
+2026-07-24 02:40:25 | INFO    |     corr(param,img)=0.903 auc|param wrong=0.069 best blend auc=0.8855 (alpha=1.00, +0.0000) | w=[0.8086, 0.0272, 0.1642] | mag_lock=0.57 subtype_lift=+0.151
+2026-07-24 02:40:25 | INFO    | 
+2026-07-24 02:40:25 | INFO    | [37/39] key='fpn.gap@0' transform='pca_drop:10'  (fpn.gap@0 pca_drop:10)
+2026-07-24 02:40:45 | INFO    |     dim=  256 eff_rank=  17.22 | p_img auc=0.8604 acc=0.8325 | p_final auc=0.8917 (+0.0062) | LOSO auc=0.8872 (+0.0017) acc=0.8633 (-0.0021) pat=0.8636
+2026-07-24 02:40:45 | INFO    |     corr(param,img)=0.894 auc|param wrong=0.072 best blend auc=0.8877 (alpha=0.91, +0.0022) | w=[0.6823, 0.0809, 0.2368] | mag_lock=0.53 subtype_lift=+0.144
+2026-07-24 02:40:45 | INFO    | 
+2026-07-24 02:40:45 | INFO    | [38/39] key='features+fpn.std' transform='whiten:128'  (features+fpn.std whiten:128)
+2026-07-24 02:42:04 | INFO    |     dim=  128 eff_rank= 117.23 | p_img auc=0.8636 acc=0.8349 | p_final auc=0.8867 (+0.0012) | LOSO auc=0.8836 (-0.0019) acc=0.8579 (-0.0075) pat=0.8485
+2026-07-24 02:42:04 | INFO    |     corr(param,img)=0.898 auc|param wrong=0.074 best blend auc=0.8859 (alpha=0.94, +0.0004) | w=[0.8411, 0.0596, 0.0992] | mag_lock=0.51 subtype_lift=+0.145
+2026-07-24 02:42:04 | INFO    | 
+2026-07-24 02:42:04 | INFO    | [39/39] key='features+fpn.std' transform='pca_drop:10'  (features+fpn.std pca_drop:10)
+2026-07-24 02:43:31 | INFO    |     dim= 2048 eff_rank=  27.41 | p_img auc=0.8628 acc=0.8362 | p_final auc=0.8855 (+0.0000) | LOSO auc=0.8795 (-0.0060) acc=0.8632 (-0.0022) pat=0.8788
+2026-07-24 02:43:31 | INFO    |     corr(param,img)=0.894 auc|param wrong=0.080 best blend auc=0.8855 (alpha=0.99, +0.0000) | w=[0.7113, 0.0583, 0.2304] | mag_lock=0.48 subtype_lift=+0.139
+2026-07-24 02:43:31 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation.json
+2026-07-24 02:43:31 | INFO    | 
+Ranked by leave-one-fold-out fused AUC (the honest ordering)
+2026-07-24 02:43:31 | INFO    | key / transform                      dim    eff  pImgAUC  LOSOauc    dAUC    dAcc  dPatAcc   corr
+2026-07-24 02:43:31 | INFO    | -------------------------------------------------------------------------------------------------
+2026-07-24 02:43:31 | INFO    | features / pca_drop:20              1024  33.30   0.8593   0.8897 +0.0042 -0.0013  +0.0152  0.899
+2026-07-24 02:43:31 | INFO    | fpn.gap@0 / whiten:128               128 106.89   0.8647   0.8874 +0.0019 -0.0065  +0.0000  0.903
+2026-07-24 02:43:31 | INFO    | fpn.gap@0 / pca_drop:10              256  17.22   0.8604   0.8872 +0.0017 -0.0021  +0.0000  0.894
+2026-07-24 02:43:31 | INFO    | features / pca_drop:3,whiten:128     128 103.94   0.8670   0.8869 +0.0014 -0.0037  +0.0152  0.901
+2026-07-24 02:43:31 | INFO    | features / pca_drop:10              1024  19.36   0.8585   0.8866 +0.0011 -0.0053  +0.0152  0.892
+2026-07-24 02:43:31 | INFO    | features / whiten:256                256 203.68   0.8670   0.8865 +0.0010 -0.0030  +0.0152  0.913
+2026-07-24 02:43:31 | INFO    | features / whiten:512                512 364.13   0.8689   0.8863 +0.0008 -0.0038  +0.0152  0.926
+2026-07-24 02:43:31 | INFO    | features / pca_drop:3               1024   7.06   0.8612   0.8862 +0.0007 -0.0029  +0.0000  0.896
+2026-07-24 02:43:31 | INFO    | features / whiten:128                128 103.13   0.8663   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 02:43:31 | INFO    | features / center,drop_dirs,whiten   128 103.13   0.8661   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 02:43:31 | INFO    | features+fpn.std / none             2048   1.42   0.8686   0.8848 -0.0007 -0.0041  +0.0000  0.946
+2026-07-24 02:43:31 | INFO    | fpn.std / none                      1024   2.71   0.8699   0.8846 -0.0009 -0.0017  +0.0000  0.937
+2026-07-24 02:43:31 | INFO    | fpn.gap@2 / none                     256   1.17   0.8618   0.8843 -0.0012 -0.0019  +0.0152  0.929
+2026-07-24 02:43:31 | INFO    | features / whiten:64                  64  52.69   0.8640   0.8842 -0.0013 -0.0080  -0.0151  0.896
+2026-07-24 02:43:31 | INFO    | fpn.gem / none                      1024   1.25   0.8675   0.8841 -0.0014 -0.0024  +0.0000  0.946
+2026-07-24 02:43:31 | INFO    | fpn.gap@1 / none                     256   1.16   0.8687   0.8839 -0.0016 -0.0016  +0.0152  0.947
+2026-07-24 02:43:31 | INFO    | fpn.max / none                      1024   1.60   0.8682   0.8838 -0.0017 -0.0025  +0.0000  0.941
+2026-07-24 02:43:31 | INFO    | fpn.gap@3 / none                     256   1.44   0.8658   0.8837 -0.0018 -0.0029  +0.0152  0.930
+2026-07-24 02:43:31 | INFO    | features+fpn.std / whiten:128        128 117.23   0.8636   0.8836 -0.0019 -0.0075  -0.0151  0.898
+2026-07-24 02:43:31 | INFO    | fpn.gap.ln / none                   1024   1.20   0.8667   0.8834 -0.0021 -0.0048  +0.0000  0.948
+2026-07-24 02:43:31 | INFO    | features+projections / none         1152   1.16   0.8672   0.8834 -0.0021 -0.0013  +0.0152  0.948
+2026-07-24 02:43:31 | INFO    | features / none                     1024   1.19   0.8678   0.8833 -0.0022 -0.0027  +0.0152  0.948
+2026-07-24 02:43:31 | INFO    | projections / pca_drop:1             128   6.04   0.8636   0.8833 -0.0022 -0.0049  +0.0152  0.921
+2026-07-24 02:43:31 | INFO    | projections / none                   128   1.08   0.8660   0.8832 -0.0023 -0.0009  +0.0000  0.944
+2026-07-24 02:43:31 | INFO    | fpn.std@0 / none                     256   2.61   0.8693   0.8832 -0.0023 -0.0045  +0.0000  0.939
+2026-07-24 02:43:31 | INFO    | fpn.gap@0 / none                     256   1.24   0.8655   0.8831 -0.0024 -0.0048  +0.0000  0.945
+2026-07-24 02:43:31 | INFO    | features / center                   1024   1.39   0.8657   0.8829 -0.0026 -0.0051  +0.0000  0.941
+2026-07-24 02:43:31 | INFO    | features / center,drop_dirs         1024   1.47   0.8657   0.8829 -0.0026 -0.0033  +0.0000  0.941
+2026-07-24 02:43:31 | INFO    | fpn.std / whiten:128                 128 120.41   0.8632   0.8829 -0.0026 -0.0096  +0.0000  0.899
+2026-07-24 02:43:31 | INFO    | fpn.std@3 / none                     256   2.07   0.8584   0.8827 -0.0028 -0.0045  +0.0000  0.905
+2026-07-24 02:43:31 | INFO    | projections / whiten:64               64  38.27   0.8650   0.8826 -0.0029 -0.0065  -0.0151  0.885
+2026-07-24 02:43:31 | INFO    | features / pca_drop:1               1024   3.54   0.8622   0.8825 -0.0030 -0.0032  +0.0152  0.912
+2026-07-24 02:43:31 | INFO    | fpn.std / pca_drop:1                1024   4.68   0.8618   0.8823 -0.0032 -0.0046  +0.0000  0.928
+2026-07-24 02:43:31 | INFO    | features / pca_drop:50              1024  72.53   0.8655   0.8815 -0.0040 -0.0038  +0.0152  0.907
+2026-07-24 02:43:31 | INFO    | projections / pca_drop:10            128  16.04   0.8658   0.8806 -0.0049 -0.0027  +0.0000  0.903
+2026-07-24 02:43:31 | INFO    | features+fpn.std / pca_drop:10      2048  27.41   0.8628   0.8795 -0.0060 -0.0022  +0.0152  0.894
+2026-07-24 02:43:31 | INFO    | fpn.std / pca_drop:10               1024  30.22   0.8597   0.8748 -0.0107 -0.0072  +0.0000  0.890
+2026-07-24 02:43:31 | INFO    | features / pca_drop:100             1024 117.51   0.8758   0.8706 -0.0149 -0.0056  +0.0000  0.906
+2026-07-24 02:43:31 | INFO    | features / pca_drop:200             1024 168.20   0.8691   0.8613 -0.0242 -0.0080  +0.0000  0.902
+2026-07-24 02:46:34 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  stage                     : eval
+  grid size                 : 39 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 02:46:35 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 02:46:36 | INFO    | loaded cache_fold1.npz: 5133 bank rows, 1123 val rows
+2026-07-24 02:46:36 | INFO    | loaded cache_fold2.npz: 5137 bank rows, 1119 val rows
+2026-07-24 02:46:37 | INFO    | loaded cache_fold3.npz: 5027 bank rows, 1229 val rows
+2026-07-24 02:46:38 | INFO    | loaded cache_fold4.npz: 5186 bank rows, 1070 val rows
+2026-07-24 02:46:39 | INFO    | cross-encoder cache cache_fold0.npz loaded and row-aligned with exp3n
+2026-07-24 02:46:40 | INFO    | cross-encoder cache cache_fold1.npz loaded and row-aligned with exp3n
+2026-07-24 02:46:40 | INFO    | cross-encoder cache cache_fold2.npz loaded and row-aligned with exp3n
+2026-07-24 02:46:41 | INFO    | cross-encoder cache cache_fold3.npz loaded and row-aligned with exp3n
+2026-07-24 02:46:42 | INFO    | cross-encoder cache cache_fold4.npz loaded and row-aligned with exp3n
+2026-07-24 02:46:42 | INFO    | 
+2026-07-24 02:46:42 | INFO    | [1/20] key='features' transform='none'  (features (D1 baseline))
+2026-07-24 02:47:00 | INFO    |     dim= 1024 eff_rank=   1.19 | p_img auc=0.8678 acc=0.8496 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=0.8788
+2026-07-24 02:47:00 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.056 best blend auc=0.8864 (alpha=0.89, +0.0009) | w=[0.8226, 0.1468, 0.0306] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 02:47:00 | INFO    | 
+2026-07-24 02:47:00 | INFO    | [2/20] key='features' transform='center'  (features  center)
+2026-07-24 02:47:30 | INFO    |     dim= 1024 eff_rank=   1.39 | p_img auc=0.8657 acc=0.8480 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8829 (-0.0026) acc=0.8603 (-0.0051) pat=0.8636
+2026-07-24 02:47:30 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8862 (alpha=0.89, +0.0007) | w=[0.8648, 0.1352, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 02:47:30 | INFO    | 
+2026-07-24 02:47:30 | INFO    | [3/20] key='features' transform='pca_drop:1'  (features  pca_drop:1)
+2026-07-24 02:48:11 | INFO    |     dim= 1024 eff_rank=   3.54 | p_img auc=0.8622 acc=0.8358 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8825 (-0.0030) acc=0.8622 (-0.0032) pat=0.8788
+2026-07-24 02:48:11 | INFO    |     corr(param,img)=0.912 auc|param wrong=0.076 best blend auc=0.8872 (alpha=0.88, +0.0017) | w=[0.7983, 0.1158, 0.0859] | mag_lock=0.45 subtype_lift=+0.136
+2026-07-24 02:48:11 | INFO    | 
+2026-07-24 02:48:11 | INFO    | [4/20] key='features' transform='pca_drop:3'  (features  pca_drop:3)
+2026-07-24 02:48:48 | INFO    |     dim= 1024 eff_rank=   7.06 | p_img auc=0.8612 acc=0.8370 | p_final auc=0.8916 (+0.0061) | LOSO auc=0.8862 (+0.0007) acc=0.8625 (-0.0029) pat=0.8636
+2026-07-24 02:48:48 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.098 best blend auc=0.8887 (alpha=0.89, +0.0032) | w=[0.7098, 0.0712, 0.219] | mag_lock=0.48 subtype_lift=+0.141
+2026-07-24 02:48:48 | INFO    | 
+2026-07-24 02:48:48 | INFO    | [5/20] key='features' transform='pca_drop:10'  (features  pca_drop:10)
+2026-07-24 02:49:24 | INFO    |     dim= 1024 eff_rank=  19.36 | p_img auc=0.8585 acc=0.8405 | p_final auc=0.8930 (+0.0075) | LOSO auc=0.8866 (+0.0011) acc=0.8601 (-0.0053) pat=0.8788
+2026-07-24 02:49:24 | INFO    |     corr(param,img)=0.892 auc|param wrong=0.086 best blend auc=0.8884 (alpha=0.85, +0.0029) | w=[0.6552, 0.0902, 0.2546] | mag_lock=0.52 subtype_lift=+0.151
+2026-07-24 02:49:24 | INFO    | 
+2026-07-24 02:49:24 | INFO    | [6/20] key='features' transform='pca_drop:20'  (features  pca_drop:20)
+2026-07-24 02:50:01 | INFO    |     dim= 1024 eff_rank=  33.30 | p_img auc=0.8593 acc=0.8413 | p_final auc=0.8931 (+0.0076) | LOSO auc=0.8897 (+0.0042) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 02:50:01 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.080 best blend auc=0.8863 (alpha=0.92, +0.0008) | w=[0.6582, 0.0596, 0.2823] | mag_lock=0.51 subtype_lift=+0.136
+2026-07-24 02:50:01 | INFO    | 
+2026-07-24 02:50:01 | INFO    | [7/20] key='features' transform='pca_drop:50'  (features  pca_drop:50)
+2026-07-24 02:50:37 | INFO    |     dim= 1024 eff_rank=  72.53 | p_img auc=0.8655 acc=0.8382 | p_final auc=0.8925 (+0.0070) | LOSO auc=0.8815 (-0.0040) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 02:50:37 | INFO    |     corr(param,img)=0.907 auc|param wrong=0.069 best blend auc=0.8867 (alpha=0.85, +0.0012) | w=[0.6313, 0.0603, 0.3084] | mag_lock=0.49 subtype_lift=+0.137
+2026-07-24 02:50:37 | INFO    | 
+2026-07-24 02:50:37 | INFO    | [8/20] key='features' transform='pca_drop:100'  (features  pca_drop:100)
+2026-07-24 02:51:13 | INFO    |     dim= 1024 eff_rank= 117.51 | p_img auc=0.8758 acc=0.8371 | p_final auc=0.8848 (-0.0007) | LOSO auc=0.8706 (-0.0149) acc=0.8598 (-0.0056) pat=0.8636
+2026-07-24 02:51:13 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.084 best blend auc=0.8895 (alpha=0.70, +0.0040) | w=[0.6123, 0.1744, 0.2133] | mag_lock=0.46 subtype_lift=+0.131
+2026-07-24 02:51:13 | INFO    | 
+2026-07-24 02:51:13 | INFO    | [9/20] key='features' transform='pca_drop:200'  (features  pca_drop:200)
+2026-07-24 02:51:49 | INFO    |     dim= 1024 eff_rank= 168.20 | p_img auc=0.8691 acc=0.8405 | p_final auc=0.8830 (-0.0025) | LOSO auc=0.8613 (-0.0242) acc=0.8574 (-0.0080) pat=0.8636
+2026-07-24 02:51:49 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.078 best blend auc=0.8905 (alpha=0.81, +0.0050) | w=[0.5701, 0.3135, 0.1165] | mag_lock=0.40 subtype_lift=+0.107
+2026-07-24 02:51:49 | INFO    | 
+2026-07-24 02:51:49 | INFO    | [10/20] key='features' transform='whiten:64'  (features  whiten:64)
+2026-07-24 02:52:22 | INFO    |     dim=   64 eff_rank=  52.69 | p_img auc=0.8640 acc=0.8390 | p_final auc=0.8872 (+0.0017) | LOSO auc=0.8842 (-0.0013) acc=0.8574 (-0.0080) pat=0.8485
+2026-07-24 02:52:22 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.082 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8846, 0.0444, 0.071] | mag_lock=0.55 subtype_lift=+0.149
+2026-07-24 02:52:22 | INFO    | 
+2026-07-24 02:52:22 | INFO    | [11/20] key='features' transform='whiten:128'  (features  whiten:128)
+2026-07-24 02:52:56 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8663 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 02:52:56 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.077 best blend auc=0.8860 (alpha=0.93, +0.0005) | w=[0.8675, 0.0284, 0.104] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:52:56 | INFO    | 
+2026-07-24 02:52:56 | INFO    | [12/20] key='features' transform='whiten:256'  (features  whiten:256)
+2026-07-24 02:53:29 | INFO    |     dim=  256 eff_rank= 203.68 | p_img auc=0.8670 acc=0.8384 | p_final auc=0.8883 (+0.0028) | LOSO auc=0.8865 (+0.0010) acc=0.8624 (-0.0030) pat=0.8788
+2026-07-24 02:53:29 | INFO    |     corr(param,img)=0.913 auc|param wrong=0.065 best blend auc=0.8858 (alpha=0.93, +0.0003) | w=[0.829, 0.0302, 0.1408] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 02:53:29 | INFO    | 
+2026-07-24 02:53:29 | INFO    | [13/20] key='features' transform='whiten:512'  (features  whiten:512)
+2026-07-24 02:54:03 | INFO    |     dim=  512 eff_rank= 364.13 | p_img auc=0.8689 acc=0.8441 | p_final auc=0.8885 (+0.0030) | LOSO auc=0.8863 (+0.0008) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 02:54:03 | INFO    |     corr(param,img)=0.926 auc|param wrong=0.059 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8259, 0.0389, 0.1352] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 02:54:03 | INFO    | 
+2026-07-24 02:54:03 | INFO    | [14/20] key='features' transform='pca_drop:3,whiten:128'  (features  pca_drop:3+whiten)
+2026-07-24 02:54:53 | INFO    |     dim=  128 eff_rank= 103.94 | p_img auc=0.8670 acc=0.8379 | p_final auc=0.8904 (+0.0049) | LOSO auc=0.8869 (+0.0014) acc=0.8617 (-0.0037) pat=0.8788
+2026-07-24 02:54:53 | INFO    |     corr(param,img)=0.901 auc|param wrong=0.075 best blend auc=0.8860 (alpha=0.92, +0.0005) | w=[0.7222, 0.0276, 0.2502] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:54:53 | INFO    | 
+2026-07-24 02:54:53 | INFO    | [15/20] key='features' transform='center,drop_dirs'  (features  drop_clf_dir)
+2026-07-24 02:55:25 | INFO    |     dim= 1024 eff_rank=   1.47 | p_img auc=0.8657 acc=0.8485 | p_final auc=0.8854 (-0.0001) | LOSO auc=0.8829 (-0.0026) acc=0.8621 (-0.0033) pat=0.8636
+2026-07-24 02:55:25 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8861 (alpha=0.89, +0.0006) | w=[0.8586, 0.1414, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 02:55:25 | INFO    | 
+2026-07-24 02:55:25 | INFO    | [16/20] key='features' transform='center,drop_dirs,whiten:128'  (features  drop_clf+whiten:128)
+2026-07-24 02:56:09 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8661 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 02:56:09 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.076 best blend auc=0.8860 (alpha=0.94, +0.0005) | w=[0.87, 0.0285, 0.1015] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 02:56:09 | INFO    | 
+2026-07-24 02:56:09 | INFO    | [17/20] key='features' transform='none'  (X-enc features)
+2026-07-24 02:56:28 | INFO    |     dim= 1024 eff_rank=   1.27 | p_img auc=0.8718 acc=0.8550 | p_final auc=0.8900 (+0.0045) | LOSO auc=0.8872 (+0.0017) acc=0.8659 (+0.0005) pat=0.9242
+2026-07-24 02:56:28 | INFO    |     corr(param,img)=0.908 auc|param wrong=0.133 best blend auc=0.8898 (alpha=0.71, +0.0043) | w=[0.836, 0.1323, 0.0318] | mag_lock=0.38 subtype_lift=+0.118
+2026-07-24 02:56:28 | INFO    | 
+2026-07-24 02:56:28 | INFO    | [18/20] key='features' transform='pca_drop:10'  (X-enc features pca_drop:10)
+2026-07-24 02:57:05 | INFO    |     dim= 1024 eff_rank=  19.17 | p_img auc=0.8593 acc=0.8370 | p_final auc=0.8880 (+0.0025) | LOSO auc=0.8850 (-0.0005) acc=0.8667 (+0.0013) pat=0.8788
+2026-07-24 02:57:05 | INFO    |     corr(param,img)=0.868 auc|param wrong=0.136 best blend auc=0.8875 (alpha=0.89, +0.0020) | w=[0.6945, 0.1254, 0.1801] | mag_lock=0.53 subtype_lift=+0.140
+2026-07-24 02:57:05 | INFO    | 
+2026-07-24 02:57:05 | INFO    | [19/20] key='features' transform='whiten:128'  (X-enc features whiten:128)
+2026-07-24 02:57:39 | INFO    |     dim=  128 eff_rank= 101.28 | p_img auc=0.8676 acc=0.8410 | p_final auc=0.8899 (+0.0044) | LOSO auc=0.8868 (+0.0013) acc=0.8651 (-0.0003) pat=0.8939
+2026-07-24 02:57:39 | INFO    |     corr(param,img)=0.873 auc|param wrong=0.127 best blend auc=0.8880 (alpha=0.74, +0.0025) | w=[0.8352, 0.0823, 0.0825] | mag_lock=0.56 subtype_lift=+0.146
+2026-07-24 02:57:39 | INFO    | 
+2026-07-24 02:57:39 | INFO    | [20/20] key='fpn.std' transform='none'  (X-enc fpn.std)
+2026-07-24 02:57:59 | INFO    |     dim= 1024 eff_rank=   2.89 | p_img auc=0.8723 acc=0.8577 | p_final auc=0.8910 (+0.0055) | LOSO auc=0.8883 (+0.0028) acc=0.8652 (-0.0002) pat=0.9091
+2026-07-24 02:57:59 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.128 best blend auc=0.8902 (alpha=0.72, +0.0047) | w=[0.8082, 0.1501, 0.0417] | mag_lock=0.34 subtype_lift=+0.121
+2026-07-24 02:57:59 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation_cross_exp1.json
+2026-07-24 02:57:59 | INFO    | 
+Ranked by leave-one-fold-out fused AUC (the honest ordering)
+2026-07-24 02:57:59 | INFO    | key / transform                      dim    eff  pImgAUC  LOSOauc    dAUC    dAcc  dPatAcc   corr
+2026-07-24 02:57:59 | INFO    | -------------------------------------------------------------------------------------------------
+2026-07-24 02:57:59 | INFO    | features / pca_drop:20              1024  33.30   0.8593   0.8897 +0.0042 -0.0013  +0.0152  0.899
+2026-07-24 02:57:59 | INFO    | [exp1] fpn.std / none               1024   2.89   0.8723   0.8883 +0.0028 -0.0002  +0.0455  0.906
+2026-07-24 02:57:59 | INFO    | [exp1] features / none              1024   1.27   0.8718   0.8872 +0.0017 +0.0005  +0.0606  0.908
+2026-07-24 02:57:59 | INFO    | features / pca_drop:3,whiten:128     128 103.94   0.8670   0.8869 +0.0014 -0.0037  +0.0152  0.901
+2026-07-24 02:57:59 | INFO    | [exp1] features / whiten:128         128 101.28   0.8676   0.8868 +0.0013 -0.0003  +0.0303  0.873
+2026-07-24 02:57:59 | INFO    | features / pca_drop:10              1024  19.36   0.8585   0.8866 +0.0011 -0.0053  +0.0152  0.892
+2026-07-24 02:57:59 | INFO    | features / whiten:256                256 203.68   0.8670   0.8865 +0.0010 -0.0030  +0.0152  0.913
+2026-07-24 02:57:59 | INFO    | features / whiten:512                512 364.13   0.8689   0.8863 +0.0008 -0.0038  +0.0152  0.926
+2026-07-24 02:57:59 | INFO    | features / pca_drop:3               1024   7.06   0.8612   0.8862 +0.0007 -0.0029  +0.0000  0.896
+2026-07-24 02:57:59 | INFO    | features / whiten:128                128 103.13   0.8663   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 02:57:59 | INFO    | features / center,drop_dirs,whiten   128 103.13   0.8661   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 02:57:59 | INFO    | [exp1] features / pca_drop:10       1024  19.17   0.8593   0.8850 -0.0005 +0.0013  +0.0152  0.868
+2026-07-24 02:57:59 | INFO    | features / whiten:64                  64  52.69   0.8640   0.8842 -0.0013 -0.0080  -0.0151  0.896
+2026-07-24 02:57:59 | INFO    | features / none                     1024   1.19   0.8678   0.8833 -0.0022 -0.0027  +0.0152  0.948
+2026-07-24 02:57:59 | INFO    | features / center                   1024   1.39   0.8657   0.8829 -0.0026 -0.0051  +0.0000  0.941
+2026-07-24 02:57:59 | INFO    | features / center,drop_dirs         1024   1.47   0.8657   0.8829 -0.0026 -0.0033  +0.0000  0.941
+2026-07-24 02:57:59 | INFO    | features / pca_drop:1               1024   3.54   0.8622   0.8825 -0.0030 -0.0032  +0.0152  0.912
+2026-07-24 02:57:59 | INFO    | features / pca_drop:50              1024  72.53   0.8655   0.8815 -0.0040 -0.0038  +0.0152  0.907
+2026-07-24 02:57:59 | INFO    | features / pca_drop:100             1024 117.51   0.8758   0.8706 -0.0149 -0.0056  +0.0000  0.906
+2026-07-24 02:57:59 | INFO    | features / pca_drop:200             1024 168.20   0.8691   0.8613 -0.0242 -0.0080  +0.0000  0.902
+2026-07-24 03:00:16 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  stage                     : eval
+  grid size                 : 39 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 03:00:17 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 03:00:18 | INFO    | loaded cache_fold1.npz: 5133 bank rows, 1123 val rows
+2026-07-24 03:00:19 | INFO    | loaded cache_fold2.npz: 5137 bank rows, 1119 val rows
+2026-07-24 03:00:19 | INFO    | loaded cache_fold3.npz: 5027 bank rows, 1229 val rows
+2026-07-24 03:00:20 | INFO    | loaded cache_fold4.npz: 5186 bank rows, 1070 val rows
+2026-07-24 03:00:20 | INFO    | 
+2026-07-24 03:00:20 | INFO    | [1/16] key='features' transform='none'  (features (D1 baseline))
+2026-07-24 03:00:43 | INFO    |     dim= 1024 eff_rank=   1.19 | p_img auc=0.8678 acc=0.8496 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=0.8788
+2026-07-24 03:00:43 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.056 best blend auc=0.8864 (alpha=0.89, +0.0009) | w=[0.8226, 0.1468, 0.0306] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 03:00:43 | INFO    | 
+2026-07-24 03:00:43 | INFO    | [2/16] key='features' transform='center'  (features  center)
+2026-07-24 03:01:13 | INFO    |     dim= 1024 eff_rank=   1.39 | p_img auc=0.8657 acc=0.8480 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8829 (-0.0026) acc=0.8603 (-0.0051) pat=0.8636
+2026-07-24 03:01:13 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8862 (alpha=0.89, +0.0007) | w=[0.8648, 0.1352, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 03:01:13 | INFO    | 
+2026-07-24 03:01:13 | INFO    | [3/16] key='features' transform='pca_drop:1'  (features  pca_drop:1)
+2026-07-24 03:01:48 | INFO    |     dim= 1024 eff_rank=   3.54 | p_img auc=0.8622 acc=0.8358 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8825 (-0.0030) acc=0.8622 (-0.0032) pat=0.8788
+2026-07-24 03:01:48 | INFO    |     corr(param,img)=0.912 auc|param wrong=0.076 best blend auc=0.8872 (alpha=0.88, +0.0017) | w=[0.7983, 0.1158, 0.0859] | mag_lock=0.45 subtype_lift=+0.136
+2026-07-24 03:01:48 | INFO    | 
+2026-07-24 03:01:48 | INFO    | [4/16] key='features' transform='pca_drop:3'  (features  pca_drop:3)
+2026-07-24 03:02:25 | INFO    |     dim= 1024 eff_rank=   7.06 | p_img auc=0.8612 acc=0.8370 | p_final auc=0.8916 (+0.0061) | LOSO auc=0.8862 (+0.0007) acc=0.8625 (-0.0029) pat=0.8636
+2026-07-24 03:02:25 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.098 best blend auc=0.8887 (alpha=0.89, +0.0032) | w=[0.7098, 0.0712, 0.219] | mag_lock=0.48 subtype_lift=+0.141
+2026-07-24 03:02:25 | INFO    | 
+2026-07-24 03:02:25 | INFO    | [5/16] key='features' transform='pca_drop:10'  (features  pca_drop:10)
+2026-07-24 03:02:58 | INFO    |     dim= 1024 eff_rank=  19.36 | p_img auc=0.8585 acc=0.8405 | p_final auc=0.8930 (+0.0075) | LOSO auc=0.8866 (+0.0011) acc=0.8601 (-0.0053) pat=0.8788
+2026-07-24 03:02:58 | INFO    |     corr(param,img)=0.892 auc|param wrong=0.086 best blend auc=0.8884 (alpha=0.85, +0.0029) | w=[0.6552, 0.0902, 0.2546] | mag_lock=0.52 subtype_lift=+0.151
+2026-07-24 03:02:58 | INFO    | 
+2026-07-24 03:02:58 | INFO    | [6/16] key='features' transform='pca_drop:20'  (features  pca_drop:20)
+2026-07-24 03:03:34 | INFO    |     dim= 1024 eff_rank=  33.30 | p_img auc=0.8593 acc=0.8413 | p_final auc=0.8931 (+0.0076) | LOSO auc=0.8897 (+0.0042) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 03:03:34 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.080 best blend auc=0.8863 (alpha=0.92, +0.0008) | w=[0.6582, 0.0596, 0.2823] | mag_lock=0.51 subtype_lift=+0.136
+2026-07-24 03:03:34 | INFO    | 
+2026-07-24 03:03:34 | INFO    | [7/16] key='features' transform='pca_drop:50'  (features  pca_drop:50)
+2026-07-24 03:04:09 | INFO    |     dim= 1024 eff_rank=  72.53 | p_img auc=0.8655 acc=0.8382 | p_final auc=0.8925 (+0.0070) | LOSO auc=0.8815 (-0.0040) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 03:04:09 | INFO    |     corr(param,img)=0.907 auc|param wrong=0.069 best blend auc=0.8867 (alpha=0.85, +0.0012) | w=[0.6313, 0.0603, 0.3084] | mag_lock=0.49 subtype_lift=+0.137
+2026-07-24 03:04:09 | INFO    | 
+2026-07-24 03:04:09 | INFO    | [8/16] key='features' transform='pca_drop:100'  (features  pca_drop:100)
+2026-07-24 03:04:46 | INFO    |     dim= 1024 eff_rank= 117.51 | p_img auc=0.8758 acc=0.8371 | p_final auc=0.8848 (-0.0007) | LOSO auc=0.8706 (-0.0149) acc=0.8598 (-0.0056) pat=0.8636
+2026-07-24 03:04:46 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.084 best blend auc=0.8895 (alpha=0.70, +0.0040) | w=[0.6123, 0.1744, 0.2133] | mag_lock=0.46 subtype_lift=+0.131
+2026-07-24 03:04:46 | INFO    | 
+2026-07-24 03:04:46 | INFO    | [9/16] key='features' transform='pca_drop:200'  (features  pca_drop:200)
+2026-07-24 03:05:23 | INFO    |     dim= 1024 eff_rank= 168.20 | p_img auc=0.8691 acc=0.8405 | p_final auc=0.8830 (-0.0025) | LOSO auc=0.8613 (-0.0242) acc=0.8574 (-0.0080) pat=0.8636
+2026-07-24 03:05:23 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.078 best blend auc=0.8905 (alpha=0.81, +0.0050) | w=[0.5701, 0.3135, 0.1165] | mag_lock=0.40 subtype_lift=+0.107
+2026-07-24 03:05:23 | INFO    | 
+2026-07-24 03:05:23 | INFO    | [10/16] key='features' transform='whiten:64'  (features  whiten:64)
+2026-07-24 03:05:58 | INFO    |     dim=   64 eff_rank=  52.69 | p_img auc=0.8640 acc=0.8390 | p_final auc=0.8872 (+0.0017) | LOSO auc=0.8842 (-0.0013) acc=0.8574 (-0.0080) pat=0.8485
+2026-07-24 03:05:58 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.082 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8846, 0.0444, 0.071] | mag_lock=0.55 subtype_lift=+0.149
+2026-07-24 03:05:58 | INFO    | 
+2026-07-24 03:05:58 | INFO    | [11/16] key='features' transform='whiten:128'  (features  whiten:128)
+2026-07-24 03:06:34 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8663 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 03:06:34 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.077 best blend auc=0.8860 (alpha=0.93, +0.0005) | w=[0.8675, 0.0284, 0.104] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:06:34 | INFO    | 
+2026-07-24 03:06:34 | INFO    | [12/16] key='features' transform='whiten:256'  (features  whiten:256)
+2026-07-24 03:07:10 | INFO    |     dim=  256 eff_rank= 203.68 | p_img auc=0.8670 acc=0.8384 | p_final auc=0.8883 (+0.0028) | LOSO auc=0.8865 (+0.0010) acc=0.8624 (-0.0030) pat=0.8788
+2026-07-24 03:07:10 | INFO    |     corr(param,img)=0.913 auc|param wrong=0.065 best blend auc=0.8858 (alpha=0.93, +0.0003) | w=[0.829, 0.0302, 0.1408] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 03:07:10 | INFO    | 
+2026-07-24 03:07:10 | INFO    | [13/16] key='features' transform='whiten:512'  (features  whiten:512)
+2026-07-24 03:07:46 | INFO    |     dim=  512 eff_rank= 364.13 | p_img auc=0.8689 acc=0.8441 | p_final auc=0.8885 (+0.0030) | LOSO auc=0.8863 (+0.0008) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 03:07:46 | INFO    |     corr(param,img)=0.926 auc|param wrong=0.059 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8259, 0.0389, 0.1352] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 03:07:46 | INFO    | 
+2026-07-24 03:07:46 | INFO    | [14/16] key='features' transform='pca_drop:3,whiten:128'  (features  pca_drop:3+whiten)
+2026-07-24 03:08:36 | INFO    |     dim=  128 eff_rank= 103.94 | p_img auc=0.8670 acc=0.8379 | p_final auc=0.8904 (+0.0049) | LOSO auc=0.8869 (+0.0014) acc=0.8617 (-0.0037) pat=0.8788
+2026-07-24 03:08:36 | INFO    |     corr(param,img)=0.901 auc|param wrong=0.075 best blend auc=0.8860 (alpha=0.92, +0.0005) | w=[0.7222, 0.0276, 0.2502] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:08:36 | INFO    | 
+2026-07-24 03:08:36 | INFO    | [15/16] key='features' transform='center,drop_dirs'  (features  drop_clf_dir)
+2026-07-24 03:09:07 | INFO    |     dim= 1024 eff_rank=   1.47 | p_img auc=0.8657 acc=0.8485 | p_final auc=0.8854 (-0.0001) | LOSO auc=0.8829 (-0.0026) acc=0.8621 (-0.0033) pat=0.8636
+2026-07-24 03:09:07 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8861 (alpha=0.89, +0.0006) | w=[0.8586, 0.1414, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 03:09:07 | INFO    | 
+2026-07-24 03:09:07 | INFO    | [16/16] key='features' transform='center,drop_dirs,whiten:128'  (features  drop_clf+whiten:128)
+2026-07-24 03:09:52 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8661 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 03:09:52 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.076 best blend auc=0.8860 (alpha=0.94, +0.0005) | w=[0.87, 0.0285, 0.1015] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:09:52 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation.json
+2026-07-24 03:09:52 | INFO    | 
+Ranked by leave-one-fold-out fused AUC (the honest ordering)
+2026-07-24 03:09:52 | INFO    | key / transform                      dim    eff  pImgAUC  LOSOauc    dAUC    dAcc  dPatAcc   corr
+2026-07-24 03:09:52 | INFO    | -------------------------------------------------------------------------------------------------
+2026-07-24 03:09:52 | INFO    | features / pca_drop:20              1024  33.30   0.8593   0.8897 +0.0042 -0.0013  +0.0152  0.899
+2026-07-24 03:09:52 | INFO    | features / pca_drop:3,whiten:128     128 103.94   0.8670   0.8869 +0.0014 -0.0037  +0.0152  0.901
+2026-07-24 03:09:52 | INFO    | features / pca_drop:10              1024  19.36   0.8585   0.8866 +0.0011 -0.0053  +0.0152  0.892
+2026-07-24 03:09:52 | INFO    | features / whiten:256                256 203.68   0.8670   0.8865 +0.0010 -0.0030  +0.0152  0.913
+2026-07-24 03:09:52 | INFO    | features / whiten:512                512 364.13   0.8689   0.8863 +0.0008 -0.0038  +0.0152  0.926
+2026-07-24 03:09:52 | INFO    | features / pca_drop:3               1024   7.06   0.8612   0.8862 +0.0007 -0.0029  +0.0000  0.896
+2026-07-24 03:09:52 | INFO    | features / whiten:128                128 103.13   0.8663   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 03:09:52 | INFO    | features / center,drop_dirs,whiten   128 103.13   0.8661   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 03:09:52 | INFO    | features / whiten:64                  64  52.69   0.8640   0.8842 -0.0013 -0.0080  -0.0151  0.896
+2026-07-24 03:09:52 | INFO    | features / none                     1024   1.19   0.8678   0.8833 -0.0022 -0.0027  +0.0152  0.948
+2026-07-24 03:09:52 | INFO    | features / center                   1024   1.39   0.8657   0.8829 -0.0026 -0.0051  +0.0000  0.941
+2026-07-24 03:09:52 | INFO    | features / center,drop_dirs         1024   1.47   0.8657   0.8829 -0.0026 -0.0033  +0.0000  0.941
+2026-07-24 03:09:52 | INFO    | features / pca_drop:1               1024   3.54   0.8622   0.8825 -0.0030 -0.0032  +0.0152  0.912
+2026-07-24 03:09:52 | INFO    | features / pca_drop:50              1024  72.53   0.8655   0.8815 -0.0040 -0.0038  +0.0152  0.907
+2026-07-24 03:09:52 | INFO    | features / pca_drop:100             1024 117.51   0.8758   0.8706 -0.0149 -0.0056  +0.0000  0.906
+2026-07-24 03:09:52 | INFO    | features / pca_drop:200             1024 168.20   0.8691   0.8613 -0.0242 -0.0080  +0.0000  0.902
+2026-07-24 03:10:04 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  stage                     : eval
+  grid size                 : 39 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 03:10:05 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 03:10:06 | INFO    | loaded cache_fold1.npz: 5133 bank rows, 1123 val rows
+2026-07-24 03:10:07 | INFO    | loaded cache_fold2.npz: 5137 bank rows, 1119 val rows
+2026-07-24 03:10:08 | INFO    | loaded cache_fold3.npz: 5027 bank rows, 1229 val rows
+2026-07-24 03:10:08 | INFO    | loaded cache_fold4.npz: 5186 bank rows, 1070 val rows
+2026-07-24 03:10:09 | INFO    | cross-encoder cache cache_fold0.npz loaded and row-aligned with exp3n
+2026-07-24 03:10:10 | INFO    | cross-encoder cache cache_fold1.npz loaded and row-aligned with exp3n
+2026-07-24 03:10:11 | INFO    | cross-encoder cache cache_fold2.npz loaded and row-aligned with exp3n
+2026-07-24 03:10:12 | INFO    | cross-encoder cache cache_fold3.npz loaded and row-aligned with exp3n
+2026-07-24 03:10:13 | INFO    | cross-encoder cache cache_fold4.npz loaded and row-aligned with exp3n
+2026-07-24 03:10:13 | INFO    | 
+2026-07-24 03:10:13 | INFO    | [1/2] key='features' transform='none'  (X-enc features)
+2026-07-24 03:10:32 | INFO    |     dim= 1024 eff_rank=   1.27 | p_img auc=0.8718 acc=0.8550 | p_final auc=0.8900 (+0.0045) | LOSO auc=0.8872 (+0.0017) acc=0.8659 (+0.0005) pat=0.9242
+2026-07-24 03:10:32 | INFO    |     corr(param,img)=0.908 auc|param wrong=0.133 best blend auc=0.8898 (alpha=0.71, +0.0043) | w=[0.836, 0.1323, 0.0318] | mag_lock=0.38 subtype_lift=+0.118
+2026-07-24 03:10:32 | INFO    | 
+2026-07-24 03:10:32 | INFO    | [2/2] key='fpn.std' transform='none'  (X-enc fpn.std)
+2026-07-24 03:10:51 | INFO    |     dim= 1024 eff_rank=   2.89 | p_img auc=0.8723 acc=0.8577 | p_final auc=0.8910 (+0.0055) | LOSO auc=0.8883 (+0.0028) acc=0.8652 (-0.0002) pat=0.9091
+2026-07-24 03:10:51 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.128 best blend auc=0.8902 (alpha=0.72, +0.0047) | w=[0.8082, 0.1501, 0.0417] | mag_lock=0.34 subtype_lift=+0.121
+2026-07-24 03:10:51 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation_cross_exp1.json
+2026-07-24 03:10:51 | INFO    | 
+Ranked by leave-one-fold-out fused AUC (the honest ordering)
+2026-07-24 03:10:51 | INFO    | key / transform                      dim    eff  pImgAUC  LOSOauc    dAUC    dAcc  dPatAcc   corr
+2026-07-24 03:10:51 | INFO    | -------------------------------------------------------------------------------------------------
+2026-07-24 03:10:51 | INFO    | [exp1] fpn.std / none               1024   2.89   0.8723   0.8883 +0.0028 -0.0002  +0.0455  0.906
+2026-07-24 03:10:51 | INFO    | [exp1] features / none              1024   1.27   0.8718   0.8872 +0.0017 +0.0005  +0.0606  0.908
+2026-07-24 03:18:48 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL KEY ABLATION
+══════════════════════════════════════════════════════════════════════════
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  stage                     : eval
+  grid size                 : 39 (key, key_transform) configurations
+  held fixed                : route/k/cap/T (D3-D7) + the Stage B2 gate protocol
+  surface                   : pooled out-of-fold validation -- the test set is NOT touched
+  output dir                : analysis\retrieval_keys\exp3n
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-24 03:18:49 | INFO    | loaded cache_fold0.npz: 4541 bank rows, 1715 val rows
+2026-07-24 03:18:49 | INFO    | loaded cache_fold1.npz: 5133 bank rows, 1123 val rows
+2026-07-24 03:18:50 | INFO    | loaded cache_fold2.npz: 5137 bank rows, 1119 val rows
+2026-07-24 03:18:51 | INFO    | loaded cache_fold3.npz: 5027 bank rows, 1229 val rows
+2026-07-24 03:18:52 | INFO    | loaded cache_fold4.npz: 5186 bank rows, 1070 val rows
+2026-07-24 03:18:53 | INFO    | cross-encoder cache cache_fold0.npz loaded and row-aligned with exp3n
+2026-07-24 03:18:54 | INFO    | cross-encoder cache cache_fold1.npz loaded and row-aligned with exp3n
+2026-07-24 03:18:55 | INFO    | cross-encoder cache cache_fold2.npz loaded and row-aligned with exp3n
+2026-07-24 03:18:55 | INFO    | cross-encoder cache cache_fold3.npz loaded and row-aligned with exp3n
+2026-07-24 03:18:56 | INFO    | cross-encoder cache cache_fold4.npz loaded and row-aligned with exp3n
+2026-07-24 03:18:56 | INFO    | 
+2026-07-24 03:18:56 | INFO    | [1/43] key='features' transform='none'  (features (D1 baseline))
+2026-07-24 03:19:16 | INFO    |     dim= 1024 eff_rank=   1.19 | p_img auc=0.8678 acc=0.8496 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8833 (-0.0022) acc=0.8627 (-0.0027) pat=0.8788
+2026-07-24 03:19:16 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.056 best blend auc=0.8864 (alpha=0.89, +0.0009) | w=[0.8226, 0.1468, 0.0306] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 03:19:16 | INFO    | 
+2026-07-24 03:19:16 | INFO    | [2/43] key='projections' transform='none'  (projections (SupCon))
+2026-07-24 03:19:34 | INFO    |     dim=  128 eff_rank=   1.08 | p_img auc=0.8660 acc=0.8523 | p_final auc=0.8858 (+0.0003) | LOSO auc=0.8832 (-0.0023) acc=0.8645 (-0.0009) pat=0.8636
+2026-07-24 03:19:34 | INFO    |     corr(param,img)=0.944 auc|param wrong=0.060 best blend auc=0.8862 (alpha=0.91, +0.0008) | w=[0.8546, 0.145, 0.0004] | mag_lock=0.41 subtype_lift=+0.131
+2026-07-24 03:19:34 | INFO    | 
+2026-07-24 03:19:34 | INFO    | [3/43] key='fpn.std' transform='none'  (fpn.std)
+2026-07-24 03:19:54 | INFO    |     dim= 1024 eff_rank=   2.71 | p_img auc=0.8699 acc=0.8378 | p_final auc=0.8860 (+0.0005) | LOSO auc=0.8846 (-0.0009) acc=0.8637 (-0.0017) pat=0.8636
+2026-07-24 03:19:54 | INFO    |     corr(param,img)=0.937 auc|param wrong=0.057 best blend auc=0.8868 (alpha=0.87, +0.0013) | w=[0.8576, 0.1397, 0.0028] | mag_lock=0.38 subtype_lift=+0.139
+2026-07-24 03:19:54 | INFO    | 
+2026-07-24 03:19:54 | INFO    | [4/43] key='fpn.max' transform='none'  (fpn.max)
+2026-07-24 03:20:12 | INFO    |     dim= 1024 eff_rank=   1.60 | p_img auc=0.8682 acc=0.8381 | p_final auc=0.8853 (-0.0002) | LOSO auc=0.8838 (-0.0017) acc=0.8629 (-0.0025) pat=0.8636
+2026-07-24 03:20:12 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.055 best blend auc=0.8863 (alpha=0.88, +0.0008) | w=[0.8642, 0.1357, 0.0001] | mag_lock=0.37 subtype_lift=+0.141
+2026-07-24 03:20:12 | INFO    | 
+2026-07-24 03:20:12 | INFO    | [5/43] key='fpn.gem' transform='none'  (fpn.gem)
+2026-07-24 03:20:31 | INFO    |     dim= 1024 eff_rank=   1.25 | p_img auc=0.8675 acc=0.8435 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8841 (-0.0014) acc=0.8630 (-0.0024) pat=0.8636
+2026-07-24 03:20:31 | INFO    |     corr(param,img)=0.946 auc|param wrong=0.054 best blend auc=0.8865 (alpha=0.91, +0.0010) | w=[0.8187, 0.1392, 0.0421] | mag_lock=0.40 subtype_lift=+0.138
+2026-07-24 03:20:31 | INFO    | 
+2026-07-24 03:20:31 | INFO    | [6/43] key='fpn.gap@0' transform='none'  (fpn.gap@0)
+2026-07-24 03:20:50 | INFO    |     dim=  256 eff_rank=   1.24 | p_img auc=0.8655 acc=0.8453 | p_final auc=0.8855 (+0.0000) | LOSO auc=0.8831 (-0.0024) acc=0.8606 (-0.0048) pat=0.8636
+2026-07-24 03:20:50 | INFO    |     corr(param,img)=0.945 auc|param wrong=0.051 best blend auc=0.8856 (alpha=0.92, +0.0001) | w=[0.8395, 0.1231, 0.0374] | mag_lock=0.42 subtype_lift=+0.133
+2026-07-24 03:20:50 | INFO    | 
+2026-07-24 03:20:50 | INFO    | [7/43] key='fpn.gap@1' transform='none'  (fpn.gap@1)
+2026-07-24 03:21:09 | INFO    |     dim=  256 eff_rank=   1.16 | p_img auc=0.8687 acc=0.8558 | p_final auc=0.8864 (+0.0009) | LOSO auc=0.8839 (-0.0016) acc=0.8638 (-0.0016) pat=0.8788
+2026-07-24 03:21:09 | INFO    |     corr(param,img)=0.947 auc|param wrong=0.065 best blend auc=0.8863 (alpha=0.88, +0.0008) | w=[0.8433, 0.1565, 0.0002] | mag_lock=0.41 subtype_lift=+0.126
+2026-07-24 03:21:09 | INFO    | 
+2026-07-24 03:21:09 | INFO    | [8/43] key='fpn.gap@2' transform='none'  (fpn.gap@2)
+2026-07-24 03:21:28 | INFO    |     dim=  256 eff_rank=   1.17 | p_img auc=0.8618 acc=0.8394 | p_final auc=0.8853 (-0.0002) | LOSO auc=0.8843 (-0.0012) acc=0.8635 (-0.0019) pat=0.8788
+2026-07-24 03:21:28 | INFO    |     corr(param,img)=0.929 auc|param wrong=0.067 best blend auc=0.8862 (alpha=0.91, +0.0008) | w=[0.9057, 0.0943, 0.0] | mag_lock=0.38 subtype_lift=+0.120
+2026-07-24 03:21:28 | INFO    | 
+2026-07-24 03:21:28 | INFO    | [9/43] key='fpn.gap@3' transform='none'  (fpn.gap@3)
+2026-07-24 03:21:46 | INFO    |     dim=  256 eff_rank=   1.44 | p_img auc=0.8658 acc=0.8429 | p_final auc=0.8850 (-0.0005) | LOSO auc=0.8837 (-0.0018) acc=0.8625 (-0.0029) pat=0.8788
+2026-07-24 03:21:46 | INFO    |     corr(param,img)=0.930 auc|param wrong=0.067 best blend auc=0.8861 (alpha=0.93, +0.0007) | w=[0.8881, 0.1119, 0.0] | mag_lock=0.32 subtype_lift=+0.136
+2026-07-24 03:21:46 | INFO    | 
+2026-07-24 03:21:46 | INFO    | [10/43] key='fpn.std@0' transform='none'  (fpn.std@0)
+2026-07-24 03:22:03 | INFO    |     dim=  256 eff_rank=   2.61 | p_img auc=0.8693 acc=0.8421 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8832 (-0.0023) acc=0.8609 (-0.0045) pat=0.8636
+2026-07-24 03:22:03 | INFO    |     corr(param,img)=0.939 auc|param wrong=0.053 best blend auc=0.8865 (alpha=0.89, +0.0010) | w=[0.8745, 0.1254, 0.0001] | mag_lock=0.41 subtype_lift=+0.144
+2026-07-24 03:22:03 | INFO    | 
+2026-07-24 03:22:03 | INFO    | [11/43] key='fpn.std@3' transform='none'  (fpn.std@3)
+2026-07-24 03:22:21 | INFO    |     dim=  256 eff_rank=   2.07 | p_img auc=0.8584 acc=0.8266 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8827 (-0.0028) acc=0.8609 (-0.0045) pat=0.8636
+2026-07-24 03:22:21 | INFO    |     corr(param,img)=0.905 auc|param wrong=0.067 best blend auc=0.8862 (alpha=0.97, +0.0007) | w=[0.8909, 0.1091, 0.0001] | mag_lock=0.29 subtype_lift=+0.124
+2026-07-24 03:22:21 | INFO    | 
+2026-07-24 03:22:21 | INFO    | [12/43] key='fpn.gap.ln' transform='none'  (fpn.gap.ln)
+2026-07-24 03:22:40 | INFO    |     dim= 1024 eff_rank=   1.20 | p_img auc=0.8667 acc=0.8501 | p_final auc=0.8859 (+0.0004) | LOSO auc=0.8834 (-0.0021) acc=0.8606 (-0.0048) pat=0.8636
+2026-07-24 03:22:40 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.055 best blend auc=0.8863 (alpha=0.91, +0.0008) | w=[0.8261, 0.1393, 0.0347] | mag_lock=0.41 subtype_lift=+0.134
+2026-07-24 03:22:40 | INFO    | 
+2026-07-24 03:22:40 | INFO    | [13/43] key='features+fpn.std' transform='none'  (features+fpn.std)
+2026-07-24 03:23:05 | INFO    |     dim= 2048 eff_rank=   1.42 | p_img auc=0.8686 acc=0.8456 | p_final auc=0.8857 (+0.0002) | LOSO auc=0.8848 (-0.0007) acc=0.8613 (-0.0041) pat=0.8636
+2026-07-24 03:23:05 | INFO    |     corr(param,img)=0.946 auc|param wrong=0.057 best blend auc=0.8865 (alpha=0.89, +0.0010) | w=[0.8549, 0.1437, 0.0014] | mag_lock=0.39 subtype_lift=+0.141
+2026-07-24 03:23:05 | INFO    | 
+2026-07-24 03:23:05 | INFO    | [14/43] key='features+projections' transform='none'  (features+projections)
+2026-07-24 03:23:23 | INFO    |     dim= 1152 eff_rank=   1.16 | p_img auc=0.8672 acc=0.8512 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8834 (-0.0021) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 03:23:23 | INFO    |     corr(param,img)=0.948 auc|param wrong=0.057 best blend auc=0.8864 (alpha=0.90, +0.0009) | w=[0.8149, 0.1499, 0.0352] | mag_lock=0.41 subtype_lift=+0.133
+2026-07-24 03:23:23 | INFO    | 
+2026-07-24 03:23:23 | INFO    | [15/43] key='features' transform='center'  (features  center)
+2026-07-24 03:23:56 | INFO    |     dim= 1024 eff_rank=   1.39 | p_img auc=0.8657 acc=0.8480 | p_final auc=0.8852 (-0.0003) | LOSO auc=0.8829 (-0.0026) acc=0.8603 (-0.0051) pat=0.8636
+2026-07-24 03:23:56 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8862 (alpha=0.89, +0.0007) | w=[0.8648, 0.1352, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 03:23:56 | INFO    | 
+2026-07-24 03:23:56 | INFO    | [16/43] key='features' transform='pca_drop:1'  (features  pca_drop:1)
+2026-07-24 03:24:35 | INFO    |     dim= 1024 eff_rank=   3.54 | p_img auc=0.8622 acc=0.8358 | p_final auc=0.8862 (+0.0007) | LOSO auc=0.8825 (-0.0030) acc=0.8622 (-0.0032) pat=0.8788
+2026-07-24 03:24:35 | INFO    |     corr(param,img)=0.912 auc|param wrong=0.076 best blend auc=0.8872 (alpha=0.88, +0.0017) | w=[0.7983, 0.1158, 0.0859] | mag_lock=0.45 subtype_lift=+0.136
+2026-07-24 03:24:35 | INFO    | 
+2026-07-24 03:24:35 | INFO    | [17/43] key='features' transform='pca_drop:3'  (features  pca_drop:3)
+2026-07-24 03:25:12 | INFO    |     dim= 1024 eff_rank=   7.06 | p_img auc=0.8612 acc=0.8370 | p_final auc=0.8916 (+0.0061) | LOSO auc=0.8862 (+0.0007) acc=0.8625 (-0.0029) pat=0.8636
+2026-07-24 03:25:12 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.098 best blend auc=0.8887 (alpha=0.89, +0.0032) | w=[0.7098, 0.0712, 0.219] | mag_lock=0.48 subtype_lift=+0.141
+2026-07-24 03:25:12 | INFO    | 
+2026-07-24 03:25:12 | INFO    | [18/43] key='features' transform='pca_drop:10'  (features  pca_drop:10)
+2026-07-24 03:25:48 | INFO    |     dim= 1024 eff_rank=  19.36 | p_img auc=0.8585 acc=0.8405 | p_final auc=0.8930 (+0.0075) | LOSO auc=0.8866 (+0.0011) acc=0.8601 (-0.0053) pat=0.8788
+2026-07-24 03:25:48 | INFO    |     corr(param,img)=0.892 auc|param wrong=0.086 best blend auc=0.8884 (alpha=0.85, +0.0029) | w=[0.6552, 0.0902, 0.2546] | mag_lock=0.52 subtype_lift=+0.151
+2026-07-24 03:25:48 | INFO    | 
+2026-07-24 03:25:48 | INFO    | [19/43] key='features' transform='pca_drop:20'  (features  pca_drop:20)
+2026-07-24 03:26:24 | INFO    |     dim= 1024 eff_rank=  33.30 | p_img auc=0.8593 acc=0.8413 | p_final auc=0.8931 (+0.0076) | LOSO auc=0.8897 (+0.0042) acc=0.8641 (-0.0013) pat=0.8788
+2026-07-24 03:26:24 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.080 best blend auc=0.8863 (alpha=0.92, +0.0008) | w=[0.6582, 0.0596, 0.2823] | mag_lock=0.51 subtype_lift=+0.136
+2026-07-24 03:26:24 | INFO    | 
+2026-07-24 03:26:24 | INFO    | [20/43] key='features' transform='pca_drop:50'  (features  pca_drop:50)
+2026-07-24 03:27:00 | INFO    |     dim= 1024 eff_rank=  72.53 | p_img auc=0.8655 acc=0.8382 | p_final auc=0.8925 (+0.0070) | LOSO auc=0.8815 (-0.0040) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 03:27:00 | INFO    |     corr(param,img)=0.907 auc|param wrong=0.069 best blend auc=0.8867 (alpha=0.85, +0.0012) | w=[0.6313, 0.0603, 0.3084] | mag_lock=0.49 subtype_lift=+0.137
+2026-07-24 03:27:00 | INFO    | 
+2026-07-24 03:27:00 | INFO    | [21/43] key='features' transform='pca_drop:100'  (features  pca_drop:100)
+2026-07-24 03:27:38 | INFO    |     dim= 1024 eff_rank= 117.51 | p_img auc=0.8758 acc=0.8371 | p_final auc=0.8848 (-0.0007) | LOSO auc=0.8706 (-0.0149) acc=0.8598 (-0.0056) pat=0.8636
+2026-07-24 03:27:38 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.084 best blend auc=0.8895 (alpha=0.70, +0.0040) | w=[0.6123, 0.1744, 0.2133] | mag_lock=0.46 subtype_lift=+0.131
+2026-07-24 03:27:38 | INFO    | 
+2026-07-24 03:27:38 | INFO    | [22/43] key='features' transform='pca_drop:200'  (features  pca_drop:200)
+2026-07-24 03:28:15 | INFO    |     dim= 1024 eff_rank= 168.20 | p_img auc=0.8691 acc=0.8405 | p_final auc=0.8830 (-0.0025) | LOSO auc=0.8613 (-0.0242) acc=0.8574 (-0.0080) pat=0.8636
+2026-07-24 03:28:15 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.078 best blend auc=0.8905 (alpha=0.81, +0.0050) | w=[0.5701, 0.3135, 0.1165] | mag_lock=0.40 subtype_lift=+0.107
+2026-07-24 03:28:15 | INFO    | 
+2026-07-24 03:28:15 | INFO    | [23/43] key='features' transform='whiten:64'  (features  whiten:64)
+2026-07-24 03:28:49 | INFO    |     dim=   64 eff_rank=  52.69 | p_img auc=0.8640 acc=0.8390 | p_final auc=0.8872 (+0.0017) | LOSO auc=0.8842 (-0.0013) acc=0.8574 (-0.0080) pat=0.8485
+2026-07-24 03:28:49 | INFO    |     corr(param,img)=0.896 auc|param wrong=0.082 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8846, 0.0444, 0.071] | mag_lock=0.55 subtype_lift=+0.149
+2026-07-24 03:28:49 | INFO    | 
+2026-07-24 03:28:49 | INFO    | [24/43] key='features' transform='whiten:128'  (features  whiten:128)
+2026-07-24 03:29:23 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8663 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 03:29:23 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.077 best blend auc=0.8860 (alpha=0.93, +0.0005) | w=[0.8675, 0.0284, 0.104] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:29:23 | INFO    | 
+2026-07-24 03:29:23 | INFO    | [25/43] key='features' transform='whiten:256'  (features  whiten:256)
+2026-07-24 03:29:56 | INFO    |     dim=  256 eff_rank= 203.68 | p_img auc=0.8670 acc=0.8384 | p_final auc=0.8883 (+0.0028) | LOSO auc=0.8865 (+0.0010) acc=0.8624 (-0.0030) pat=0.8788
+2026-07-24 03:29:56 | INFO    |     corr(param,img)=0.913 auc|param wrong=0.065 best blend auc=0.8858 (alpha=0.93, +0.0003) | w=[0.829, 0.0302, 0.1408] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 03:29:56 | INFO    | 
+2026-07-24 03:29:56 | INFO    | [26/43] key='features' transform='whiten:512'  (features  whiten:512)
+2026-07-24 03:30:31 | INFO    |     dim=  512 eff_rank= 364.13 | p_img auc=0.8689 acc=0.8441 | p_final auc=0.8885 (+0.0030) | LOSO auc=0.8863 (+0.0008) acc=0.8616 (-0.0038) pat=0.8788
+2026-07-24 03:30:31 | INFO    |     corr(param,img)=0.926 auc|param wrong=0.059 best blend auc=0.8859 (alpha=0.91, +0.0004) | w=[0.8259, 0.0389, 0.1352] | mag_lock=0.56 subtype_lift=+0.147
+2026-07-24 03:30:31 | INFO    | 
+2026-07-24 03:30:31 | INFO    | [27/43] key='features' transform='pca_drop:3,whiten:128'  (features  pca_drop:3+whiten)
+2026-07-24 03:31:21 | INFO    |     dim=  128 eff_rank= 103.94 | p_img auc=0.8670 acc=0.8379 | p_final auc=0.8904 (+0.0049) | LOSO auc=0.8869 (+0.0014) acc=0.8617 (-0.0037) pat=0.8788
+2026-07-24 03:31:21 | INFO    |     corr(param,img)=0.901 auc|param wrong=0.075 best blend auc=0.8860 (alpha=0.92, +0.0005) | w=[0.7222, 0.0276, 0.2502] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:31:22 | INFO    | 
+2026-07-24 03:31:22 | INFO    | [28/43] key='features' transform='center,drop_dirs'  (features  drop_clf_dir)
+2026-07-24 03:31:53 | INFO    |     dim= 1024 eff_rank=   1.47 | p_img auc=0.8657 acc=0.8485 | p_final auc=0.8854 (-0.0001) | LOSO auc=0.8829 (-0.0026) acc=0.8621 (-0.0033) pat=0.8636
+2026-07-24 03:31:53 | INFO    |     corr(param,img)=0.941 auc|param wrong=0.064 best blend auc=0.8861 (alpha=0.89, +0.0006) | w=[0.8586, 0.1414, 0.0] | mag_lock=0.42 subtype_lift=+0.135
+2026-07-24 03:31:53 | INFO    | 
+2026-07-24 03:31:53 | INFO    | [29/43] key='features' transform='center,drop_dirs,whiten:128'  (features  drop_clf+whiten:128)
+2026-07-24 03:32:39 | INFO    |     dim=  128 eff_rank= 103.13 | p_img auc=0.8661 acc=0.8384 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8853 (-0.0002) acc=0.8622 (-0.0032) pat=0.8636
+2026-07-24 03:32:39 | INFO    |     corr(param,img)=0.902 auc|param wrong=0.076 best blend auc=0.8860 (alpha=0.94, +0.0005) | w=[0.87, 0.0285, 0.1015] | mag_lock=0.56 subtype_lift=+0.149
+2026-07-24 03:32:39 | INFO    | 
+2026-07-24 03:32:39 | INFO    | [30/43] key='projections' transform='whiten:64'  (projections whiten:64)
+2026-07-24 03:32:57 | INFO    |     dim=   64 eff_rank=  38.27 | p_img auc=0.8650 acc=0.8355 | p_final auc=0.8858 (+0.0003) | LOSO auc=0.8826 (-0.0029) acc=0.8589 (-0.0065) pat=0.8485
+2026-07-24 03:32:57 | INFO    |     corr(param,img)=0.885 auc|param wrong=0.100 best blend auc=0.8861 (alpha=0.96, +0.0006) | w=[0.9036, 0.0544, 0.042] | mag_lock=0.49 subtype_lift=+0.145
+2026-07-24 03:32:57 | INFO    | 
+2026-07-24 03:32:57 | INFO    | [31/43] key='projections' transform='pca_drop:1'  (projections pca_drop:1)
+2026-07-24 03:33:16 | INFO    |     dim=  128 eff_rank=   6.04 | p_img auc=0.8636 acc=0.8378 | p_final auc=0.8850 (-0.0005) | LOSO auc=0.8833 (-0.0022) acc=0.8605 (-0.0049) pat=0.8788
+2026-07-24 03:33:16 | INFO    |     corr(param,img)=0.921 auc|param wrong=0.076 best blend auc=0.8859 (alpha=0.94, +0.0004) | w=[0.8742, 0.1076, 0.0183] | mag_lock=0.43 subtype_lift=+0.136
+2026-07-24 03:33:16 | INFO    | 
+2026-07-24 03:33:16 | INFO    | [32/43] key='projections' transform='pca_drop:10'  (projections pca_drop:10)
+2026-07-24 03:33:35 | INFO    |     dim=  128 eff_rank=  16.04 | p_img auc=0.8658 acc=0.8344 | p_final auc=0.8836 (-0.0019) | LOSO auc=0.8806 (-0.0049) acc=0.8627 (-0.0027) pat=0.8636
+2026-07-24 03:33:35 | INFO    |     corr(param,img)=0.903 auc|param wrong=0.077 best blend auc=0.8855 (alpha=0.99, +0.0001) | w=[0.8382, 0.05, 0.1118] | mag_lock=0.49 subtype_lift=+0.149
+2026-07-24 03:33:35 | INFO    | 
+2026-07-24 03:33:35 | INFO    | [33/43] key='fpn.std' transform='whiten:128'  (fpn.std  whiten:128)
+2026-07-24 03:34:10 | INFO    |     dim=  128 eff_rank= 120.41 | p_img auc=0.8632 acc=0.8323 | p_final auc=0.8878 (+0.0023) | LOSO auc=0.8829 (-0.0026) acc=0.8558 (-0.0096) pat=0.8636
+2026-07-24 03:34:10 | INFO    |     corr(param,img)=0.899 auc|param wrong=0.073 best blend auc=0.8859 (alpha=0.92, +0.0004) | w=[0.8199, 0.0834, 0.0967] | mag_lock=0.48 subtype_lift=+0.140
+2026-07-24 03:34:10 | INFO    | 
+2026-07-24 03:34:10 | INFO    | [34/43] key='fpn.std' transform='pca_drop:1'  (fpn.std  pca_drop:1)
+2026-07-24 03:34:47 | INFO    |     dim= 1024 eff_rank=   4.68 | p_img auc=0.8618 acc=0.8390 | p_final auc=0.8856 (+0.0001) | LOSO auc=0.8823 (-0.0032) acc=0.8608 (-0.0046) pat=0.8636
+2026-07-24 03:34:47 | INFO    |     corr(param,img)=0.928 auc|param wrong=0.059 best blend auc=0.8855 (alpha=0.97, +0.0000) | w=[0.8715, 0.1103, 0.0182] | mag_lock=0.40 subtype_lift=+0.135
+2026-07-24 03:34:47 | INFO    | 
+2026-07-24 03:34:47 | INFO    | [35/43] key='fpn.std' transform='pca_drop:10'  (fpn.std  pca_drop:10)
+2026-07-24 03:35:26 | INFO    |     dim= 1024 eff_rank=  30.22 | p_img auc=0.8597 acc=0.8342 | p_final auc=0.8791 (-0.0064) | LOSO auc=0.8748 (-0.0107) acc=0.8582 (-0.0072) pat=0.8636
+2026-07-24 03:35:26 | INFO    |     corr(param,img)=0.890 auc|param wrong=0.089 best blend auc=0.8855 (alpha=1.00, +0.0000) | w=[0.7506, 0.0842, 0.1653] | mag_lock=0.45 subtype_lift=+0.138
+2026-07-24 03:35:26 | INFO    | 
+2026-07-24 03:35:26 | INFO    | [36/43] key='fpn.gap@0' transform='whiten:128'  (fpn.gap@0 whiten:128)
+2026-07-24 03:35:46 | INFO    |     dim=  128 eff_rank= 106.89 | p_img auc=0.8647 acc=0.8360 | p_final auc=0.8891 (+0.0036) | LOSO auc=0.8874 (+0.0019) acc=0.8589 (-0.0065) pat=0.8636
+2026-07-24 03:35:46 | INFO    |     corr(param,img)=0.903 auc|param wrong=0.069 best blend auc=0.8855 (alpha=1.00, +0.0000) | w=[0.8086, 0.0272, 0.1642] | mag_lock=0.57 subtype_lift=+0.151
+2026-07-24 03:35:46 | INFO    | 
+2026-07-24 03:35:46 | INFO    | [37/43] key='fpn.gap@0' transform='pca_drop:10'  (fpn.gap@0 pca_drop:10)
+2026-07-24 03:36:06 | INFO    |     dim=  256 eff_rank=  17.22 | p_img auc=0.8604 acc=0.8325 | p_final auc=0.8917 (+0.0062) | LOSO auc=0.8872 (+0.0017) acc=0.8633 (-0.0021) pat=0.8636
+2026-07-24 03:36:06 | INFO    |     corr(param,img)=0.894 auc|param wrong=0.072 best blend auc=0.8877 (alpha=0.91, +0.0022) | w=[0.6823, 0.0809, 0.2368] | mag_lock=0.53 subtype_lift=+0.144
+2026-07-24 03:36:06 | INFO    | 
+2026-07-24 03:36:06 | INFO    | [38/43] key='features+fpn.std' transform='whiten:128'  (features+fpn.std whiten:128)
+2026-07-24 03:37:23 | INFO    |     dim=  128 eff_rank= 117.23 | p_img auc=0.8636 acc=0.8349 | p_final auc=0.8867 (+0.0012) | LOSO auc=0.8836 (-0.0019) acc=0.8579 (-0.0075) pat=0.8485
+2026-07-24 03:37:23 | INFO    |     corr(param,img)=0.898 auc|param wrong=0.074 best blend auc=0.8859 (alpha=0.94, +0.0004) | w=[0.8411, 0.0596, 0.0992] | mag_lock=0.51 subtype_lift=+0.145
+2026-07-24 03:37:23 | INFO    | 
+2026-07-24 03:37:23 | INFO    | [39/43] key='features+fpn.std' transform='pca_drop:10'  (features+fpn.std pca_drop:10)
+2026-07-24 03:38:47 | INFO    |     dim= 2048 eff_rank=  27.41 | p_img auc=0.8628 acc=0.8362 | p_final auc=0.8855 (+0.0000) | LOSO auc=0.8795 (-0.0060) acc=0.8632 (-0.0022) pat=0.8788
+2026-07-24 03:38:47 | INFO    |     corr(param,img)=0.894 auc|param wrong=0.080 best blend auc=0.8855 (alpha=0.99, +0.0000) | w=[0.7113, 0.0583, 0.2304] | mag_lock=0.48 subtype_lift=+0.139
+2026-07-24 03:38:47 | INFO    | 
+2026-07-24 03:38:47 | INFO    | [40/43] key='features' transform='none'  (X-enc features)
+2026-07-24 03:39:07 | INFO    |     dim= 1024 eff_rank=   1.27 | p_img auc=0.8718 acc=0.8550 | p_final auc=0.8900 (+0.0045) | LOSO auc=0.8872 (+0.0017) acc=0.8659 (+0.0005) pat=0.9242
+2026-07-24 03:39:07 | INFO    |     corr(param,img)=0.908 auc|param wrong=0.133 best blend auc=0.8898 (alpha=0.71, +0.0043) | w=[0.836, 0.1323, 0.0318] | mag_lock=0.38 subtype_lift=+0.118
+2026-07-24 03:39:07 | INFO    | 
+2026-07-24 03:39:07 | INFO    | [41/43] key='features' transform='pca_drop:10'  (X-enc features pca_drop:10)
+2026-07-24 03:39:42 | INFO    |     dim= 1024 eff_rank=  19.17 | p_img auc=0.8593 acc=0.8370 | p_final auc=0.8880 (+0.0025) | LOSO auc=0.8850 (-0.0005) acc=0.8667 (+0.0013) pat=0.8788
+2026-07-24 03:39:42 | INFO    |     corr(param,img)=0.868 auc|param wrong=0.136 best blend auc=0.8875 (alpha=0.89, +0.0020) | w=[0.6945, 0.1254, 0.1801] | mag_lock=0.53 subtype_lift=+0.140
+2026-07-24 03:39:42 | INFO    | 
+2026-07-24 03:39:42 | INFO    | [42/43] key='features' transform='whiten:128'  (X-enc features whiten:128)
+2026-07-24 03:40:15 | INFO    |     dim=  128 eff_rank= 101.28 | p_img auc=0.8676 acc=0.8410 | p_final auc=0.8899 (+0.0044) | LOSO auc=0.8868 (+0.0013) acc=0.8651 (-0.0003) pat=0.8939
+2026-07-24 03:40:15 | INFO    |     corr(param,img)=0.873 auc|param wrong=0.127 best blend auc=0.8880 (alpha=0.74, +0.0025) | w=[0.8352, 0.0823, 0.0825] | mag_lock=0.56 subtype_lift=+0.146
+2026-07-24 03:40:15 | INFO    | 
+2026-07-24 03:40:15 | INFO    | [43/43] key='fpn.std' transform='none'  (X-enc fpn.std)
+2026-07-24 03:40:35 | INFO    |     dim= 1024 eff_rank=   2.89 | p_img auc=0.8723 acc=0.8577 | p_final auc=0.8910 (+0.0055) | LOSO auc=0.8883 (+0.0028) acc=0.8652 (-0.0002) pat=0.9091
+2026-07-24 03:40:35 | INFO    |     corr(param,img)=0.906 auc|param wrong=0.128 best blend auc=0.8902 (alpha=0.72, +0.0047) | w=[0.8082, 0.1501, 0.0417] | mag_lock=0.34 subtype_lift=+0.121
+2026-07-24 03:40:35 | INFO    | 
+Saved -> analysis\retrieval_keys\exp3n\key_ablation_cross_exp1.json
+2026-07-24 03:40:35 | INFO    | 
+Ranked by leave-one-fold-out fused AUC (the honest ordering)
+2026-07-24 03:40:35 | INFO    | key / transform                      dim    eff  pImgAUC  LOSOauc    dAUC    dAcc  dPatAcc   corr
+2026-07-24 03:40:35 | INFO    | -------------------------------------------------------------------------------------------------
+2026-07-24 03:40:35 | INFO    | features / pca_drop:20              1024  33.30   0.8593   0.8897 +0.0042 -0.0013  +0.0152  0.899
+2026-07-24 03:40:35 | INFO    | [exp1] fpn.std / none               1024   2.89   0.8723   0.8883 +0.0028 -0.0002  +0.0455  0.906
+2026-07-24 03:40:35 | INFO    | fpn.gap@0 / whiten:128               128 106.89   0.8647   0.8874 +0.0019 -0.0065  +0.0000  0.903
+2026-07-24 03:40:35 | INFO    | fpn.gap@0 / pca_drop:10              256  17.22   0.8604   0.8872 +0.0017 -0.0021  +0.0000  0.894
+2026-07-24 03:40:35 | INFO    | [exp1] features / none              1024   1.27   0.8718   0.8872 +0.0017 +0.0005  +0.0606  0.908
+2026-07-24 03:40:35 | INFO    | features / pca_drop:3,whiten:128     128 103.94   0.8670   0.8869 +0.0014 -0.0037  +0.0152  0.901
+2026-07-24 03:40:35 | INFO    | [exp1] features / whiten:128         128 101.28   0.8676   0.8868 +0.0013 -0.0003  +0.0303  0.873
+2026-07-24 03:40:35 | INFO    | features / pca_drop:10              1024  19.36   0.8585   0.8866 +0.0011 -0.0053  +0.0152  0.892
+2026-07-24 03:40:35 | INFO    | features / whiten:256                256 203.68   0.8670   0.8865 +0.0010 -0.0030  +0.0152  0.913
+2026-07-24 03:40:35 | INFO    | features / whiten:512                512 364.13   0.8689   0.8863 +0.0008 -0.0038  +0.0152  0.926
+2026-07-24 03:40:35 | INFO    | features / pca_drop:3               1024   7.06   0.8612   0.8862 +0.0007 -0.0029  +0.0000  0.896
+2026-07-24 03:40:35 | INFO    | features / whiten:128                128 103.13   0.8663   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 03:40:35 | INFO    | features / center,drop_dirs,whiten   128 103.13   0.8661   0.8853 -0.0002 -0.0032  +0.0000  0.902
+2026-07-24 03:40:35 | INFO    | [exp1] features / pca_drop:10       1024  19.17   0.8593   0.8850 -0.0005 +0.0013  +0.0152  0.868
+2026-07-24 03:40:35 | INFO    | features+fpn.std / none             2048   1.42   0.8686   0.8848 -0.0007 -0.0041  +0.0000  0.946
+2026-07-24 03:40:35 | INFO    | fpn.std / none                      1024   2.71   0.8699   0.8846 -0.0009 -0.0017  +0.0000  0.937
+2026-07-24 03:40:35 | INFO    | fpn.gap@2 / none                     256   1.17   0.8618   0.8843 -0.0012 -0.0019  +0.0152  0.929
+2026-07-24 03:40:35 | INFO    | features / whiten:64                  64  52.69   0.8640   0.8842 -0.0013 -0.0080  -0.0151  0.896
+2026-07-24 03:40:35 | INFO    | fpn.gem / none                      1024   1.25   0.8675   0.8841 -0.0014 -0.0024  +0.0000  0.946
+2026-07-24 03:40:35 | INFO    | fpn.gap@1 / none                     256   1.16   0.8687   0.8839 -0.0016 -0.0016  +0.0152  0.947
+2026-07-24 03:40:35 | INFO    | fpn.max / none                      1024   1.60   0.8682   0.8838 -0.0017 -0.0025  +0.0000  0.941
+2026-07-24 03:40:35 | INFO    | fpn.gap@3 / none                     256   1.44   0.8658   0.8837 -0.0018 -0.0029  +0.0152  0.930
+2026-07-24 03:40:35 | INFO    | features+fpn.std / whiten:128        128 117.23   0.8636   0.8836 -0.0019 -0.0075  -0.0151  0.898
+2026-07-24 03:40:35 | INFO    | fpn.gap.ln / none                   1024   1.20   0.8667   0.8834 -0.0021 -0.0048  +0.0000  0.948
+2026-07-24 03:40:35 | INFO    | features+projections / none         1152   1.16   0.8672   0.8834 -0.0021 -0.0013  +0.0152  0.948
+2026-07-24 03:40:35 | INFO    | features / none                     1024   1.19   0.8678   0.8833 -0.0022 -0.0027  +0.0152  0.948
+2026-07-24 03:40:35 | INFO    | projections / pca_drop:1             128   6.04   0.8636   0.8833 -0.0022 -0.0049  +0.0152  0.921
+2026-07-24 03:40:35 | INFO    | projections / none                   128   1.08   0.8660   0.8832 -0.0023 -0.0009  +0.0000  0.944
+2026-07-24 03:40:35 | INFO    | fpn.std@0 / none                     256   2.61   0.8693   0.8832 -0.0023 -0.0045  +0.0000  0.939
+2026-07-24 03:40:35 | INFO    | fpn.gap@0 / none                     256   1.24   0.8655   0.8831 -0.0024 -0.0048  +0.0000  0.945
+2026-07-24 03:40:35 | INFO    | features / center                   1024   1.39   0.8657   0.8829 -0.0026 -0.0051  +0.0000  0.941
+2026-07-24 03:40:35 | INFO    | features / center,drop_dirs         1024   1.47   0.8657   0.8829 -0.0026 -0.0033  +0.0000  0.941
+2026-07-24 03:40:35 | INFO    | fpn.std / whiten:128                 128 120.41   0.8632   0.8829 -0.0026 -0.0096  +0.0000  0.899
+2026-07-24 03:40:35 | INFO    | fpn.std@3 / none                     256   2.07   0.8584   0.8827 -0.0028 -0.0045  +0.0000  0.905
+2026-07-24 03:40:35 | INFO    | projections / whiten:64               64  38.27   0.8650   0.8826 -0.0029 -0.0065  -0.0151  0.885
+2026-07-24 03:40:35 | INFO    | features / pca_drop:1               1024   3.54   0.8622   0.8825 -0.0030 -0.0032  +0.0152  0.912
+2026-07-24 03:40:35 | INFO    | fpn.std / pca_drop:1                1024   4.68   0.8618   0.8823 -0.0032 -0.0046  +0.0000  0.928
+2026-07-24 03:40:35 | INFO    | features / pca_drop:50              1024  72.53   0.8655   0.8815 -0.0040 -0.0038  +0.0152  0.907
+2026-07-24 03:40:35 | INFO    | projections / pca_drop:10            128  16.04   0.8658   0.8806 -0.0049 -0.0027  +0.0000  0.903
+2026-07-24 03:40:35 | INFO    | features+fpn.std / pca_drop:10      2048  27.41   0.8628   0.8795 -0.0060 -0.0022  +0.0152  0.894
+2026-07-24 03:40:35 | INFO    | fpn.std / pca_drop:10               1024  30.22   0.8597   0.8748 -0.0107 -0.0072  +0.0000  0.890
+2026-07-24 03:40:35 | INFO    | features / pca_drop:100             1024 117.51   0.8758   0.8706 -0.0149 -0.0056  +0.0000  0.906
+2026-07-24 03:40:35 | INFO    | features / pca_drop:200             1024 168.20   0.8691   0.8613 -0.0242 -0.0080  +0.0000  0.902
