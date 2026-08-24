@@ -1,0 +1,111 @@
+2026-07-23 23:19:59 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ STAGE B2 -- FUSION GATE (pooled out-of-fold)
+══════════════════════════════════════════════════════════════════════════
+  key (D1)                  : features
+  base encoder (D9)         : exp3n
+  image view                : route=same_mag k=15 cap=3 T=0.07
+  slide view                : route=all k=5 cap=1 T=0.07
+  merge_levels (ablation)   : False
+  block_query_patients      : True
+  gate                      : enabled=True hidden=16 init=[0.5, 0.5, 0.0] fit_on=pooled_oof
+──────────────────────────────────────────────────────────────────────────
+  experiment                : exp3n  (encoder: exp3n)
+  folds                     : [0, 1, 2, 3, 4]
+  bank                      : analysis\retrieval\exp3n\bank_fold{fold}.npz
+  output                    : analysis\retrieval\exp3n\gate.pt
+  fit                       : epochs=400 lr=0.01 weight_decay=0.0
+  device                    : cuda  (NVIDIA GeForce RTX 3050 Laptop GPU)
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:19:59 | INFO    | fold 0: loading 20260723_010827_train_fold0 and scanning the dataset ...
+2026-07-23 23:20:02 | INFO    | retrieval: bank bank_fold0.npz loaded from analysis\retrieval\exp3n -- 4541 image + 52 slide rows, 52 patients, key=features[1024], encoder=exp3n fold=0 built=2026-07-23T23:10:53
+2026-07-23 23:20:02 | INFO    | retrieval: leakage guard passed -- none of the 14 evaluated patients is in the bank
+2026-07-23 23:20:02 | INFO    | retrieval: gate disabled -- blending at fixed weights (ablation)
+2026-07-23 23:20:02 | INFO    | fold 0: scoring 1715 validation images (14 patients) against a 4593-row bank ...
+2026-07-23 23:20:24 | INFO    | retrieval: ONE bank -> TWO independent rankings (D5 verified on the first batch) | image view: level=image route=same_mag k=15 cap=3 T=0.07 | slide view: level=slide route=all k=5 cap=1 T=0.07
+2026-07-23 23:20:45 | INFO    | fold 0: 1715 images / 14 patients | top1=0.9987 neighbours=15.0 distinct_patients=7.4 same_mag=1.000 img/slide disagreement=0.8%
+2026-07-23 23:20:45 | INFO    | fold 1: loading 20260723_013510_train_fold1 and scanning the dataset ...
+2026-07-23 23:20:48 | INFO    | retrieval: bank bank_fold1.npz loaded from analysis\retrieval\exp3n -- 5133 image + 53 slide rows, 53 patients, key=features[1024], encoder=exp3n fold=1 built=2026-07-23T23:12:08
+2026-07-23 23:20:48 | INFO    | retrieval: leakage guard passed -- none of the 13 evaluated patients is in the bank
+2026-07-23 23:20:48 | INFO    | retrieval: gate disabled -- blending at fixed weights (ablation)
+2026-07-23 23:20:48 | INFO    | fold 1: scoring 1123 validation images (13 patients) against a 5186-row bank ...
+2026-07-23 23:21:09 | INFO    | retrieval: ONE bank -> TWO independent rankings (D5 verified on the first batch) | image view: level=image route=same_mag k=15 cap=3 T=0.07 | slide view: level=slide route=all k=5 cap=1 T=0.07
+2026-07-23 23:21:20 | INFO    | fold 1: 1123 images / 13 patients | top1=0.9994 neighbours=15.0 distinct_patients=7.8 same_mag=1.000 img/slide disagreement=5.9%
+2026-07-23 23:21:20 | INFO    | fold 2: loading 20260723_015949_train_fold2 and scanning the dataset ...
+2026-07-23 23:21:22 | INFO    | retrieval: bank bank_fold2.npz loaded from analysis\retrieval\exp3n -- 5137 image + 53 slide rows, 53 patients, key=features[1024], encoder=exp3n fold=2 built=2026-07-23T23:13:47
+2026-07-23 23:21:22 | INFO    | retrieval: leakage guard passed -- none of the 13 evaluated patients is in the bank
+2026-07-23 23:21:22 | INFO    | retrieval: gate disabled -- blending at fixed weights (ablation)
+2026-07-23 23:21:22 | INFO    | fold 2: scoring 1119 validation images (13 patients) against a 5190-row bank ...
+2026-07-23 23:21:41 | INFO    | retrieval: ONE bank -> TWO independent rankings (D5 verified on the first batch) | image view: level=image route=same_mag k=15 cap=3 T=0.07 | slide view: level=slide route=all k=5 cap=1 T=0.07
+2026-07-23 23:21:54 | INFO    | fold 2: 1119 images / 13 patients | top1=0.9977 neighbours=15.0 distinct_patients=7.5 same_mag=1.000 img/slide disagreement=4.2%
+2026-07-23 23:21:54 | INFO    | fold 3: loading 20260723_025321_train_fold3 and scanning the dataset ...
+2026-07-23 23:21:57 | INFO    | retrieval: bank bank_fold3.npz loaded from analysis\retrieval\exp3n -- 5027 image + 53 slide rows, 53 patients, key=features[1024], encoder=exp3n fold=3 built=2026-07-23T23:15:27
+2026-07-23 23:21:57 | INFO    | retrieval: leakage guard passed -- none of the 13 evaluated patients is in the bank
+2026-07-23 23:21:57 | INFO    | retrieval: gate disabled -- blending at fixed weights (ablation)
+2026-07-23 23:21:57 | INFO    | fold 3: scoring 1229 validation images (13 patients) against a 5080-row bank ...
+2026-07-23 23:22:19 | INFO    | retrieval: ONE bank -> TWO independent rankings (D5 verified on the first batch) | image view: level=image route=same_mag k=15 cap=3 T=0.07 | slide view: level=slide route=all k=5 cap=1 T=0.07
+2026-07-23 23:22:35 | INFO    | fold 3: 1229 images / 13 patients | top1=0.9984 neighbours=15.0 distinct_patients=7.4 same_mag=1.000 img/slide disagreement=0.2%
+2026-07-23 23:22:35 | INFO    | fold 4: loading 20260723_075322_train_fold4 and scanning the dataset ...
+2026-07-23 23:22:38 | INFO    | retrieval: bank bank_fold4.npz loaded from analysis\retrieval\exp3n -- 5186 image + 53 slide rows, 53 patients, key=features[1024], encoder=exp3n fold=4 built=2026-07-23T23:16:56
+2026-07-23 23:22:38 | INFO    | retrieval: leakage guard passed -- none of the 13 evaluated patients is in the bank
+2026-07-23 23:22:38 | INFO    | retrieval: gate disabled -- blending at fixed weights (ablation)
+2026-07-23 23:22:38 | INFO    | fold 4: scoring 1070 validation images (13 patients) against a 5239-row bank ...
+2026-07-23 23:22:58 | INFO    | retrieval: ONE bank -> TWO independent rankings (D5 verified on the first batch) | image view: level=image route=same_mag k=15 cap=3 T=0.07 | slide view: level=slide route=all k=5 cap=1 T=0.07
+2026-07-23 23:23:11 | INFO    | fold 4: 1070 images / 13 patients | top1=0.9989 neighbours=15.0 distinct_patients=7.9 same_mag=1.000 img/slide disagreement=2.1%
+2026-07-23 23:23:11 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ POOLED OOF SANITY
+══════════════════════════════════════════════════════════════════════════
+  rows                      : 6256
+  distinct patients         : 66  (expected 66)
+  any test patient          : no ✓
+  class balance             : benign 2022 / malignant 4234
+  active terms (param, img, slide): [1.0, 1.0, 1.0]
+  folds pooled              : [0, 1, 2, 3, 4]  (disjoint validation partition)
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:23:11 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ RETRIEVAL DIAGNOSTICS (pooled OOF validation)
+══════════════════════════════════════════════════════════════════════════
+  queries                   : 6256
+  mean neighbours / query   : 15.00
+  short neighbourhoods      : 0.0%
+  mean top-1 similarity     : 0.9986
+  mean neighbour agreement  : 0.8741
+  mean distinct patients    : 7.56
+  same-magnification rate   : 1.0000   (routing verified (1.0000 expected by construction, D3))
+──────────────────────────────────────────────────────────────────────────
+  -- two independent rankings over the ONE bank (D5) --
+  slide rows retrieved / query: 5.00
+  p_slide spread (std)      : 0.4262   (0.0000 = level absent/merged)
+  image vs slide disagreement: 2.4%
+  mean |p_img - p_slide|    : 0.0450
+  mean gate weights         : param=0.500  img=0.500  slide=0.000
+  retrieved subtypes (D8)   : DC 44%, F 13%, MC 10%, LC 9%, PC 8%, PT 6%
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:23:11 | INFO    |   epoch    1  bce=0.59906  mean w=(0.495, 0.495, 0.010)
+2026-07-23 23:23:12 | INFO    |   epoch   50  bce=0.56652  mean w=(0.891, 0.108, 0.001)
+2026-07-23 23:23:12 | INFO    |   epoch  100  bce=0.56063  mean w=(0.863, 0.136, 0.001)
+2026-07-23 23:23:12 | INFO    |   epoch  150  bce=0.55657  mean w=(0.855, 0.139, 0.007)
+2026-07-23 23:23:13 | INFO    |   epoch  200  bce=0.55405  mean w=(0.853, 0.134, 0.013)
+2026-07-23 23:23:13 | INFO    |   epoch  250  bce=0.55096  mean w=(0.835, 0.132, 0.033)
+2026-07-23 23:23:14 | INFO    |   epoch  300  bce=0.54941  mean w=(0.833, 0.138, 0.029)
+2026-07-23 23:23:14 | INFO    |   epoch  350  bce=0.54844  mean w=(0.827, 0.142, 0.030)
+2026-07-23 23:23:15 | INFO    |   epoch  400  bce=0.54766  mean w=(0.823, 0.146, 0.030)
+2026-07-23 23:23:16 | INFO    | ══════════════════════════════════════════════════════════════════════════
+ GATE RESULT (pooled OOF validation)
+══════════════════════════════════════════════════════════════════════════
+  BCE                       : 0.59906 -> 0.54766
+  mean weights (param, img, slide): (0.823, 0.146, 0.030)
+  val acc  p_param          : 0.8654
+  val acc  p_img            : 0.8496
+  val acc  p_slide          : 0.8611
+  val acc  p_final          : 0.8645 (-0.0010 vs p_param)
+  locked image threshold (p_final): 0.692
+  locked patient threshold (p_final): 0.378
+──────────────────────────────────────────────────────────────────────────
+2026-07-23 23:23:16 | WARNING | 
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+  WARNING: The memory is not helping on validation
+  - p_final (0.8645) does not beat p_param (0.8654).
+  - Report this as 'the module does not help on this encoder' -- do not tune until it does.
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+2026-07-23 23:23:16 | INFO    | Saved gate -> analysis\retrieval\exp3n\gate.pt
+2026-07-23 23:23:16 | INFO    | Saved fit report -> analysis\retrieval\exp3n\gate_fit.json
