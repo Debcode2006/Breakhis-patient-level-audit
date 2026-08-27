@@ -1,4 +1,4 @@
-# Figure design guide — RAP-MST
+# Figure design guide
 
 The house style for every figure in this paper. Derived from the conventions of
 MICCAI, CVPR/ICCV, TPAMI, *Medical Image Analysis* and *Nature Biomedical

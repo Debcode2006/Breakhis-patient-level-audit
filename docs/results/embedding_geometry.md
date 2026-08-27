@@ -1,4 +1,4 @@
-# RAP-MST — Embedding-Space Evidence that SupCon Works (UMAP of the held-out test set)
+# Embedding-Space Evidence that SupCon Works (UMAP of the held-out test set)
 
 **Question.** `docs/results/classifier_ladder.md` and `docs/results/threshold_calibration.md` established that exp3
 (SupCon) helps *ranking* (best AUC 0.9607; best patient accuracy once the threshold

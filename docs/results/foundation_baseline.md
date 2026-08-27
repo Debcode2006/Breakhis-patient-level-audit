@@ -150,7 +150,7 @@ experiment, exactly as predicted ("the CTransPath gift"):
 
 | | params | pretrained on |
 |---|---:|---|
-| RAP-MST exp3n (Swin-Tiny + FPN) | 30,843,388 | ImageNet-1k |
+| exp3n (Swin-Tiny + FPN) | 30,843,388 | ImageNet-1k |
 | **CTransPath** | **27,520,038** *(measured)* | ~15 M TCGA + PAIP histology patches, SRCL |
 | UNI (ViT-L/16) | ~307 M | pathology |
 
@@ -476,7 +476,7 @@ discrimination loss"* — was, until now, demonstrated entirely *within* one
 architecture and one training pipeline. A reviewer could reasonably ask whether it is
 an artifact of that pipeline. It is not: CTransPath, a different architecture
 pretrained on different data with a different objective, exhibits the same
-dissociation **more extremely than any RAP-MST variant** (best AUC in the study,
+dissociation **more extremely than any Swin ladder variant** (best AUC in the study,
 worst accuracy at 0.5, optimal threshold 0.209). Promote this to a paragraph in the
 magnification/threshold Results subsection — it is nearly free evidence.
 
@@ -493,12 +493,12 @@ name the mechanism *and* show the evidence for it in a table you already have.**
 
 ### 6.5 The parameter-efficiency argument survives, in the direction §2.5 permits
 
-CTransPath is **smaller** than RAP-MST (27.5 M vs 30.8 M), pathology-pretrained, and
+CTransPath is **smaller** than the Swin ladder (27.5 M vs 30.8 M), pathology-pretrained, and
 it does not win. So the honest framing stays —
 *"competitive accuracy at a fraction of the parameters of the transformer and
 foundation-model approaches the field is converging on, on commodity hardware"* — and
 **not** "fewest parameters", which DenseNet121 (~8 M, ~92.1%) would sink anyway. Do
-not claim RAP-MST beats a foundation model. Claim that under an honest protocol the
+not claim the Swin ladder beats a foundation model. Claim that under an honest protocol the
 two are indistinguishable, which is the more interesting sentence and the one you can
 defend.
 

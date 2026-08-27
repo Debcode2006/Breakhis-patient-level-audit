@@ -1,4 +1,4 @@
-# RAP-MST — Retrieval-Augmented Pathology Memory Swin Transformer
+# Research Log
 
 Research framework for **binary benign/malignant classification** on the
 **BreaKHis** breast-histopathology dataset, with a single unified model trained
@@ -97,7 +97,7 @@ SupCon, not retrieval, and not pathology-specific pretraining.
 It also has the **best image AUC measured here (0.9668)** *and* the **worst accuracy
 at 0.5 (0.8580)**, with the study's most extreme accuracy-optimal threshold
 (**0.209** vs exp3n's 0.540). A different architecture, pretrained on different data
-by a different objective, exhibits finding ① **more strongly than any RAP-MST
+by a different objective, exhibits finding ① **more strongly than any Swin ladder
 variant** — so it is not an artifact of this training pipeline.
 
 And its **errors sit elsewhere**: it solves `DC-14-12312` (0.712 → **0.930**) and
@@ -489,14 +489,14 @@ inspect.
 
 ### 5.1 expfm — the frozen CTransPath baseline (outside the ladder)
 
-**What it is.** Not a RAP-MST variant. **CTransPath** — a Swin-Tiny with a CNN patch
+**What it is.** Not a Swin ladder variant. **CTransPath** — a Swin-Tiny with a CNN patch
 stem, pretrained by semantically-relevant contrastive learning on ~15 M TCGA/PAIP
 histology patches — frozen, its 768-d pooled features cached once for all 7,909
 images, with a **1,538-parameter linear head** fitted per fold. Built to answer the
 one question the paper cannot leave open (the paper): *why train a Swin
 from ImageNet weights instead of probing a pathology foundation model?*
 
-At **27,520,038 parameters** it is param-matched to RAP-MST's 30,843,388 to within
+At **27,520,038 parameters** it is param-matched to the Swin ladder's 30,843,388 to within
 11%, so the comparison isolates **pretraining corpus** from **model scale**. Same
 splits, same eval transform, same class weighting, same monitor, same metric
 functions, same seed — every knob pinned to what exp1–exp3n actually did.

@@ -1,4 +1,4 @@
-# RAP-MST — Threshold-Calibration Experiment
+# Threshold-Calibration Experiment
 
 **Question this answers.** `docs/results/classifier_ladder.md` found that adding the magnification
 embedding (exp2) and SupCon (exp3) did **not** raise thresholded test accuracy at

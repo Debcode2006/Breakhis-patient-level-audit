@@ -1,4 +1,4 @@
-# RAP-MST — Cross-Experiment Fold & Test Analysis
+# Cross-Experiment Fold & Test Analysis
 
 **Scope.** Four experiments, five patient-level CV folds each, evaluated on the
 same 16-patient held-out test set (`splits/breakhis_splits.json`).
